@@ -1,0 +1,113 @@
+# Indicateurs de couverture déclarés / publiés — France métropolitaine
+# Sources et dates explicitement tracées. À actualiser lors des collectes.
+#
+# ATTENTION: les % population NB-IoT / LTE-M sont des déclarations opérateurs
+# ou agrégats presse ; ils ne sont PAS mesurés par l'Arcep à ce jour.
+
+meta:
+  country: FR
+  scope: metropole
+  last_review: "2026-07-21"
+  notes: |
+    L'Arcep open data ne publie pas encore de couches NB-IoT / LTE-M / LoRaWAN.
+    Les sites 4G Arcep servent de proxy d'infrastructure cellulaire (NB-IoT in-band).
+
+lora:
+  orange:
+    technology: LoRaWAN
+    spectrum: unlicensed_EU868
+    antennas: 4800
+    communes: 30000
+    population_coverage_pct: 95
+    commitment_until: "2027-12-31"
+    platform: Live Objects
+    sources:
+      - url: "https://www.orange-business.com/fr/reseau-iot"
+        claim: "95% population, >30 000 communes"
+      - url: "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+        claim: ">4800 antennes métropole + Réunion"
+      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+        claim: "maintien a minima jusqu'au 31/12/2027 ; croissance objets à 2 chiffres"
+  objenious_bouygues:
+    technology: LoRaWAN
+    status: shutdown
+    shutdown_date: "2024-12-31"
+    historical_antennas: 4300
+    sources:
+      - url: "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+        claim: "arrêt réseau LoRaWAN Objenious fin 2024"
+      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+        claim: "Objenious avait ~4300 antennes"
+  community_packet_broker:
+    technology: LoRaWAN
+    note: "Gateways fédérés via Packet Broker (TTN/TTS et autres) — hors Orange opéré"
+    measured_live: true
+  helium_iot:
+    technology: LoRaWAN
+    note: "Hotspots Helium IoT — estimation échantillonnée Entity API"
+    measured_live: true
+  private_networks:
+    share_industrial_estimate_pct: 15
+    sources:
+      - url: "https://www.application-iot.fr/reseau-lora-france/"
+        claim: ">15% des déploiements industriels FR utilisent une portion LoRaWAN privé"
+
+nbiot:
+  orange:
+    technology: NB-IoT
+    status: not_positioned_fr
+    notes: |
+      Direction Orange Business (JDN): pas de positionnement NB-IoT en France
+      (préférence LoRaWAN + LTE-M). GSMA liste Orange FR en LTE-M & NB-IoT —
+      à croiser ; roaming DT IoT ne liste Orange FR qu'en LTE-M pour NB-IoT.
+    sources:
+      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+        claim: "Orange non positionné NB-IoT en France"
+      - url: "https://hub.iot.telekom.com/docs/device-to-cloud/general-info/roaming-network-info/"
+        claim: "NB-IoT FR: Bouygues 20820, SFR 20810 (pas Orange)"
+  sfr:
+    technology: NB-IoT
+    population_coverage_pct: 99
+    bands: ["B20"]
+    plmn: "20810"
+    sources:
+      - url: "https://trakmy.fr/test-couverture-nbiot-2/"
+        claim: "SFR 99% population France"
+      - url: "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"
+        claim: "SFR France NB-IoT & LTE-M (GSMA Nov 2025)"
+  bouygues_objenious:
+    technology: NB-IoT
+    population_coverage_pct: 99
+    bands: ["B20"]
+    plmn: "20820"
+    national_since: "2022-12"
+    sources:
+      - url: "https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"
+        claim: "couverture nationale >99% fin 2022"
+      - url: "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"
+        claim: "Objenious by Bouygues Telecom France LTE-M & NB-IoT"
+
+lte_m:
+  orange:
+    population_coverage_pct: null
+    notes: "Complémentaire LoRaWAN ; migration 2G→LTE-M"
+    sources:
+      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+  sfr:
+    population_coverage_pct: null
+  bouygues:
+    population_coverage_pct: 99
+    national_since: "2022-12"
+
+market_global_context:
+  # IoT Analytics LPWAN Market 2024 (Q1/2024 tracker)
+  lpwan_connections_2023_bn: 1.3
+  nbiot_share_global_pct: 54
+  lora_share_ex_china_pct: 41
+  nbiot_share_ex_china_pct: 20
+  cagr_to_2027_pct: 26
+  source: "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
+
+france_iot_stock:
+  connected_objects_2022_m: 244
+  source: "ADEME / Arcep janvier 2022 (cité Orange Business)"

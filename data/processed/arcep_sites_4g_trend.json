@@ -1,0 +1,174 @@
+{
+  "source": "https://data.arcep.fr/mobile/sites",
+  "fetched_at": "2026-07-21T08:38:31Z",
+  "series": [
+    {
+      "quarter": "2023_T1",
+      "file": "arcep_sites_2023_T1_Metropole.csv",
+      "total_rows": 103817,
+      "by_operator": {
+        "Orange": {
+          "sites": 29651,
+          "4g": 29457,
+          "5g": 6267,
+          "3g": 29147,
+          "2g": 18925
+        },
+        "SFR": {
+          "sites": 24498,
+          "4g": 24227,
+          "5g": 8936,
+          "3g": 24153,
+          "2g": 21068
+        },
+        "Bouygues Telecom": {
+          "sites": 25623,
+          "4g": 25313,
+          "5g": 9942,
+          "3g": 25431,
+          "2g": 22038
+        },
+        "Free Mobile": {
+          "sites": 24045,
+          "4g": 23939,
+          "5g": 16644,
+          "3g": 24039,
+          "2g": 0
+        }
+      },
+      "sites_4g_nbiot_relevant": {
+        "Orange": 29457,
+        "SFR": 24227,
+        "Bouygues Telecom": 25313,
+        "Free Mobile": 23939
+      },
+      "note": "Les sites 4G Arcep ne distinguent pas NB-IoT/LTE-M. Ils mesurent la densification RAN cellulaire sous-jacente."
+    },
+    {
+      "quarter": "2024_T1",
+      "file": "arcep_sites_2024_T1_Metropole.csv",
+      "total_rows": 111219,
+      "by_operator": {
+        "Orange": {
+          "sites": 30812,
+          "4g": 30717,
+          "5g": 9517,
+          "3g": 29955,
+          "2g": 18797
+        },
+        "SFR": {
+          "sites": 26801,
+          "4g": 26695,
+          "5g": 11495,
+          "3g": 26592,
+          "2g": 21941
+        },
+        "Bouygues Telecom": {
+          "sites": 27187,
+          "4g": 27109,
+          "5g": 12089,
+          "3g": 27181,
+          "2g": 21556
+        },
+        "Free Mobile": {
+          "sites": 26419,
+          "4g": 26354,
+          "5g": 19093,
+          "3g": 26415,
+          "2g": 0
+        }
+      },
+      "sites_4g_nbiot_relevant": {
+        "Orange": 30717,
+        "SFR": 26695,
+        "Bouygues Telecom": 27109,
+        "Free Mobile": 26354
+      },
+      "note": "Les sites 4G Arcep ne distinguent pas NB-IoT/LTE-M. Ils mesurent la densification RAN cellulaire sous-jacente."
+    },
+    {
+      "quarter": "2025_T1",
+      "file": "arcep_sites_2025_T1_Metropole.csv",
+      "total_rows": 118087,
+      "by_operator": {
+        "Orange": {
+          "sites": 31781,
+          "4g": 31718,
+          "5g": 12856,
+          "3g": 30595,
+          "2g": 18602
+        },
+        "SFR": {
+          "sites": 28750,
+          "4g": 28711,
+          "5g": 14376,
+          "3g": 28458,
+          "2g": 21903
+        },
+        "Bouygues Telecom": {
+          "sites": 29079,
+          "4g": 29045,
+          "5g": 15087,
+          "3g": 29022,
+          "2g": 20233
+        },
+        "Free Mobile": {
+          "sites": 28477,
+          "4g": 28445,
+          "5g": 20989,
+          "3g": 28445,
+          "2g": 0
+        }
+      },
+      "sites_4g_nbiot_relevant": {
+        "Orange": 31718,
+        "SFR": 28711,
+        "Bouygues Telecom": 29045,
+        "Free Mobile": 28445
+      },
+      "note": "Les sites 4G Arcep ne distinguent pas NB-IoT/LTE-M. Ils mesurent la densification RAN cellulaire sous-jacente."
+    },
+    {
+      "quarter": "2026_T1",
+      "file": "arcep_sites_2026_T1_Metropole.csv",
+      "total_rows": 124214,
+      "by_operator": {
+        "Orange": {
+          "sites": 32607,
+          "4g": 32576,
+          "5g": 16745,
+          "3g": 29735,
+          "2g": 15440
+        },
+        "SFR": {
+          "sites": 30408,
+          "4g": 30394,
+          "5g": 16438,
+          "3g": 29311,
+          "2g": 21973
+        },
+        "Bouygues Telecom": {
+          "sites": 30563,
+          "4g": 30546,
+          "5g": 17957,
+          "3g": 28830,
+          "2g": 19693
+        },
+        "Free Mobile": {
+          "sites": 30636,
+          "4g": 30614,
+          "5g": 22777,
+          "3g": 6763,
+          "2g": 0
+        }
+      },
+      "sites_4g_nbiot_relevant": {
+        "Orange": 32576,
+        "SFR": 30394,
+        "Bouygues Telecom": 30546,
+        "Free Mobile": 30614
+      },
+      "note": "Les sites 4G Arcep ne distinguent pas NB-IoT/LTE-M. Ils mesurent la densification RAN cellulaire sous-jacente."
+    }
+  ]
+}

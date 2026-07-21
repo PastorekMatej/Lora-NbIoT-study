@@ -1,0 +1,128 @@
+# Chronologie qualitative — LoRaWAN vs NB-IoT / LTE-M en France
+events:
+  - date: "2015-09"
+    technology: LoRaWAN
+    actor: Orange
+    event: "Annonce déploiement réseau national LoRa (pilote Grenoble)"
+    type: launch
+    sources: ["https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"]
+
+  - date: "2016-01"
+    technology: LoRaWAN
+    actor: Orange
+    event: "Ouverture progressive du réseau LoRa national (Live Objects)"
+    type: launch
+    sources: ["https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"]
+
+  - date: "2016"
+    technology: LoRaWAN
+    actor: Objenious / Bouygues Telecom
+    event: "Création Objenious — 1er réseau LoRaWAN opéré concurrent"
+    type: launch
+    sources: ["https://www.synox.io/ressources/tribunes-iot/nos-tribunes-jerome-fenwick-objenious/"]
+
+  - date: "2016-06"
+    technology: NB-IoT
+    actor: 3GPP
+    event: "Standardisation NB-IoT (Release 13)"
+    type: standard
+    sources: ["https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"]
+
+  - date: "2018-2020"
+    technology: LTE-M / NB-IoT
+    actor: Orange / SFR / Bouygues
+    event: "Déploiements progressifs LTE-M (Orange) et NB-IoT (SFR puis Bouygues)"
+    type: rollout
+    sources: ["https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"]
+
+  - date: "2022-01"
+    technology: IoT stock
+    actor: ADEME / Arcep
+    event: "244 millions d'objets connectés estimés en France"
+    type: market
+    sources: ["https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"]
+
+  - date: "2022-12"
+    technology: NB-IoT / LTE-M
+    actor: Bouygues Telecom / Objenious
+    event: "Couverture nationale >99% population LTE-M et NB-IoT"
+    type: coverage
+    sources: ["https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"]
+
+  - date: "2023"
+    technology: LPWAN market
+    actor: IoT Analytics
+    event: "1,3 Md connexions LPWAN mondiales ; hors Chine LoRa ~41% vs NB-IoT ~20%"
+    type: market
+    sources: ["https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"]
+
+  - date: "2024-06"
+    technology: LoRaWAN
+    actor: Objenious
+    event: "Annonce arrêt réseau LoRaWAN Objenious (bascule cellulaire IoT)"
+    type: shutdown
+    sources: ["https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"]
+
+  - date: "2024-12"
+    technology: LoRaWAN
+    actor: Objenious
+    event: "Fermeture effective du réseau LoRaWAN Bouygues/Objenious"
+    type: shutdown
+    sources: ["https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"]
+
+  - date: "2024"
+    technology: LoRaWAN
+    actor: Orange
+    event: "Engagement de continuité LoRaWAN a minima jusqu'au 31/12/2027"
+    type: commitment
+    sources: ["https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"]
+
+  - date: "2025-2026"
+    technology: 2G/3G sunset
+    actor: Opérateurs FR
+    event: "Arrêts 2G/3G planifiés → accélération migration IoT vers LTE-M / NB-IoT"
+    type: migration
+    sources: ["https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"]
+
+  - date: "2025-11"
+    technology: NB-IoT / LTE-M
+    actor: GSMA
+    event: "269 réseaux Mobile IoT mondiaux (140 NB-IoT, 129 LTE-M) — FR: Orange, SFR, Bouygues"
+    type: market
+    sources: ["https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"]
+
+qualitative_axes:
+  - id: spectrum
+    title: Spectre et modèle économique
+    lora: "Bande libre EU868 — CAPEX gateway / OPEX opérateur public ou privé"
+    nbiot: "Spectre licencié — s'appuie sur RAN 4G existant ; abonnement SIM opérateur"
+
+  - id: coverage_model
+    title: Modèle de couverture
+    lora: "Réseau dédié (Orange ~4800 GW) + communautaires + privés"
+    nbiot: "Densification via sites LTE (in-band) — couverture population déclarée ~99% SFR/Bouygues"
+
+  - id: indoor
+    title: Pénétration indoor / deep indoor
+    lora: "Bonne outdoor ; indoor variable — nano-gateways / privés souvent nécessaires"
+    nbiot: "MCL élevé (~164 dB) — avantage caves, compteurs, sous-sols"
+
+  - id: mobility_roaming
+    title: Mobilité et roaming
+    lora: "Roaming LoRaWAN Alliance / Packet Broker possible mais hétérogène"
+    nbiot: "Roaming cellulaire standardisé (accords opérateurs / MVNO IoT)"
+
+  - id: energy
+    title: Autonomie énergétique
+    lora: "Optimisé objets statiques très basse conso (avantage cité par Orange vs NB-IoT)"
+    nbiot: "PSM / eDRX ; autonomie élevée mais souvent inférieure LoRaWAN class A pour cas ultra-basse conso"
+
+  - id: ecosystem_risk
+    title: Risque écosystème France
+    lora: "Consolidation opérateur (Objenious off) ; Orange seul national public ; privés en hausse"
+    nbiot: "Dualité SFR + Bouygues ; aligné sunset 2G/3G et roadmap 3GPP (NB-IoT 2.0)"
+
+  - id: use_cases
+    title: Cas d'usage typiques FR
+    lora: "Smart metering eau (Birdz/Veolia), smart city, agri, monitoring statique"
+    nbiot: "Compteurs gaz/eau, tracking, alarmes, cas needing QoS opérateur / deep indoor"

@@ -1,0 +1,61 @@
+{
+  "source": "https://mapper.packetbroker.net/api/v2/gateways",
+  "fetched_at": "2026-07-21T08:39:15Z",
+  "global_total": 182278,
+  "france_metro_total": 2734,
+  "france_metro_online": 413,
+  "online_ratio": 0.1511,
+  "geo_filter": {
+    "method": "point_in_polygon",
+    "geojson": "france_regions.geojson",
+    "regions": 13,
+    "includes_corsica": true
+  },
+  "top_networks": [
+    {
+      "netID": "000013",
+      "tenantID": "ttn",
+      "count": 1686
+    },
+    {
+      "netID": "000013",
+      "tenantID": "ttnv2",
+      "count": 993
+    },
+    {
+      "netID": "000013",
+      "tenantID": "woodsense",
+      "count": 45
+    },
+    {
+      "netID": "000013",
+      "tenantID": "sgj",
+      "count": 3
+    },
+    {
+      "netID": "000013",
+      "tenantID": "datacake",
+      "count": 2
+    },
+    {
+      "netID": "000013",
+      "tenantID": "neon",
+      "count": 2
+    },
+    {
+      "netID": "000013",
+      "tenantID": "digital-domo",
+      "count": 1
+    },
+    {
+      "netID": "000013",
+      "tenantID": "digital-twin-ttc",
+      "count": 1
+    },
+    {
+      "netID": "000013",
+      "tenantID": "sgj-2",
+      "count": 1
+    }
+  ]
+}

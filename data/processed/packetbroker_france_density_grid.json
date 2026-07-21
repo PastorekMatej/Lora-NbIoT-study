@@ -1,0 +1,186 @@
+{
+  "features": 2734,
+  "top_cells": [
+    {
+      "lat": 49.0,
+      "lon": 2.5,
+      "total": 246,
+      "online": 36
+    },
+    {
+      "lat": 49.0,
+      "lon": 2.0,
+      "total": 96,
+      "online": 9
+    },
+    {
+      "lat": 43.5,
+      "lon": 1.5,
+      "total": 80,
+      "online": 8
+    },
+    {
+      "lat": 43.5,
+      "lon": 5.5,
+      "total": 71,
+      "online": 13
+    },
+    {
+      "lat": 48.0,
+      "lon": -1.5,
+      "total": 69,
+      "online": 1
+    },
+    {
+      "lat": 46.0,
+      "lon": 5.0,
+      "total": 69,
+      "online": 9
+    },
+    {
+      "lat": 45.0,
+      "lon": 5.5,
+      "total": 63,
+      "online": 7
+    },
+    {
+      "lat": 43.5,
+      "lon": 4.0,
+      "total": 57,
+      "online": 18
+    },
+    {
+      "lat": 42.5,
+      "lon": 3.0,
+      "total": 55,
+      "online": 7
+    },
+    {
+      "lat": 45.0,
+      "lon": 6.0,
+      "total": 51,
+      "online": 7
+    },
+    {
+      "lat": 46.0,
+      "lon": 3.0,
+      "total": 49,
+      "online": 4
+    },
+    {
+      "lat": 50.5,
+      "lon": 3.0,
+      "total": 48,
+      "online": 6
+    },
+    {
+      "lat": 46.0,
+      "lon": 6.0,
+      "total": 43,
+      "online": 8
+    },
+    {
+      "lat": 45.0,
+      "lon": -0.5,
+      "total": 43,
+      "online": 5
+    },
+    {
+      "lat": 45.5,
+      "lon": 4.5,
+      "total": 40,
+      "online": 5
+    },
+    {
+      "lat": 43.5,
+      "lon": -0.5,
+      "total": 40,
+      "online": 11
+    },
+    {
+      "lat": 47.5,
+      "lon": -0.5,
+      "total": 39,
+      "online": 5
+    },
+    {
+      "lat": 48.5,
+      "lon": 2.0,
+      "total": 38,
+      "online": 10
+    },
+    {
+      "lat": 45.5,
+      "lon": 6.0,
+      "total": 37,
+      "online": 6
+    },
+    {
+      "lat": 45.5,
+      "lon": 5.0,
+      "total": 35,
+      "online": 3
+    },
+    {
+      "lat": 47.0,
+      "lon": -1.5,
+      "total": 35,
+      "online": 6
+    },
+    {
+      "lat": 48.5,
+      "lon": 2.5,
+      "total": 33,
+      "online": 4
+    },
+    {
+      "lat": 48.5,
+      "lon": -4.5,
+      "total": 32,
+      "online": 3
+    },
+    {
+      "lat": 43.5,
+      "lon": 7.0,
+      "total": 29,
+      "online": 6
+    },
+    {
+      "lat": 46.5,
+      "lon": 0.5,
+      "total": 28,
+      "online": 1
+    },
+    {
+      "lat": 44.0,
+      "lon": 5.0,
+      "total": 28,
+      "online": 3
+    },
+    {
+      "lat": 47.5,
+      "lon": 0.5,
+      "total": 25,
+      "online": 4
+    },
+    {
+      "lat": 43.0,
+      "lon": 6.0,
+      "total": 23,
+      "online": 1
+    },
+    {
+      "lat": 49.5,
+      "lon": 1.0,
+      "total": 22,
+      "online": 3
+    },
+    {
+      "lat": 49.0,
+      "lon": -0.5,
+      "total": 21,
+      "online": 4
+    }
+  ],
+  "grid_step_deg": 0.5
+}

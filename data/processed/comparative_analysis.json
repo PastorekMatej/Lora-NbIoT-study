@@ -1,0 +1,461 @@
+{
+  "kpis": [
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Orange (réseau opéré)",
+      "indicateur": "Antennes / gateways",
+      "valeur": 4800,
+      "unite": "antennes",
+      "type": "déclaratif",
+      "source": "Orange Business"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Orange (réseau opéré)",
+      "indicateur": "Couverture population",
+      "valeur": 95,
+      "unite": "%",
+      "type": "déclaratif",
+      "source": "Orange Business"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Orange (réseau opéré)",
+      "indicateur": "Communes couvertes",
+      "valeur": 30000,
+      "unite": "communes",
+      "type": "déclaratif",
+      "source": "Orange Business"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Communautaire (Packet Broker)",
+      "indicateur": "Gateways géolocalisés FR métropole",
+      "valeur": 2734,
+      "unite": "gateways",
+      "type": "mesuré_api",
+      "source": "https://mapper.packetbroker.net/api/v2/gateways"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Communautaire (Packet Broker)",
+      "indicateur": "Gateways online",
+      "valeur": 413,
+      "unite": "gateways",
+      "type": "mesuré_api",
+      "source": "https://mapper.packetbroker.net/api/v2/gateways"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Helium IoT",
+      "indicateur": "Hotspots estimés FR (échantillon)",
+      "valeur": 11869,
+      "unite": "hotspots",
+      "type": "estimé_api",
+      "source": "https://entities.nft.helium.io/v2/hotspots"
+    },
+    {
+      "technologie": "LoRaWAN",
+      "acteur": "Objenious / Bouygues",
+      "indicateur": "Statut réseau",
+      "valeur": "shutdown",
+      "unite": "",
+      "type": "fait",
+      "source": "Objenious (arrêt 2024)"
+    },
+    {
+      "technologie": "NB-IoT",
+      "acteur": "SFR",
+      "indicateur": "Couverture population déclarée",
+      "valeur": 99,
+      "unite": "%",
+      "type": "déclaratif",
+      "source": "Opérateur / presse IoT"
+    },
+    {
+      "technologie": "NB-IoT",
+      "acteur": "Bouygues / Objenious",
+      "indicateur": "Couverture population déclarée",
+      "valeur": 99,
+      "unite": "%",
+      "type": "déclaratif",
+      "source": "Opérateur / presse IoT"
+    },
+    {
+      "technologie": "NB-IoT",
+      "acteur": "Orange",
+      "indicateur": "Positionnement FR",
+      "valeur": "not_positioned_fr",
+      "unite": "",
+      "type": "qualitatif",
+      "source": "Orange Business (JDN)"
+    },
+    {
+      "technologie": "Cellulaire (proxy NB-IoT/LTE-M)",
+      "acteur": "Orange",
+      "indicateur": "Sites 4G Arcep (2026_T1)",
+      "valeur": 32576,
+      "unite": "sites",
+      "type": "mesuré_open_data",
+      "source": "Arcep Mon Réseau Mobile"
+    },
+    {
+      "technologie": "Cellulaire (proxy NB-IoT/LTE-M)",
+      "acteur": "SFR",
+      "indicateur": "Sites 4G Arcep (2026_T1)",
+      "valeur": 30394,
+      "unite": "sites",
+      "type": "mesuré_open_data",
+      "source": "Arcep Mon Réseau Mobile"
+    },
+    {
+      "technologie": "Cellulaire (proxy NB-IoT/LTE-M)",
+      "acteur": "Bouygues Telecom",
+      "indicateur": "Sites 4G Arcep (2026_T1)",
+      "valeur": 30546,
+      "unite": "sites",
+      "type": "mesuré_open_data",
+      "source": "Arcep Mon Réseau Mobile"
+    },
+    {
+      "technologie": "Cellulaire (proxy NB-IoT/LTE-M)",
+      "acteur": "Free Mobile",
+      "indicateur": "Sites 4G Arcep (2026_T1)",
+      "valeur": 30614,
+      "unite": "sites",
+      "type": "mesuré_open_data",
+      "source": "Arcep Mon Réseau Mobile"
+    },
+    {
+      "technologie": "LPWAN mondial",
+      "acteur": "IoT Analytics",
+      "indicateur": "Connexions LPWAN 2023",
+      "valeur": 1.3,
+      "unite": "milliards",
+      "type": "marché",
+      "source": "IoT Analytics 2024"
+    },
+    {
+      "technologie": "LoRa (ex-Chine)",
+      "acteur": "IoT Analytics",
+      "indicateur": "Part connexions LPWAN",
+      "valeur": 41,
+      "unite": "%",
+      "type": "marché",
+      "source": "IoT Analytics 2024"
+    },
+    {
+      "technologie": "NB-IoT (ex-Chine)",
+      "acteur": "IoT Analytics",
+      "indicateur": "Part connexions LPWAN",
+      "valeur": 20,
+      "unite": "%",
+      "type": "marché",
+      "source": "IoT Analytics 2024"
+    }
+  ],
+  "arcep_4g_trend": [
+    {
+      "quarter": "2023_T1",
+      "operator": "Orange",
+      "sites_total": 29651,
+      "sites_4g": 29457,
+      "sites_5g": 6267
+    },
+    {
+      "quarter": "2023_T1",
+      "operator": "SFR",
+      "sites_total": 24498,
+      "sites_4g": 24227,
+      "sites_5g": 8936
+    },
+    {
+      "quarter": "2023_T1",
+      "operator": "Bouygues Telecom",
+      "sites_total": 25623,
+      "sites_4g": 25313,
+      "sites_5g": 9942
+    },
+    {
+      "quarter": "2023_T1",
+      "operator": "Free Mobile",
+      "sites_total": 24045,
+      "sites_4g": 23939,
+      "sites_5g": 16644
+    },
+    {
+      "quarter": "2024_T1",
+      "operator": "Orange",
+      "sites_total": 30812,
+      "sites_4g": 30717,
+      "sites_5g": 9517
+    },
+    {
+      "quarter": "2024_T1",
+      "operator": "SFR",
+      "sites_total": 26801,
+      "sites_4g": 26695,
+      "sites_5g": 11495
+    },
+    {
+      "quarter": "2024_T1",
+      "operator": "Bouygues Telecom",
+      "sites_total": 27187,
+      "sites_4g": 27109,
+      "sites_5g": 12089
+    },
+    {
+      "quarter": "2024_T1",
+      "operator": "Free Mobile",
+      "sites_total": 26419,
+      "sites_4g": 26354,
+      "sites_5g": 19093
+    },
+    {
+      "quarter": "2025_T1",
+      "operator": "Orange",
+      "sites_total": 31781,
+      "sites_4g": 31718,
+      "sites_5g": 12856
+    },
+    {
+      "quarter": "2025_T1",
+      "operator": "SFR",
+      "sites_total": 28750,
+      "sites_4g": 28711,
+      "sites_5g": 14376
+    },
+    {
+      "quarter": "2025_T1",
+      "operator": "Bouygues Telecom",
+      "sites_total": 29079,
+      "sites_4g": 29045,
+      "sites_5g": 15087
+    },
+    {
+      "quarter": "2025_T1",
+      "operator": "Free Mobile",
+      "sites_total": 28477,
+      "sites_4g": 28445,
+      "sites_5g": 20989
+    },
+    {
+      "quarter": "2026_T1",
+      "operator": "Orange",
+      "sites_total": 32607,
+      "sites_4g": 32576,
+      "sites_5g": 16745
+    },
+    {
+      "quarter": "2026_T1",
+      "operator": "SFR",
+      "sites_total": 30408,
+      "sites_4g": 30394,
+      "sites_5g": 16438
+    },
+    {
+      "quarter": "2026_T1",
+      "operator": "Bouygues Telecom",
+      "sites_total": 30563,
+      "sites_4g": 30546,
+      "sites_5g": 17957
+    },
+    {
+      "quarter": "2026_T1",
+      "operator": "Free Mobile",
+      "sites_total": 30636,
+      "sites_4g": 30614,
+      "sites_5g": 22777
+    }
+  ],
+  "deployment_models": {
+    "lora_public_national_operators": 1,
+    "nbiot_national_operators": 2,
+    "lora_orange_antennas": 4800,
+    "lora_orange_pop_pct": 95,
+    "nbiot_sfr_pop_pct": 99,
+    "nbiot_bouygues_pop_pct": 99,
+    "structural_shift": "Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un monopole public Orange, tandis que NB-IoT/LTE-M se déploie en multi-opérateurs cellulaires (SFR, Bouygues ; Orange sur LTE-M)."
+  },
+  "timeline_events": [
+    {
+      "date": "2015-09",
+      "technology": "LoRaWAN",
+      "actor": "Orange",
+      "event": "Annonce déploiement réseau national LoRa (pilote Grenoble)",
+      "type": "launch",
+      "sources": [
+        "https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"
+      ]
+    },
+    {
+      "date": "2016-01",
+      "technology": "LoRaWAN",
+      "actor": "Orange",
+      "event": "Ouverture progressive du réseau LoRa national (Live Objects)",
+      "type": "launch",
+      "sources": [
+        "https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"
+      ]
+    },
+    {
+      "date": "2016",
+      "technology": "LoRaWAN",
+      "actor": "Objenious / Bouygues Telecom",
+      "event": "Création Objenious — 1er réseau LoRaWAN opéré concurrent",
+      "type": "launch",
+      "sources": [
+        "https://www.synox.io/ressources/tribunes-iot/nos-tribunes-jerome-fenwick-objenious/"
+      ]
+    },
+    {
+      "date": "2016-06",
+      "technology": "NB-IoT",
+      "actor": "3GPP",
+      "event": "Standardisation NB-IoT (Release 13)",
+      "type": "standard",
+      "sources": [
+        "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
+      ]
+    },
+    {
+      "date": "2018-2020",
+      "technology": "LTE-M / NB-IoT",
+      "actor": "Orange / SFR / Bouygues",
+      "event": "Déploiements progressifs LTE-M (Orange) et NB-IoT (SFR puis Bouygues)",
+      "type": "rollout",
+      "sources": [
+        "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"
+      ]
+    },
+    {
+      "date": "2022-01",
+      "technology": "IoT stock",
+      "actor": "ADEME / Arcep",
+      "event": "244 millions d'objets connectés estimés en France",
+      "type": "market",
+      "sources": [
+        "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+      ]
+    },
+    {
+      "date": "2022-12",
+      "technology": "NB-IoT / LTE-M",
+      "actor": "Bouygues Telecom / Objenious",
+      "event": "Couverture nationale >99% population LTE-M et NB-IoT",
+      "type": "coverage",
+      "sources": [
+        "https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"
+      ]
+    },
+    {
+      "date": "2023",
+      "technology": "LPWAN market",
+      "actor": "IoT Analytics",
+      "event": "1,3 Md connexions LPWAN mondiales ; hors Chine LoRa ~41% vs NB-IoT ~20%",
+      "type": "market",
+      "sources": [
+        "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
+      ]
+    },
+    {
+      "date": "2024-06",
+      "technology": "LoRaWAN",
+      "actor": "Objenious",
+      "event": "Annonce arrêt réseau LoRaWAN Objenious (bascule cellulaire IoT)",
+      "type": "shutdown",
+      "sources": [
+        "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+      ]
+    },
+    {
+      "date": "2024-12",
+      "technology": "LoRaWAN",
+      "actor": "Objenious",
+      "event": "Fermeture effective du réseau LoRaWAN Bouygues/Objenious",
+      "type": "shutdown",
+      "sources": [
+        "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+      ]
+    },
+    {
+      "date": "2024",
+      "technology": "LoRaWAN",
+      "actor": "Orange",
+      "event": "Engagement de continuité LoRaWAN a minima jusqu'au 31/12/2027",
+      "type": "commitment",
+      "sources": [
+        "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+      ]
+    },
+    {
+      "date": "2025-2026",
+      "technology": "2G/3G sunset",
+      "actor": "Opérateurs FR",
+      "event": "Arrêts 2G/3G planifiés → accélération migration IoT vers LTE-M / NB-IoT",
+      "type": "migration",
+      "sources": [
+        "https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"
+      ]
+    },
+    {
+      "date": "2025-11",
+      "technology": "NB-IoT / LTE-M",
+      "actor": "GSMA",
+      "event": "269 réseaux Mobile IoT mondiaux (140 NB-IoT, 129 LTE-M) — FR: Orange, SFR, Bouygues",
+      "type": "market",
+      "sources": [
+        "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"
+      ]
+    }
+  ],
+  "qualitative_axes": [
+    {
+      "id": "spectrum",
+      "title": "Spectre et modèle économique",
+      "lora": "Bande libre EU868 — CAPEX gateway / OPEX opérateur public ou privé",
+      "nbiot": "Spectre licencié — s'appuie sur RAN 4G existant ; abonnement SIM opérateur"
+    },
+    {
+      "id": "coverage_model",
+      "title": "Modèle de couverture",
+      "lora": "Réseau dédié (Orange ~4800 GW) + communautaires + privés",
+      "nbiot": "Densification via sites LTE (in-band) — couverture population déclarée ~99% SFR/Bouygues"
+    },
+    {
+      "id": "indoor",
+      "title": "Pénétration indoor / deep indoor",
+      "lora": "Bonne outdoor ; indoor variable — nano-gateways / privés souvent nécessaires",
+      "nbiot": "MCL élevé (~164 dB) — avantage caves, compteurs, sous-sols"
+    },
+    {
+      "id": "mobility_roaming",
+      "title": "Mobilité et roaming",
+      "lora": "Roaming LoRaWAN Alliance / Packet Broker possible mais hétérogène",
+      "nbiot": "Roaming cellulaire standardisé (accords opérateurs / MVNO IoT)"
+    },
+    {
+      "id": "energy",
+      "title": "Autonomie énergétique",
+      "lora": "Optimisé objets statiques très basse conso (avantage cité par Orange vs NB-IoT)",
+      "nbiot": "PSM / eDRX ; autonomie élevée mais souvent inférieure LoRaWAN class A pour cas ultra-basse conso"
+    },
+    {
+      "id": "ecosystem_risk",
+      "title": "Risque écosystème France",
+      "lora": "Consolidation opérateur (Objenious off) ; Orange seul national public ; privés en hausse",
+      "nbiot": "Dualité SFR + Bouygues ; aligné sunset 2G/3G et roadmap 3GPP (NB-IoT 2.0)"
+    },
+    {
+      "id": "use_cases",
+      "title": "Cas d'usage typiques FR",
+      "lora": "Smart metering eau (Birdz/Veolia), smart city, agri, monitoring statique",
+      "nbiot": "Compteurs gaz/eau, tracking, alarmes, cas needing QoS opérateur / deep indoor"
+    }
+  ],
+  "inputs": {
+    "packetbroker": true,
+    "helium": true,
+    "arcep": true
+  }
+}
