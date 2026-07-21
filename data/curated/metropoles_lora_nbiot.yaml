@@ -1,0 +1,183 @@
+# Focus grandes métropoles — projets métier LoRa / NB-IoT (France)
+# Périmètre : métropoles / eurométropoles (+ Grenoble ville-pilote historique).
+# Hors scope : départements, petites agglo, syndicats ruraux (Berry, Sarthe, Ribemont…).
+
+meta:
+  last_review: "2026-07-21"
+  method_note: |
+    Ne confondre pas couverture radio Orange/Objenious dans une métropole
+    (éligibilité) et projet métier documenté. Objets = chiffre publié ;
+    « — » = projet réel sans volume public.
+
+metropoles_reference:
+  # 22 métropoles + focus explicite Grand Paris / Aix-Marseille
+  - Paris / Métropole du Grand Paris
+  - Métropole d'Aix-Marseille-Provence
+  - Métropole de Lyon
+  - Toulouse Métropole
+  - Bordeaux Métropole
+  - Lille Métropole (MEL)
+  - Nantes Métropole
+  - Nice Côte d'Azur
+  - Eurométropole de Strasbourg
+  - Rennes Métropole
+  - Montpellier Méditerranée Métropole
+  - Grenoble-Alpes Métropole
+  - Rouen Normandie
+  - Toulon Provence Méditerranée
+  - Saint-Étienne Métropole
+  - Dijon Métropole
+  - Metz Métropole
+  - Clermont Auvergne Métropole
+  - Tours Métropole
+  - Orléans Métropole
+  - Brest Métropole
+  - Nancy
+
+projets:
+  - metropole: Montpellier Méditerranée Métropole
+    tech: LoRa
+    year_start: 2016
+    year_objets: 2026
+    objets: 50000
+    objets_detail: "~45 000 télérelève eau ; reste déchets/hydrologie/air/écoles"
+    use_cases: [teleleve_eau, dechets, hydrologie, air]
+    network: prive
+    confidence: high
+    status: confirme
+    sources:
+      - "https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes"
+
+  - metropole: Bordeaux Métropole
+    tech: LoRa
+    year_start: 2018
+    year_objets: 2019
+    objets: 500
+    objets_detail: "Pilote quartier Matmut Atlantique puis extension (~500 capteurs)"
+    use_cases: [eclairage, dechets, bornes_ve, batiments]
+    network: prive
+    confidence: high
+    status: confirme
+    sources:
+      - "https://www.smartcitymag.fr/article/410/500-capteurs-au-quartier-matmut-atlantique"
+      - "https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/"
+
+  - metropole: Dijon Métropole
+    tech: LoRa
+    year_start: 2019
+    year_objets: 2019
+    objets: 450
+    objets_detail: "Capteurs stationnement Os300 (Onesitu/Synox)"
+    use_cases: [stationnement]
+    network: public_ou_integre
+    confidence: high
+    status: confirme
+    sources:
+      - "https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/"
+
+  - metropole: Rennes Métropole
+    tech: LoRa
+    year_start: 2019
+    year_objets: null
+    objets: null
+    objets_detail: "Réseau privé Wi6labs (43 communes) ; volume objets non publié"
+    use_cases: [dechets, smart_city]
+    network: prive
+    confidence: high
+    status: confirme_sans_volume
+    sources:
+      - "https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/"
+
+  - metropole: Eurométropole de Strasbourg
+    tech: LoRa
+    year_start: 2016
+    year_objets: null
+    objets: null
+    objets_detail: "Réseau expérimental/production (Inetlab) ; volume non publié"
+    use_cases: [mobilite, environnement, patrimoine]
+    network: prive_experimental
+    confidence: high
+    status: confirme_sans_volume
+    sources:
+      - "https://hal.science/hal-04807013v1/document"
+
+  - metropole: Toulouse Métropole
+    tech: LoRa
+    year_start: 2017
+    year_objets: null
+    objets: null
+    objets_detail: "POC Birdz/Veolia télérelève eau sur Orange LoRaWAN ; volume local non isolé"
+    use_cases: [teleleve_eau]
+    network: orange_public
+    confidence: high
+    status: confirme_sans_volume
+    sources:
+      - "https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/"
+
+  - metropole: Grenoble-Alpes Métropole / Grenoble
+    tech: LoRa
+    year_start: 2015
+    year_objets: null
+    objets: null
+    objets_detail: "Pilote national Orange LoRa (mai 2015) ; volume objets non publié"
+    use_cases: [pilote_reseau, smart_city]
+    network: orange_public
+    confidence: high
+    status: confirme_sans_volume
+    sources:
+      - "https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"
+
+  - metropole: Paris / Île-de-France (syndicats — proxy Grand Paris)
+    tech: LoRa
+    year_start: 2018
+    year_objets: null
+    objets: null
+    objets_detail: "Réseau privé régional Val d'Oise/Essonne/77 ; cible ~3000 GW début 2027 ; objets usages non chiffrés. Issy = démonstrateur."
+    use_cases: [smart_city, infrastructure_regionale]
+    network: prive_mutualise
+    confidence: medium
+    status: infra_en_cours
+    sources:
+      - "https://www.journaldunet.com/iot/1529749-decouvrez-comment-se-deploie-l-un-des-plus-grands-reseaux-smart-city-lorawan-d-europe/"
+
+  - metropole: Métropole de Lyon
+    tech: NB-IoT
+    year_start: 2024
+    year_objets: 2024
+    objets: 50
+    objets_detail: "Valises Mobil'Eau pro migrées 2G→NB-IoT (dizaines — ordre de grandeur ~50). Dataloggers réseau = 4G (~300), PAS NB-IoT."
+    use_cases: [comptage_eau_mobile, detection_fuites]
+    network: cellulaire
+    confidence: medium
+    status: partiel_confirme
+    note: |
+      SERFIM 2024 / Expressions Vénissieux : NB-IoT confirmé pour Mobil'Eau (dizaines).
+      Les ~300 dataloggers remplacés sont en 4G. L'annonce EIN 2023 (6000 Gutermann NB-IoT)
+      reste non confirmée → non comptée ici.
+    sources:
+      - "https://www.revue-ein.com/actualite/la-metropole-de-lyon-choisit-serfim-t-i-c-pour-la-modernisation-de-son-reseau-de-distribution-d-eau-potable"
+      - "https://www.expressions-venissieux.fr/2024-06-27-ces-capteurs-venissians-traquent-les-fuites-deau-dans-la-metropole/"
+
+metropoles_sans_projet_metier_documente:
+  note: |
+    Présentes dans l'ouverture Orange 2016 (couverture) mais sans projet métier
+    métropolitain chiffré trouvé dans nos sources.
+  list:
+    - Métropole d'Aix-Marseille-Provence
+    - Lille Métropole (MEL)
+    - Nantes Métropole
+    - Nice Côte d'Azur
+    - Rouen Normandie
+    - Toulon Provence Méditerranée
+    - Saint-Étienne Métropole
+    - Metz / Nancy / Clermont / Tours / Orléans / Brest
+
+tendances_metropoles:
+  resume:
+    - "2015–2017 : amorçage LoRa dans quelques métropoles (Grenoble, Montpellier, Strasbourg, Toulouse)"
+    - "2018–2019 : projets métier LoRa (Bordeaux, Rennes, Dijon) ; volumes encore modestes hors Montpellier"
+    - "2020–2023 : peu de nouveaux projets métier métropolitains documentés ; densification Montpellier"
+    - "2024–2026 : Lyon bascule partiellement NB-IoT (Mobil'Eau) ; Montpellier atteint 50k LoRa ; Grand Paris/IDF en déploiement infra"
+  ecart_lora_nbiot: |
+    Sur les grandes métropoles, LoRa domine clairement les projets métier documentés.
+    NB-IoT n'apparaît de façon crédible qu'à Lyon (volume faible / partiel).
