@@ -1,587 +1,742 @@
-# Inventaire documenté — usagers LoRa / LoRaWAN en France (communes, villes, sociétés)
-# Depuis 2015. Inventaire NON exhaustif : presse + CP opérateurs + REX territoires.
-# Distinguer « couvert » (éligibilité radio ~30k communes) et « utilise » (projet documenté).
-
 meta:
-  last_review: "2026-07-21"
+  last_review: '2026-07-21'
   scope: france_metropolitaine
-  method_note: |
-    Pas de registre national Arcep des projets LoRaWAN. Cet inventaire compile
-    des collectivités et sociétés nommément citées dans des sources publiques.
-    La couverture Orange/Objenious (~30 000 communes) ≠ 30 000 projets smart city.
-
+  method_note: Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventaire nominatif
+    sourcé (flux/cumul calculés) ; (B) marqueurs opérateurs/alliance. Séparer couverture radio (~30 000
+    communes) et projets métier documentés. Le claim « 500 collectivités (2021) » est un marqueur secondaire
+    à faible confiance.
 collectivites:
-  - name: Grenoble
-    type: ville
-    year_start: 2015
-    use_cases: [pilote_reseau, smart_city]
-    network: orange_public
-    note: "Pilote Orange LoRa (mai 2015), >30 partenaires"
-    confidence: high
-    sources:
-      - "https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"
-
-  - name: Paris
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    note: "Parmi les 17 zones d'ouverture Orange T1 2016"
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Lyon
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Marseille
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Toulouse
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur, teleleve_eau]
-    network: orange_public
-    note: "POC Birdz/Veolia télérelève eau LoRaWAN Orange (~2017-2018)"
-    confidence: high
-    sources:
-      - "https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/"
-      - "https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans"
-
-  - name: Bordeaux
-    type: metropole
-    year_start: 2016
-    use_cases: [couverture_operateur, eclairage, dechets, bornes_ve, batiments]
-    network: mixte
-    note: "Ouverture Orange 2016 ; réseau privé métropole ~500 capteurs (2018-2019, Kerlink/SPIE/Pilot Things)"
-    confidence: high
-    sources:
-      - "https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme"
-      - "https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/"
-
-  - name: Nantes
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Lille
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Nice
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Rennes
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: high
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Strasbourg
-    type: eurometropole
-    year_start: 2016
-    use_cases: [mobilite, environnement, patrimoine, recherche]
-    network: prive_experimental
-    note: "Réseau LoRaWAN expérimental puis production (Univ. Strasbourg / Inetlab)"
-    confidence: high
-    sources:
-      - "https://hal.science/hal-04807013v1/document"
-
-  - name: Montpellier Méditerranée Métropole
-    type: metropole
-    year_start: 2016
-    use_cases: [teleleve_eau, dechets, hydrologie, air, ilots_fraicheur]
-    network: prive
-    objets_approx: 50000
-    note: "Réseau privé ChirpStack ; ~45k compteurs eau ; 50k objets en 2026 ; objectif 85k compteurs 2027"
-    confidence: high
-    sources:
-      - "https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes"
-
-  - name: Angers
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: medium
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Avignon
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: medium
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Rouen
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: medium
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Toulon
-    type: ville
-    year_start: 2016
-    use_cases: [couverture_operateur]
-    network: orange_public
-    confidence: medium
-    sources:
-      - "https://totaltele.com/orange-details-iot-rollout-plan/"
-
-  - name: Dijon Métropole
-    type: metropole
-    year_start: 2019
-    use_cases: [stationnement]
-    network: public_ou_integre
-    objets_approx: 450
-    note: "~450 capteurs Os300 LoRa (Onesitu/Synox) — parking OnDijon"
-    confidence: high
-    sources:
-      - "https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/"
-
-  - name: Département de l'Isère
-    type: departement
-    year_start: 2020
-    use_cases: [batiments, teleleve_eau, dechets, eclairage]
-    network: prive_departemental
-    note: "Réseau LoRaWAN départemental ~80% territoire ; TE38 ~400 communes"
-    confidence: high
-    sources:
-      - "https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora"
-
-  - name: Istres
-    type: ville
-    year_start: 2022
-    use_cases: [eclairage, qualite_air, ecoles]
-    network: prive
-    confidence: medium
-    sources:
-      - "https://numerique360.banquedesterritoires.fr/attractivite-amenagement/retours-experiences/une-ville-saine-et-tranquille-grace-a-ses-multiples-services-numeriques-a-istres-13/"
-
-  - name: Communauté de communes Pays du Mont-Blanc
-    type: intercommunalite
-    year_start: 2021
-    use_cases: [dechets]
-    network: mixte
-    objets_approx: 1500
-    note: "Sondes Heyliot (LoRaWAN / multi-réseau)"
-    confidence: high
-    sources:
-      - "https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/"
-
-  - name: Pays de Montbéliard Agglomération
-    type: agglomeration
-    year_start: 2022
-    use_cases: [dechets]
-    network: mixte
-    objets_approx: 1445
-    note: "Capteurs Heyliot PAV + espace public"
-    confidence: medium
-    sources:
-      - "https://makeamove.fr/le-digital-au-service-du-ramassage-des-dechets/"
-
-  - name: Indre (36) + Cher (18) — Berry Territoire Innovant
-    type: departements
-    year_start: 2024
-    use_cases: [teleleve_eau, batiments, frequentation]
-    network: prive_mutualise
-    note: "Réseau LoRaWAN mutualisé Ubicité ; cibles ~700 GW / 100k capteurs"
-    confidence: high
-    sources:
-      - "https://www.lanouvellerepublique.fr/indre/un-partenariat-unique-en-france-entre-l-indre-et-le-cher-pour-investir-dans-des-objets-connectes"
-      - "https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/"
-
-  - name: Département de la Somme
-    type: departement
-    year_start: 2024
-    use_cases: [eclairage, dechets, batiments, hydrologie]
-    network: prive_departemental
-    note: "PoC multi-usages puis hyperviseur IoT (validation 2025)"
-    confidence: medium
-    sources:
-      - "https://numerique360.banquedesterritoires.fr/transition-ecologique-energetique/retours-experiences/un-hyperviseur-pour-federer-les-donnees-iot-du-departement-de-la-somme-80/"
-
-  - name: Communauté d'agglomération du Niortais
-    type: agglomeration
-    year_start: 2022
-    use_cases: [dechets]
-    network: mixte
-    objets_approx: 720
-    note: "Heyliot"
-    confidence: medium
-    sources:
-      - "https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/"
-
-  - name: Saint-Malo Agglomération
-    type: agglomeration
-    year_start: 2022
-    use_cases: [dechets]
-    network: mixte
-    objets_approx: 457
-    confidence: medium
-    sources:
-      - "https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/"
-
-  - name: Communauté d'agglomération de Lens-Liévin
-    type: agglomeration
-    year_start: 2022
-    use_cases: [dechets]
-    network: mixte
-    objets_approx: 300
-    confidence: medium
-    sources:
-      - "https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/"
-
+- name: Grenoble
+  type: ville
+  year_start: 2015
+  use_cases:
+  - pilote_reseau
+  - smart_city
+  network: orange_public
+  note: Pilote Orange LoRa (mai 2015), >30 partenaires
+  confidence: high
+  sources:
+  - https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets
+  usage_level: projet_metier
+- name: Paris
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  note: Parmi les 17 zones d'ouverture Orange T1 2016
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Lyon
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Marseille
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Toulouse
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  - teleleve_eau
+  network: orange_public
+  note: POC Birdz/Veolia télérelève eau LoRaWAN Orange (~2017-2018)
+  confidence: high
+  sources:
+  - https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/
+  - https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans
+  usage_level: projet_metier
+- name: Bordeaux
+  type: metropole
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  - eclairage
+  - dechets
+  - bornes_ve
+  - batiments
+  network: mixte
+  note: Ouverture Orange 2016 ; réseau privé métropole ~500 capteurs (2018-2019, Kerlink/SPIE/Pilot Things)
+  confidence: high
+  sources:
+  - https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme
+  - https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/
+  usage_level: projet_metier
+- name: Nantes
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Lille
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Nice
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Rennes Métropole
+  type: metropole
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  - dechets
+  - smart_city
+  network: mixte
+  confidence: high
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  - https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/
+  year_projet_prive: 2019
+  note: Ouverture Orange 2016 ; réseau privé Wi6labs industrialisé fin 2018–2019 (43 communes)
+  usage_level: projet_metier
+- name: Strasbourg
+  type: eurometropole
+  year_start: 2016
+  use_cases:
+  - mobilite
+  - environnement
+  - patrimoine
+  - recherche
+  network: prive_experimental
+  note: Réseau LoRaWAN expérimental puis production (Univ. Strasbourg / Inetlab)
+  confidence: high
+  sources:
+  - https://hal.science/hal-04807013v1/document
+  usage_level: projet_metier
+- name: Montpellier Méditerranée Métropole
+  type: metropole
+  year_start: 2016
+  use_cases:
+  - teleleve_eau
+  - dechets
+  - hydrologie
+  - air
+  - ilots_fraicheur
+  network: prive
+  objets_approx: 50000
+  note: Réseau privé ChirpStack ; ~45k compteurs eau ; 50k objets en 2026 ; objectif 85k compteurs 2027
+  confidence: high
+  sources:
+  - https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes
+  usage_level: projet_metier
+  objets_year: 2026
+- name: Angers
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: medium
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Avignon
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: medium
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Rouen
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: medium
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Toulon
+  type: ville
+  year_start: 2016
+  use_cases:
+  - couverture_operateur
+  network: orange_public
+  confidence: medium
+  sources:
+  - https://totaltele.com/orange-details-iot-rollout-plan/
+  usage_level: couverture_operateur
+- name: Dijon Métropole
+  type: metropole
+  year_start: 2019
+  use_cases:
+  - stationnement
+  network: public_ou_integre
+  objets_approx: 450
+  note: ~450 capteurs Os300 LoRa (Onesitu/Synox) — parking OnDijon
+  confidence: high
+  sources:
+  - https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/
+  usage_level: projet_metier
+- name: Département de l'Isère
+  type: departement
+  year_start: 2020
+  use_cases:
+  - batiments
+  - teleleve_eau
+  - dechets
+  - eclairage
+  network: prive_departemental
+  note: Réseau LoRaWAN départemental ~80% territoire ; TE38 ~400 communes
+  confidence: high
+  sources:
+  - https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora
+  usage_level: projet_metier
+- name: Istres
+  type: ville
+  year_start: 2022
+  use_cases:
+  - eclairage
+  - qualite_air
+  - ecoles
+  network: prive
+  confidence: medium
+  sources:
+  - https://numerique360.banquedesterritoires.fr/attractivite-amenagement/retours-experiences/une-ville-saine-et-tranquille-grace-a-ses-multiples-services-numeriques-a-istres-13/
+  usage_level: projet_metier
+- name: Communauté de communes Pays du Mont-Blanc
+  type: intercommunalite
+  year_start: 2021
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 1500
+  note: Sondes Heyliot (LoRaWAN / multi-réseau)
+  confidence: high
+  sources:
+  - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
+  usage_level: projet_metier
+- name: Pays de Montbéliard Agglomération
+  type: agglomeration
+  year_start: 2022
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 1445
+  note: Capteurs Heyliot PAV + espace public
+  confidence: medium
+  sources:
+  - https://makeamove.fr/le-digital-au-service-du-ramassage-des-dechets/
+  usage_level: projet_metier
+- name: Indre (36) + Cher (18) — Berry Territoire Innovant
+  type: departements
+  year_start: 2024
+  use_cases:
+  - teleleve_eau
+  - batiments
+  - frequentation
+  network: prive_mutualise
+  note: Réseau LoRaWAN mutualisé Ubicité ; cibles ~700 GW / 100k capteurs
+  confidence: high
+  sources:
+  - https://www.lanouvellerepublique.fr/indre/un-partenariat-unique-en-france-entre-l-indre-et-le-cher-pour-investir-dans-des-objets-connectes
+  - https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/
+  usage_level: projet_metier
+- name: Département de la Somme
+  type: departement
+  year_start: 2024
+  use_cases:
+  - eclairage
+  - dechets
+  - batiments
+  - hydrologie
+  network: prive_departemental
+  note: PoC multi-usages puis hyperviseur IoT (validation 2025)
+  confidence: medium
+  sources:
+  - https://numerique360.banquedesterritoires.fr/transition-ecologique-energetique/retours-experiences/un-hyperviseur-pour-federer-les-donnees-iot-du-departement-de-la-somme-80/
+  usage_level: projet_metier
+- name: Communauté d'agglomération du Niortais
+  type: agglomeration
+  year_start: 2022
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 720
+  note: Heyliot
+  confidence: medium
+  sources:
+  - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
+  usage_level: projet_metier
+- name: Saint-Malo Agglomération
+  type: agglomeration
+  year_start: 2022
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 457
+  confidence: medium
+  sources:
+  - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
+  usage_level: projet_metier
+- name: Communauté d'agglomération de Lens-Liévin
+  type: agglomeration
+  year_start: 2022
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 300
+  confidence: medium
+  sources:
+  - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
+  usage_level: projet_metier
+- name: Saint-Sulpice-la-Forêt
+  type: commune
+  year_start: 2015
+  use_cases:
+  - smart_city
+  - pilote_reseau
+  network: prive
+  note: Expérimentation smart city précoce citée dans le récit Rennes/Wi6labs
+  confidence: medium
+  sources:
+  - https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/
+  usage_level: projet_metier
+- name: Issy-les-Moulineaux
+  type: ville
+  year_start: 2018
+  use_cases:
+  - smart_city
+  network: prive
+  note: Démonstrateur smart city francilien souvent cité (précurseur IDF LoRaWAN)
+  confidence: medium
+  sources:
+  - https://www.journaldunet.com/iot/1529749-decouvrez-comment-se-deploie-l-un-des-plus-grands-reseaux-smart-city-lorawan-d-europe/
+  usage_level: projet_metier
+- name: Val d'Oise Numérique / Essonne Numérique / Seine-et-Marne Numérique
+  type: syndicats_mixtes
+  year_start: 2018
+  use_cases:
+  - smart_city
+  - infrastructure_regionale
+  network: prive_mutualise
+  objets_approx: null
+  gateways_cible: 3000
+  note: Projet régional IDF ; initié 2018, pilote 2022 ; cible ~3000 GW début 2027
+  confidence: high
+  sources:
+  - https://www.journaldunet.com/iot/1529749-decouvrez-comment-se-deploie-l-un-des-plus-grands-reseaux-smart-city-lorawan-d-europe/
+  usage_level: projet_metier
+- name: Sarthe (Sarthe Numérique)
+  type: departement
+  year_start: 2020
+  use_cases:
+  - teleleve_eau
+  - eclairage
+  - dechets
+  - batiments
+  network: prive_departemental
+  objets_approx: 40000
+  gateways_approx: 450
+  note: Couverture 100% département ; ~40k objets (surtout compteurs eau) ; 450 antennes
+  confidence: high
+  sources:
+  - https://numerique360.banquedesterritoires.fr/gouvernance-socles-technologiques/retours-experiences/infrastructures-numeriques-la-sarthe-72-deploie-un-reseau-lora-pour-y-accueillir-40-000-objets-connectes/
+  usage_level: projet_metier
+  objets_year: 2023
+- name: Finistère (SDEF — Finistère Smart Connect)
+  type: departement
+  year_start: 2021
+  use_cases:
+  - batiments
+  - stationnement
+  - teleleve_eau
+  - eclairage
+  - dechets
+  - air
+  network: prive_departemental
+  note: '>400 gateways Kerlink ; usages multi-services hors Brest métropole'
+  confidence: high
+  sources:
+  - https://lora-alliance.org/wp-content/uploads/2021/06/Kerlink_NR_Finistere_EN_27052021.pdf
+  usage_level: projet_metier
+- name: SMICOTOM Médoc
+  type: syndicat
+  year_start: 2022
+  use_cases:
+  - dechets
+  network: mixte
+  objets_approx: 523
+  note: Heyliot
+  confidence: medium
+  sources:
+  - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
+  usage_level: projet_metier
 orange_launch_2016_zones:
-  note: "17 zones d'ouverture progressive Orange LoRaWAN (T1 2016)"
+  note: 17 zones d'ouverture progressive Orange LoRaWAN (T1 2016)
   cities:
-    - Angers
-    - Avignon
-    - Bordeaux
-    - Douai/Lens
-    - Grenoble
-    - Lille
-    - Lyon
-    - Marseille
-    - Montpellier
-    - Nantes
-    - Nice
-    - Paris
-    - Rennes
-    - Rouen
-    - Toulon
-    - Toulouse
-    - Strasbourg
-  source: "https://totaltele.com/orange-details-iot-rollout-plan/"
-
+  - Angers
+  - Avignon
+  - Bordeaux
+  - Douai/Lens
+  - Grenoble
+  - Lille
+  - Lyon
+  - Marseille
+  - Montpellier
+  - Nantes
+  - Nice
+  - Paris
+  - Rennes
+  - Rouen
+  - Toulon
+  - Toulouse
+  - Strasbourg
+  source: https://totaltele.com/orange-details-iot-rollout-plan/
 societes:
-  - name: Orange / Orange Business
-    role: operateur
-    vertical: reseau_public
-    year_start: 2015
-    note: "~4800 antennes ; engagement LoRaWAN ≥ 31/12/2027"
-    confidence: high
-    sources:
-      - "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
-
-  - name: Objenious (Bouygues Telecom)
-    role: operateur
-    vertical: reseau_public
-    year_start: 2016
-    year_end: 2024
-    note: "Arrêt commercial LoRaWAN fin 2024 ; pivot NB-IoT/LTE-M"
-    confidence: high
-    sources:
-      - "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
-
-  - name: Netmore Group
-    role: operateur
-    vertical: reseau_public
-    year_start: 2023
-    note: "Reprise actifs LoRaWAN Objenious (nov. 2023)"
-    confidence: high
-    sources:
-      - "https://netmoregroup.com/news/netmore-group-to-operate-and-expand-acquired-lorawan-network-in-france/"
-
-  - name: Actility
-    role: vendor_plateforme
-    vertical: coeur_reseau
-    year_start: 2015
-    note: "ThingPark ; co-auteur LoRaWAN ; acquis par Netmore (2026)"
-    confidence: high
-    sources:
-      - "https://www.actility.com/"
-
-  - name: Kerlink
-    role: vendor_gateways
-    vertical: infrastructure
-    year_start: 2015
-    note: "Gateways Wirnet ; fondateur LoRa Alliance ; Rennes"
-    confidence: high
-    sources:
-      - "https://www.kerlink.fr/"
-
-  - name: Birdz (Veolia / Nova Veolia)
-    role: utilisateur_massif
-    vertical: teleleve_eau
-    year_start: 2018
-    note: "Cible >3 M compteurs eau LoRaWAN Orange ; >4 M capteurs cités 2024"
-    confidence: high
-    sources:
-      - "https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans"
-      - "https://www.birdz.com/"
-
-  - name: Veolia
-    role: utilisateur
-    vertical: teleleve_eau
-    year_start: 2018
-    note: "Via Birdz"
-    confidence: high
-    sources:
-      - "https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/"
-
-  - name: SNCF
-    role: utilisateur
-    vertical: ferroviaire
-    year_start: 2018
-    note: "Réseau LoRaWAN privé ; 500 GW + 6000 modules MARTI (2021)"
-    confidence: high
-    sources:
-      - "https://www.actility.com/sncf-blog/"
-
-  - name: Heyliot
-    role: vendor_capteurs
-    vertical: dechets
-    year_start: 2021
-    note: "Heywaste ; nombreuses collectivités"
-    confidence: high
-    sources:
-      - "https://www.journaldunet.com/iot/1515645-l-iot-revolutionne-la-collecte-des-dechets/"
-
-  - name: Synox
-    role: integrateur
-    vertical: smart_city
-    year_start: 2019
-    note: "Dijon parking ; Montpellier"
-    confidence: high
-    sources:
-      - "https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/"
-
-  - name: Onesitu
-    role: vendor_capteurs
-    vertical: stationnement
-    year_start: 2019
-    confidence: high
-    sources:
-      - "https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/"
-
-  - name: Ubicité
-    role: integrateur
-    vertical: territoires
-    year_start: 2024
-    note: "Berry Territoire Innovant (Indre–Cher)"
-    confidence: high
-    sources:
-      - "https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/"
-
-  - name: SPIE ICS
-    role: integrateur
-    vertical: smart_city
-    year_start: 2018
-    note: "Pilote Bordeaux Métropole"
-    confidence: high
-    sources:
-      - "https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme/"
-
-  - name: Pilot Things
-    role: vendor_logiciel
-    vertical: supervision
-    year_start: 2018
-    confidence: medium
-    sources:
-      - "https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/"
-
-  - name: Adeunis
-    role: vendor_capteurs
-    vertical: batiment_industrie
-    year_start: 2016
-    note: "Crolles (Isère)"
-    confidence: medium
-    sources:
-      - "https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora"
-
-  - name: Abeeway (Actility)
-    role: vendor_trackers
-    vertical: tracking
-    year_start: 2017
-    confidence: high
-    sources:
-      - "https://www.actility.com/roole-antitheft-gps-solution-pr/"
-
-  - name: Invoxia
-    role: utilisateur
-    vertical: tracking
-    year_start: 2020
-    confidence: medium
-    sources:
-      - "https://www.rcrwireless.com/20230920/internet-of-things/orange-commits-to-lorawan-in-france-beyond-2027"
-
-  - name: BH Technologies
-    role: utilisateur_fournisseur
-    vertical: dechets
-    year_start: 2020
-    confidence: medium
-    sources:
-      - "https://www.rcrwireless.com/20230920/internet-of-things/orange-commits-to-lorawan-in-france-beyond-2027"
-
-  - name: Carrefour
-    role: utilisateur
-    vertical: retail_logistique
-    year_start: 2017
-    note: "Localisation rolls sur Objenious"
-    confidence: medium
-    sources:
-      - "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
-
-  - name: Colas
-    role: utilisateur
-    vertical: btp_flottes
-    year_start: 2017
-    note: "Tracking camions Objenious"
-    confidence: medium
-    sources:
-      - "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
-
-  - name: Roole
-    role: utilisateur
-    vertical: assurance_auto
-    year_start: 2021
-    note: "Anti-vol Wetrak (Abeeway + Orange)"
-    confidence: high
-    sources:
-      - "https://www.actility.com/roole-antitheft-gps-solution-pr/"
-
-  - name: Semtech / Cycleo
-    role: vendor_chip
-    vertical: radio
-    year_start: 2009
-    note: "Origine techno LoRa (Grenoble) ; Semtech acquis Cycleo"
-    confidence: high
-    sources:
-      - "https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora"
-
-  - name: The Things Industries / TTN
-    role: operateur_communautaire
-    vertical: reseau_communautaire
-    year_start: 2018
-    note: "Communautés FR (Packet Broker)"
-    confidence: high
-    sources:
-      - "https://www.thethingsnetwork.org/country/france/"
-
-  - name: Helium / Nova Labs
-    role: reseau_depin
-    vertical: reseau_communautaire
-    year_start: 2020
-    note: "~2600 hotspots FR en 2022 → ~3200 réseau estimé 2026"
-    confidence: medium
-    sources:
-      - "https://www.journaldunet.com/iot/1509147-reseau-iot-helium-gonfle-ses-chiffres-mais-peine-encore-a-convaincre-en-france/"
-
+- name: Orange / Orange Business
+  role: operateur
+  vertical: reseau_public
+  year_start: 2015
+  note: ~4800 antennes ; engagement LoRaWAN ≥ 31/12/2027
+  confidence: high
+  sources:
+  - https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange
+- name: Objenious (Bouygues Telecom)
+  role: operateur
+  vertical: reseau_public
+  year_start: 2016
+  year_end: 2024
+  note: Arrêt commercial LoRaWAN fin 2024 ; pivot NB-IoT/LTE-M
+  confidence: high
+  sources:
+  - https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/
+- name: Netmore Group
+  role: operateur
+  vertical: reseau_public
+  year_start: 2023
+  note: Reprise actifs LoRaWAN Objenious (nov. 2023)
+  confidence: high
+  sources:
+  - https://netmoregroup.com/news/netmore-group-to-operate-and-expand-acquired-lorawan-network-in-france/
+- name: Actility
+  role: vendor_plateforme
+  vertical: coeur_reseau
+  year_start: 2015
+  note: ThingPark ; co-auteur LoRaWAN ; acquis par Netmore (2026)
+  confidence: high
+  sources:
+  - https://www.actility.com/
+- name: Kerlink
+  role: vendor_gateways
+  vertical: infrastructure
+  year_start: 2015
+  note: Gateways Wirnet ; fondateur LoRa Alliance ; Rennes
+  confidence: high
+  sources:
+  - https://www.kerlink.fr/
+- name: Birdz (Veolia / Nova Veolia)
+  role: utilisateur_massif
+  vertical: teleleve_eau
+  year_start: 2018
+  note: Cible >3 M compteurs eau LoRaWAN Orange ; >4 M capteurs cités 2024
+  confidence: high
+  sources:
+  - https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans
+  - https://www.birdz.com/
+- name: Veolia
+  role: utilisateur
+  vertical: teleleve_eau
+  year_start: 2018
+  note: Via Birdz
+  confidence: high
+  sources:
+  - https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/
+- name: SNCF
+  role: utilisateur
+  vertical: ferroviaire
+  year_start: 2018
+  note: Réseau LoRaWAN privé ; 500 GW + 6000 modules MARTI (2021)
+  confidence: high
+  sources:
+  - https://www.actility.com/sncf-blog/
+- name: Heyliot
+  role: vendor_capteurs
+  vertical: dechets
+  year_start: 2021
+  note: Heywaste ; nombreuses collectivités
+  confidence: high
+  sources:
+  - https://www.journaldunet.com/iot/1515645-l-iot-revolutionne-la-collecte-des-dechets/
+- name: Synox
+  role: integrateur
+  vertical: smart_city
+  year_start: 2019
+  note: Dijon parking ; Montpellier
+  confidence: high
+  sources:
+  - https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/
+- name: Onesitu
+  role: vendor_capteurs
+  vertical: stationnement
+  year_start: 2019
+  confidence: high
+  sources:
+  - https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/
+- name: Ubicité
+  role: integrateur
+  vertical: territoires
+  year_start: 2024
+  note: Berry Territoire Innovant (Indre–Cher)
+  confidence: high
+  sources:
+  - https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/
+- name: SPIE ICS
+  role: integrateur
+  vertical: smart_city
+  year_start: 2018
+  note: Pilote Bordeaux Métropole
+  confidence: high
+  sources:
+  - https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme/
+- name: Pilot Things
+  role: vendor_logiciel
+  vertical: supervision
+  year_start: 2018
+  confidence: medium
+  sources:
+  - https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/
+- name: Adeunis
+  role: vendor_capteurs
+  vertical: batiment_industrie
+  year_start: 2016
+  note: Crolles (Isère)
+  confidence: medium
+  sources:
+  - https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora
+- name: Abeeway (Actility)
+  role: vendor_trackers
+  vertical: tracking
+  year_start: 2017
+  confidence: high
+  sources:
+  - https://www.actility.com/roole-antitheft-gps-solution-pr/
+- name: Invoxia
+  role: utilisateur
+  vertical: tracking
+  year_start: 2020
+  confidence: medium
+  sources:
+  - https://www.rcrwireless.com/20230920/internet-of-things/orange-commits-to-lorawan-in-france-beyond-2027
+- name: BH Technologies
+  role: utilisateur_fournisseur
+  vertical: dechets
+  year_start: 2020
+  confidence: medium
+  sources:
+  - https://www.rcrwireless.com/20230920/internet-of-things/orange-commits-to-lorawan-in-france-beyond-2027
+- name: Carrefour
+  role: utilisateur
+  vertical: retail_logistique
+  year_start: 2017
+  note: Localisation rolls sur Objenious
+  confidence: medium
+  sources:
+  - https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/
+- name: Colas
+  role: utilisateur
+  vertical: btp_flottes
+  year_start: 2017
+  note: Tracking camions Objenious
+  confidence: medium
+  sources:
+  - https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/
+- name: Roole
+  role: utilisateur
+  vertical: assurance_auto
+  year_start: 2021
+  note: Anti-vol Wetrak (Abeeway + Orange)
+  confidence: high
+  sources:
+  - https://www.actility.com/roole-antitheft-gps-solution-pr/
+- name: Semtech / Cycleo
+  role: vendor_chip
+  vertical: radio
+  year_start: 2009
+  note: Origine techno LoRa (Grenoble) ; Semtech acquis Cycleo
+  confidence: high
+  sources:
+  - https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora
+- name: The Things Industries / TTN
+  role: operateur_communautaire
+  vertical: reseau_communautaire
+  year_start: 2018
+  note: Communautés FR (Packet Broker)
+  confidence: high
+  sources:
+  - https://www.thethingsnetwork.org/country/france/
+- name: Helium / Nova Labs
+  role: reseau_depin
+  vertical: reseau_communautaire
+  year_start: 2020
+  note: ~2600 hotspots FR en 2022 → ~3200 réseau estimé 2026
+  confidence: medium
+  sources:
+  - https://www.journaldunet.com/iot/1509147-reseau-iot-helium-gonfle-ses-chiffres-mais-peine-encore-a-convaincre-en-france/
+- name: Wi6labs
+  role: integrateur
+  vertical: smart_city
+  year_start: 2016
+  note: Réseau privé Rennes Métropole (Wiotys)
+  confidence: high
+  sources:
+  - https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/
+- name: Eiffage Énergie Systèmes
+  role: integrateur
+  vertical: territoires
+  year_start: 2021
+  note: Partenaire Finistère Smart Connect (SDEF)
+  confidence: high
+  sources:
+  - https://lora-alliance.org/wp-content/uploads/2021/06/Kerlink_NR_Finistere_EN_27052021.pdf
+- name: Sartel THD
+  role: operateur_dsp
+  vertical: infrastructure
+  year_start: 2020
+  note: DSP Sarthe Numérique — déploiement LoRa départemental
+  confidence: high
+  sources:
+  - https://numerique360.banquedesterritoires.fr/gouvernance-socles-technologiques/retours-experiences/infrastructures-numeriques-la-sarthe-72-deploie-un-reseau-lora-pour-y-accueillir-40-000-objets-connectes/
 tendances_depuis_2015:
   series:
-    - year: 2015
-      phase: naissance
-      collectivites_documentees_cumul: 1
-      highlight: "Pilote Orange Grenoble"
-      objets_marqueurs: null
-    - year: 2016
-      phase: ouverture_nationale
-      collectivites_documentees_cumul: 17
-      highlight: "Orange 17 zones ; création Objenious ; débuts Strasbourg/Montpellier privés"
-      objets_marqueurs: null
-    - year: 2017
-      phase: densification
-      collectivites_documentees_cumul: 18
-      highlight: "Objenious ~4020 antennes, 93% pop., dizaines de milliers d'objets, >40 clients"
-      objets_marqueurs: 50000
-      objets_note: "Objenious ordre de grandeur"
-    - year: 2018
-      phase: metering_massif
-      collectivites_documentees_cumul: 20
-      highlight: "Birdz/Veolia choisit Orange ; cible >3 M compteurs ; Bordeaux privé ; SNCF"
-      objets_marqueurs: 3000000
-      objets_note: "Cible contrat Birdz (déploiement multi-années)"
-    - year: 2019
-      phase: smart_city
-      collectivites_documentees_cumul: 21
-      highlight: "Objenious ~100-120k objets ; Dijon parking ; Bordeaux extension"
-      objets_marqueurs: 110000
-      objets_note: "Objenious objets connectés"
-    - year: 2020
-      phase: consolidation
-      collectivites_documentees_cumul: 22
-      highlight: "Isère départemental ; Helium ouverture FR"
-      objets_marqueurs: null
-    - year: 2021
-      phase: expansion_verticales
-      collectivites_documentees_cumul: 24
-      highlight: "SNCF 500 GW + 6k MARTI ; Heyliot déchets ; Helium FR monte"
-      objets_marqueurs: 6000
-      objets_note: "Modules MARTI SNCF (partiel)"
-    - year: 2022
-      phase: leadership_marche
-      collectivites_documentees_cumul: 28
-      highlight: "LoRa Alliance : >3,5 M assets FR + 1,5 M en déploiement ; 64% nouveaux projets IoT FR"
-      objets_marqueurs: 3500000
-      objets_note: "LoRa Alliance assets déjà connectés FR"
-    - year: 2023
-      phase: bascule_operateurs
-      collectivites_documentees_cumul: 28
-      highlight: "Netmore reprend Objenious LoRaWAN ; clients cellulaire LPWA ↑"
-      objets_marqueurs: null
-    - year: 2024
-      phase: rupture_duopole
-      collectivites_documentees_cumul: 30
-      highlight: "Arrêt Objenious LoRa ; Berry Territoire Innovant ; Birdz >4 M capteurs"
-      objets_marqueurs: 4000000
-      objets_note: "Birdz capteurs (surtout LoRaWAN)"
-    - year: 2025
-      phase: prives_departementaux
-      collectivites_documentees_cumul: 31
-      highlight: "Orange seul MNO LoRa national ; Isère/Somme/Berry accélèrent"
-      objets_marqueurs: null
-    - year: 2026
-      phase: dual_track
-      collectivites_documentees_cumul: 32
-      highlight: "Montpellier 50k objets privés ; Orange public + privés + Netmore + Helium ~3k"
-      objets_marqueurs: 50000
-      objets_note: "Montpellier seuls (illustration réseau privé)"
-
+  - year: 2015
+    phase: naissance
+    highlight: Pilote Grenoble + Saint-Sulpice
+  - year: 2016
+    phase: ouverture_nationale
+    highlight: Orange 17 zones ; Objenious ; débuts réseaux privés (Rennes, Montpellier, Strasbourg)
+  - year: 2017
+    phase: densification
+    highlight: Objenious ~30k communes couvertes, >40 clients, dizaines de milliers d’objets
+    objets_marqueurs: 50000
+    objets_note: Objenious objets (ordre de grandeur)
+  - year: 2018
+    phase: metering_massif
+    highlight: Birdz/Veolia ; Bordeaux privé ; Issy ; syndicats IDF ; SNCF
+    objets_marqueurs: 3000000
+    objets_note: Cible contrat Birdz (multi-années)
+  - year: 2019
+    phase: smart_city
+    highlight: Rennes industrialise ; Dijon parking ; Objenious ~110k objets
+    objets_marqueurs: 110000
+    objets_note: Objenious objets connectés
+  - year: 2020
+    phase: consolidation
+    highlight: Sarthe départemental ; Isère ; Helium FR
+  - year: 2021
+    phase: expansion_verticales
+    highlight: Finistère Smart Connect ; SNCF 500 GW ; Heyliot
+    objets_marqueurs: 6000
+    objets_note: Modules MARTI SNCF (partiel)
+  - year: 2022
+    phase: leadership_marche
+    highlight: LoRa Alliance >3,5 M assets FR ; boom déchets Heyliot ; pilote IDF
+    objets_marqueurs: 3500000
+    objets_note: LoRa Alliance assets FR
+  - year: 2023
+    phase: bascule_operateurs
+    highlight: Netmore reprend Objenious LoRaWAN
+  - year: 2024
+    phase: rupture_duopole
+    highlight: Arrêt Objenious ; Berry Territoire Innovant ; Birdz >4 M
+    objets_marqueurs: 4000000
+    objets_note: Birdz capteurs
+  - year: 2025
+    phase: prives_departementaux
+    highlight: Orange seul MNO LoRa ; départements/syndicats accélèrent
+  - year: 2026
+    phase: dual_track
+    highlight: Montpellier 50k objets ; dual public + privés + Netmore
+    objets_marqueurs: 50000
+    objets_note: Montpellier objets (réseau privé)
   resume:
-    - "2015–2017 : naissance et couverture nationale (Orange + Objenious)"
-    - "2018–2022 : explosion des objets via télérelève eau (Birdz) + smart city"
-    - "2023–2024 : fin du duopole public ; migration Objenious ; Netmore entre"
-    - "2025–2026 : antennes publiques ↓ mais objets et réseaux privés collectivités ↑"
+  - '2015–2017 : naissance puis couverture nationale (Orange + Objenious) — peu de projets métier documentés
+    hors pilotes'
+  - '2018–2022 : CROISSANCE forte des projets métier (eau, smart city, départements) et des objets (Birdz
+    / Alliance)'
+  - '2023–2024 : rupture opérateurs publics (Objenious↓) mais CROISSANCE des réseaux privés mutualisés'
+  - '2025–2026 : dual track — opérateurs nationaux stabilisés + collectivités/départements en densification'
   verticales_dominantes:
-    - teleleve_eau
-    - dechets
-    - smart_city_eclairage_parking_batiments
-    - ferroviaire
-    - tracking_logistique
+  - teleleve_eau
+  - dechets
+  - smart_city_eclairage_parking_batiments
+  - ferroviaire
+  - tracking_logistique
+marqueurs_quantitatifs:
+  note: Chiffres nationaux / opérateurs hors inventaire nominatif
+  series:
+  - year: 2016
+    metric: zones_ouverture_orange
+    value: 17
+    confidence: high
+    source: https://totaltele.com/orange-details-iot-rollout-plan/
+  - year: 2017
+    metric: communes_couvertes_objenious
+    value: 30000
+    confidence: high
+    source: https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/
+  - year: 2017
+    metric: clients_objenious
+    value: 40
+    confidence: medium
+    note: '>40 clients'
+    source: https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/
+  - year: 2018
+    metric: communes_couvertes_orange
+    value: 30000
+    confidence: high
+    source: https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange
+  - year: 2021
+    metric: collectivites_claim_arcep_secondaire
+    value: 500
+    confidence: low
+    note: Claim territoireconnecte.fr attributé à Arcep — non retrouvé dans pub Arcep primaire
+    source: https://territoireconnecte.fr/reseau-lorawan-utilites-usages-collectivite-territoriale
+  - year: 2022
+    metric: assets_lora_alliance_fr
+    value: 3500000
+    confidence: medium
+    source: https://iotbusinessnews.com/2022/03/15/62510-lorawan-deployments-achieve-market-leadership-deliver-strong-roi-for-iot-across-france-and-spain/
+  - year: 2024
+    metric: birdz_capteurs
+    value: 4000000
+    confidence: medium
+    source: https://www.birdz.com/

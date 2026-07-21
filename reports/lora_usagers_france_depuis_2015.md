@@ -1,107 +1,135 @@
-# Usagers LoRa / LoRaWAN en France — communes, villes, sociétés
+# Quantification LoRa France — collectivités, villes, sociétés depuis 2015
 
-Pas de registre national Arcep des projets LoRaWAN. Cet inventaire compile
-des collectivités et sociétés nommément citées dans des sources publiques.
-La couverture Orange/Objenious (~30 000 communes) ≠ 30 000 projets smart city.
+Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventaire nominatif sourcé (flux/cumul calculés) ; (B) marqueurs opérateurs/alliance. Séparer couverture radio (~30 000 communes) et projets métier documentés. Le claim « 500 collectivités (2021) » est un marqueur secondaire à faible confiance.
 
-## Tendances depuis 2015
+## Synthèse chiffrée (inventaire)
 
-- 2015–2017 : naissance et couverture nationale (Orange + Objenious)
-- 2018–2022 : explosion des objets via télérelève eau (Birdz) + smart city
-- 2023–2024 : fin du duopole public ; migration Objenious ; Netmore entre
-- 2025–2026 : antennes publiques ↓ mais objets et réseaux privés collectivités ↑
+- Collectivités inventoriées : **32**
+- dont projets métier : **22**
+- dont couverture opérateur seule : **10**
+- Sociétés inventoriées : **27**
+- Objets documentés (somme des projets ayant un chiffre) : **95 395**
 
-### Chronologie
+## Tendances (croissance du cumul projets métier)
 
-- **2015** (naissance) — Pilote Orange Grenoble
-- **2016** (ouverture nationale) — Orange 17 zones ; création Objenious ; débuts Strasbourg/Montpellier privés
-- **2017** (densification) — Objenious ~4020 antennes, 93% pop., dizaines de milliers d'objets, >40 clients
-- **2018** (metering massif) — Birdz/Veolia choisit Orange ; cible >3 M compteurs ; Bordeaux privé ; SNCF
-- **2019** (smart city) — Objenious ~100-120k objets ; Dijon parking ; Bordeaux extension
-- **2020** (consolidation) — Isère départemental ; Helium ouverture FR
-- **2021** (expansion verticales) — SNCF 500 GW + 6k MARTI ; Heyliot déchets ; Helium FR monte
-- **2022** (leadership marche) — LoRa Alliance : >3,5 M assets FR + 1,5 M en déploiement ; 64% nouveaux projets IoT FR
-- **2023** (bascule operateurs) — Netmore reprend Objenious LoRaWAN ; clients cellulaire LPWA ↑
-- **2024** (rupture duopole) — Arrêt Objenious LoRa ; Berry Territoire Innovant ; Birdz >4 M capteurs
-- **2025** (prives departementaux) — Orange seul MNO LoRa national ; Isère/Somme/Berry accélèrent
-- **2026** (dual track) — Montpellier 50k objets privés ; Orange public + privés + Netmore + Helium ~3k
+| Période | Début | Fin | Variation | Lecture |
+|---|---:|---:|---:|---|
+| 2015–2017 | 2 | 7 | **250.0%** | Amorçage + ouverture nationale ; peu de projets métier hors pilotes/grandes villes |
+| 2018–2022 | 7 | 20 | **185.7%** | CROISSANCE forte : eau, smart city, départements (Sarthe, Finistère), déchets |
+| 2023–2026 | 20 | 22 | **10.0%** | CROISSANCE continue des projets métier privés malgré fin Objenious |
 
-## Collectivités / villes documentées
+## Tableau annuel quantifié
 
-| Collectivité | Type | Début | Cas d'usage | Réseau | Objets (approx.) |
-|---|---|---:|---|---|---:|
-| Grenoble | ville | 2015 | pilote_reseau, smart_city | orange_public | — |
-| Angers | ville | 2016 | couverture_operateur | orange_public | — |
-| Avignon | ville | 2016 | couverture_operateur | orange_public | — |
-| Bordeaux | metropole | 2016 | couverture_operateur, eclairage, dechets, bornes_ve | mixte | — |
-| Lille | ville | 2016 | couverture_operateur | orange_public | — |
-| Lyon | ville | 2016 | couverture_operateur | orange_public | — |
-| Marseille | ville | 2016 | couverture_operateur | orange_public | — |
-| Montpellier Méditerranée Métropole | metropole | 2016 | teleleve_eau, dechets, hydrologie, air | prive | 50 000 |
-| Nantes | ville | 2016 | couverture_operateur | orange_public | — |
-| Nice | ville | 2016 | couverture_operateur | orange_public | — |
-| Paris | ville | 2016 | couverture_operateur | orange_public | — |
-| Rennes | ville | 2016 | couverture_operateur | orange_public | — |
-| Rouen | ville | 2016 | couverture_operateur | orange_public | — |
-| Strasbourg | eurometropole | 2016 | mobilite, environnement, patrimoine, recherche | prive_experimental | — |
-| Toulon | ville | 2016 | couverture_operateur | orange_public | — |
-| Toulouse | ville | 2016 | couverture_operateur, teleleve_eau | orange_public | — |
-| Dijon Métropole | metropole | 2019 | stationnement | public_ou_integre | 450 |
-| Département de l'Isère | departement | 2020 | batiments, teleleve_eau, dechets, eclairage | prive_departemental | — |
-| Communauté de communes Pays du Mont-Blanc | intercommunalite | 2021 | dechets | mixte | 1 500 |
-| Communauté d'agglomération de Lens-Liévin | agglomeration | 2022 | dechets | mixte | 300 |
-| Communauté d'agglomération du Niortais | agglomeration | 2022 | dechets | mixte | 720 |
-| Istres | ville | 2022 | eclairage, qualite_air, ecoles | prive | — |
-| Pays de Montbéliard Agglomération | agglomeration | 2022 | dechets | mixte | 1 445 |
-| Saint-Malo Agglomération | agglomeration | 2022 | dechets | mixte | 457 |
-| Département de la Somme | departement | 2024 | eclairage, dechets, batiments, hydrologie | prive_departemental | — |
-| Indre (36) + Cher (18) — Berry Territoire Innovant | departements | 2024 | teleleve_eau, batiments, frequentation | prive_mutualise | — |
+| Année | + inventaire | + projets métier | Cumul métier | Croissance cumul métier | Cumul inventaire | Sociétés actives | Objets doc. cumul |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2015 | 2 | 2 | 2 | — | 2 | 4 | 0 |
+| 2016 | 15 | 5 | 7 | 250.0% | 17 | 7 | 0 |
+| 2017 | 0 | 0 | 7 | 0.0% | 17 | 10 | 0 |
+| 2018 | 2 | 2 | 9 | 28.6% | 19 | 16 | 0 |
+| 2019 | 1 | 1 | 10 | 11.1% | 20 | 18 | 450 |
+| 2020 | 2 | 2 | 12 | 20.0% | 22 | 22 | 450 |
+| 2021 | 2 | 2 | 14 | 16.7% | 24 | 25 | 1 950 |
+| 2022 | 6 | 6 | 20 | 42.9% | 30 | 25 | 5 395 |
+| 2023 | 0 | 0 | 20 | 0.0% | 30 | 26 | 45 395 |
+| 2024 | 2 | 2 | 22 | 10.0% | 32 | 27 | 45 395 |
+| 2025 | 0 | 0 | 22 | 0.0% | 32 | 26 | 45 395 |
+| 2026 | 0 | 0 | 22 | 0.0% | 32 | 26 | 95 395 |
 
-> Zones d'ouverture Orange 2016 : Angers, Avignon, Bordeaux, Douai/Lens, Grenoble, Lille, Lyon, Marseille, Montpellier, Nantes, Nice, Paris, Rennes, Rouen, Toulon, Toulouse, Strasbourg.
+### Lecture
 
-## Sociétés
+- 2015–2017 : naissance puis couverture nationale (Orange + Objenious) — peu de projets métier documentés hors pilotes
+- 2018–2022 : CROISSANCE forte des projets métier (eau, smart city, départements) et des objets (Birdz / Alliance)
+- 2023–2024 : rupture opérateurs publics (Objenious↓) mais CROISSANCE des réseaux privés mutualisés
+- 2025–2026 : dual track — opérateurs nationaux stabilisés + collectivités/départements en densification
 
-| Société | Rôle | Verticale | Début | Note |
-|---|---|---|---:|---|
-| Semtech / Cycleo | vendor_chip | radio | 2009 | Origine techno LoRa (Grenoble) ; Semtech acquis Cycleo |
-| Actility | vendor_plateforme | coeur_reseau | 2015 | ThingPark ; co-auteur LoRaWAN ; acquis par Netmore (2026) |
-| Kerlink | vendor_gateways | infrastructure | 2015 | Gateways Wirnet ; fondateur LoRa Alliance ; Rennes |
-| Orange / Orange Business | operateur | reseau_public | 2015 | ~4800 antennes ; engagement LoRaWAN ≥ 31/12/2027 |
-| Adeunis | vendor_capteurs | batiment_industrie | 2016 | Crolles (Isère) |
-| Objenious (Bouygues Telecom) | operateur | reseau_public | 2016–2024 | Arrêt commercial LoRaWAN fin 2024 ; pivot NB-IoT/LTE-M |
-| Abeeway (Actility) | vendor_trackers | tracking | 2017 |  |
-| Carrefour | utilisateur | retail_logistique | 2017 | Localisation rolls sur Objenious |
-| Colas | utilisateur | btp_flottes | 2017 | Tracking camions Objenious |
-| Birdz (Veolia / Nova Veolia) | utilisateur_massif | teleleve_eau | 2018 | Cible >3 M compteurs eau LoRaWAN Orange ; >4 M capteurs cités 2024 |
-| Pilot Things | vendor_logiciel | supervision | 2018 |  |
-| SNCF | utilisateur | ferroviaire | 2018 | Réseau LoRaWAN privé ; 500 GW + 6000 modules MARTI (2021) |
-| SPIE ICS | integrateur | smart_city | 2018 | Pilote Bordeaux Métropole |
-| The Things Industries / TTN | operateur_communautaire | reseau_communautaire | 2018 | Communautés FR (Packet Broker) |
-| Veolia | utilisateur | teleleve_eau | 2018 | Via Birdz |
-| Onesitu | vendor_capteurs | stationnement | 2019 |  |
-| Synox | integrateur | smart_city | 2019 | Dijon parking ; Montpellier |
-| BH Technologies | utilisateur_fournisseur | dechets | 2020 |  |
-| Helium / Nova Labs | reseau_depin | reseau_communautaire | 2020 | ~2600 hotspots FR en 2022 → ~3200 réseau estimé 2026 |
-| Invoxia | utilisateur | tracking | 2020 |  |
-| Heyliot | vendor_capteurs | dechets | 2021 | Heywaste ; nombreuses collectivités |
-| Roole | utilisateur | assurance_auto | 2021 | Anti-vol Wetrak (Abeeway + Orange) |
-| Netmore Group | operateur | reseau_public | 2023 | Reprise actifs LoRaWAN Objenious (nov. 2023) |
-| Ubicité | integrateur | territoires | 2024 | Berry Territoire Innovant (Indre–Cher) |
+## Marqueurs externes (hors inventaire nominatif)
+
+| Année | Métrique | Valeur | Confiance |
+|---:|---|---:|---|
+| 2016 | zones_ouverture_orange | 17 | high |
+| 2017 | communes_couvertes_objenious | 30 000 | high |
+| 2017 | clients_objenious | 40 | medium |
+| 2018 | communes_couvertes_orange | 30 000 | high |
+| 2021 | collectivites_claim_arcep_secondaire | 500 | low |
+| 2022 | assets_lora_alliance_fr | 3 500 000 | medium |
+| 2024 | birdz_capteurs | 4 000 000 | medium |
 
 ## Graphiques
 
-![lora_phases_depuis_2015.png](figures/lora_phases_depuis_2015.png)
+![lora_quantif_collectivites_flux_cumul.png](figures/lora_quantif_collectivites_flux_cumul.png)
 
-![lora_collectivites_cumul_depuis_2015.png](figures/lora_collectivites_cumul_depuis_2015.png)
+![lora_quantif_types_collectivites.png](figures/lora_quantif_types_collectivites.png)
 
-![lora_objets_marqueurs_depuis_2015.png](figures/lora_objets_marqueurs_depuis_2015.png)
+![lora_quantif_societes_actives.png](figures/lora_quantif_societes_actives.png)
 
-![lora_usecases_collectivites.png](figures/lora_usecases_collectivites.png)
+![lora_quantif_croissance_phases.png](figures/lora_quantif_croissance_phases.png)
 
-![lora_societes_par_role.png](figures/lora_societes_par_role.png)
+![lora_quantif_objets_documentes.png](figures/lora_quantif_objets_documentes.png)
+
+![lora_quantif_tendances_index.png](figures/lora_quantif_tendances_index.png)
+
+## Collectivités (projets métier)
+
+| Collectivité | Type | Début | Objets |
+|---|---|---:|---:|
+| Grenoble | ville | 2015 | — |
+| Saint-Sulpice-la-Forêt | commune | 2015 | — |
+| Bordeaux | metropole | 2016 | — |
+| Montpellier Méditerranée Métropole | metropole | 2016 | 50 000 |
+| Rennes Métropole | metropole | 2016 | — |
+| Strasbourg | eurometropole | 2016 | — |
+| Toulouse | ville | 2016 | — |
+| Issy-les-Moulineaux | ville | 2018 | — |
+| Val d'Oise Numérique / Essonne Numérique / Seine-et-Marne Numérique | syndicats_mixtes | 2018 | — |
+| Dijon Métropole | metropole | 2019 | 450 |
+| Département de l'Isère | departement | 2020 | — |
+| Sarthe (Sarthe Numérique) | departement | 2020 | 40 000 |
+| Communauté de communes Pays du Mont-Blanc | intercommunalite | 2021 | 1 500 |
+| Finistère (SDEF — Finistère Smart Connect) | departement | 2021 | — |
+| Communauté d'agglomération de Lens-Liévin | agglomeration | 2022 | 300 |
+| Communauté d'agglomération du Niortais | agglomeration | 2022 | 720 |
+| Istres | ville | 2022 | — |
+| Pays de Montbéliard Agglomération | agglomeration | 2022 | 1 445 |
+| SMICOTOM Médoc | syndicat | 2022 | 523 |
+| Saint-Malo Agglomération | agglomeration | 2022 | 457 |
+| Département de la Somme | departement | 2024 | — |
+| Indre (36) + Cher (18) — Berry Territoire Innovant | departements | 2024 | — |
+
+## Sociétés
+
+| Société | Rôle | Début | Fin |
+|---|---|---:|---:|
+| Semtech / Cycleo | vendor_chip | 2009 | — |
+| Actility | vendor_plateforme | 2015 | — |
+| Kerlink | vendor_gateways | 2015 | — |
+| Orange / Orange Business | operateur | 2015 | — |
+| Adeunis | vendor_capteurs | 2016 | — |
+| Objenious (Bouygues Telecom) | operateur | 2016 | 2024 |
+| Wi6labs | integrateur | 2016 | — |
+| Abeeway (Actility) | vendor_trackers | 2017 | — |
+| Carrefour | utilisateur | 2017 | — |
+| Colas | utilisateur | 2017 | — |
+| Birdz (Veolia / Nova Veolia) | utilisateur_massif | 2018 | — |
+| Pilot Things | vendor_logiciel | 2018 | — |
+| SNCF | utilisateur | 2018 | — |
+| SPIE ICS | integrateur | 2018 | — |
+| The Things Industries / TTN | operateur_communautaire | 2018 | — |
+| Veolia | utilisateur | 2018 | — |
+| Onesitu | vendor_capteurs | 2019 | — |
+| Synox | integrateur | 2019 | — |
+| BH Technologies | utilisateur_fournisseur | 2020 | — |
+| Helium / Nova Labs | reseau_depin | 2020 | — |
+| Invoxia | utilisateur | 2020 | — |
+| Sartel THD | operateur_dsp | 2020 | — |
+| Eiffage Énergie Systèmes | integrateur | 2021 | — |
+| Heyliot | vendor_capteurs | 2021 | — |
+| Roole | utilisateur | 2021 | — |
+| Netmore Group | operateur | 2023 | — |
+| Ubicité | integrateur | 2024 | — |
 
 ## Limites
 
-- Inventaire **non exhaustif** (presse / CP / REX).
-- « 30 000 communes couvertes » = éligibilité radio, pas 30 000 projets.
-- Les volumes d'objets sont des **marqueurs sourcés** (pas une série homogène).
+- Inventaire **non exhaustif** : la croissance mesurée est celle de l’échantillon documenté.
+- Couverture radio (~30 000 communes) ≠ projets métier.
+- Claim « 500 collectivités (2021) » : marqueur secondaire à **faible confiance**.
+- Objets documentés = somme des projets ayant publié un chiffre (sous-estime le parc réel).
