@@ -1,0 +1,42 @@
+[
+  {
+    "quarter": "2022_T4",
+    "Orange": 29213,
+    "SFR": 24138,
+    "Bouygues Telecom": 24842,
+    "Free Mobile": 23467,
+    "nbiot_ops_4g": 78193
+  },
+  {
+    "quarter": "2023_T1",
+    "Orange": 29457,
+    "SFR": 24227,
+    "Bouygues Telecom": 25313,
+    "Free Mobile": 23939,
+    "nbiot_ops_4g": 78997
+  },
+  {
+    "quarter": "2024_T1",
+    "Orange": 30717,
+    "SFR": 26695,
+    "Bouygues Telecom": 27109,
+    "Free Mobile": 26354,
+    "nbiot_ops_4g": 84521
+  },
+  {
+    "quarter": "2025_T1",
+    "Orange": 31718,
+    "SFR": 28711,
+    "Bouygues Telecom": 29045,
+    "Free Mobile": 28445,
+    "nbiot_ops_4g": 89474
+  },
+  {
+    "quarter": "2026_T1",
+    "Orange": 32576,
+    "SFR": 30394,
+    "Bouygues Telecom": 30546,
+    "Free Mobile": 30614,
+    "nbiot_ops_4g": 93516
+  }
+]

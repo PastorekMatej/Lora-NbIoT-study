@@ -1,0 +1,239 @@
+# Antennes LoRaWAN (dédiées) vs capacité radio NB-IoT (proxy sites 4G)
+# France métropolitaine — depuis 2015
+#
+# MÉTHODE
+# - LoRaWAN : antennes/gateways dédiées (bande libre EU868), comptage opérateurs.
+# - NB-IoT : PAS d'antennes dédiées open data. Déploiement in-band sur sites LTE/4G
+#   → proxy = sites 4G Arcep des opérateurs ayant un NB-IoT commercial,
+#   avec activation progressive (0 avant lancement commercial).
+
+meta:
+  last_review: "2026-07-21"
+  method_note: |
+    Comparer des gateways LoRaWAN à des sites 4G n'est pas un comptage homogène :
+    un site 4G NB-IoT mutualise voix/data/IoT ; une antenne LoRa est dédiée LPWAN.
+    L'analyse porte sur la DYNAMIQUE (croissance/décroissance) et les ordres de grandeur.
+
+lora_antennas_france:
+  unit: gateways_dediees
+  series:
+    - year: 2015
+      orange: 0
+      objenious: 0
+      total_public: 0
+      note: "Annonce Orange + pilote Grenoble — pas encore de réseau national"
+      confidence: high
+      sources: ["https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets"]
+    - year: 2016
+      orange: null  # lancement progressif, pas de chiffre officiel unique
+      objenious: null  # création Objenious
+      total_public: null
+      note: "Ouverture progressive Orange (1300 communes en sept.) ; création Objenious"
+      confidence: qualitative
+      sources:
+        - "https://www.rcrwireless.com/20160921/carriers/oranges-iot-network-tag23"
+    - year: 2017
+      orange: 4000  # 2500 indoor + 1500 outdoor (matériel Orange / GlobalData)
+      objenious: 4020
+      total_public: 8020
+      note: "Première année de densité nationale comparable"
+      confidence: medium
+      sources:
+        - "https://www.orange-business.com/sites/default/files/GlobalData%20Global%20Industrial%20IoT%20Services_Oct%202017.pdf"
+        - "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
+    - year: 2018
+      orange: 4500  # interpolation prudente entre 4000 (2017) et 4800 (plateau Orange)
+      objenious: 4300
+      total_public: 8800
+      note: "Objenious stabilise ~4300 ; Orange densifie encore"
+      confidence: medium
+      sources:
+        - "https://www.silicon.fr/Thematique/workspace-1376/Breves/IoT-Objenious-geolocalise-les-objets-sur-son-reseau-LoRa-442422.htm"
+    - year: 2019
+      orange: 4800
+      objenious: 4300
+      total_public: 9100
+      note: "Pic du duopole public atteint / approché"
+      confidence: medium
+      sources:
+        - "https://www.objetconnecte.com/objenious-reseau-dedie/"
+        - "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+    - year: 2020
+      orange: 4800
+      objenious: 4300
+      total_public: 9100
+      confidence: medium
+    - year: 2021
+      orange: 4800
+      objenious: 4300
+      total_public: 9100
+      confidence: medium
+    - year: 2022
+      orange: 4800
+      objenious: 4300
+      total_public: 9100
+      note: "Chiffre Orange Business / JDN confirmé (~4800)"
+      confidence: high
+      sources:
+        - "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+        - "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+    - year: 2023
+      orange: 4800
+      objenious: 4300
+      total_public: 9100
+      confidence: high
+    - year: 2024
+      orange: 4800
+      objenious: 4300  # jusqu'à l'arrêt de fin d'année
+      total_public: 9100
+      note: "Arrêt Objenious annoncé ; extinction progressive en 2024"
+      confidence: high
+      sources:
+        - "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+    - year: 2025
+      orange: 4800
+      objenious: 0
+      total_public: 4800
+      note: "Chute -47% du parc public vs pic"
+      confidence: high
+    - year: 2026
+      orange: 4800
+      objenious: 0
+      total_public: 4800
+      note: "Plateau Orange ; densification à la demande ; engagement ≥ 31/12/2027"
+      confidence: high
+
+nbiot_radio_sites_france:
+  unit: sites_4g_proxy_inband
+  definition: |
+    Sites 4G Arcep des opérateurs avec NB-IoT commercial. Avant lancement
+    commercial de l'opérateur, contribution = 0 dans la série 'active_nbiot_capacity'.
+  commercial_milestones:
+    - year: 2016
+      event: "Standardisation 3GPP NB-IoT (Release 13) — pas encore FR commercial"
+    - year: 2018
+      event: "Orange lance LTE-M national (complément LoRa) — pas un compteur NB-IoT dédié"
+      operator: Orange
+      technology: LTE-M
+    - year: 2019
+      event: "SFR lance NB-IoT (fév. 2019) sur son réseau 4G"
+      operator: SFR
+      technology: NB-IoT
+      sources:
+        - "https://www.zdnet.fr/actualites/sfr-lance-son-propre-reseau-nb-iot-39881263.htm"
+        - "https://www.mobileeurope.co.uk/france-s-sfr-joins-bics-global-nb-iot-ecosystem/"
+    - year: 2022
+      event: "Bouygues / Objenious couverture nationale NB-IoT+LTE-M >99% pop."
+      operator: Bouygues
+      technology: NB-IoT
+      sources:
+        - "https://objenious.com/en/blogpost/deployment-of-lte-m-and-nb-iot/"
+  # Série construite : avant 2019 = 0 capacité NB-IoT commerciale
+  # 2019-2021 : SFR (ordre de grandeur sites 4G SFR ~17-24k selon ANFR/Arcep)
+  # 2022+ : SFR + Bouygues (+ Orange si positionné NB-IoT)
+  series:
+    - year: 2015
+      sfr: 0
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 0
+      note: "Pré-standard commercial FR"
+    - year: 2016
+      sfr: 0
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 0
+    - year: 2017
+      sfr: 0
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 0
+    - year: 2018
+      sfr: 0
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 0
+      note: "LTE-M Orange existe, hors périmètre NB-IoT antennes"
+    - year: 2019
+      sfr: 17700  # ordre de grandeur ANFR juin 2019 sites 4G SFR en service
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 17700
+      note: "SFR NB-IoT lancé ; déploiement national en cours"
+      confidence: medium
+      sources:
+        - "https://www.anfr.fr/fileadmin/mediatheque/documents/Observatoire/0619/20190604-rh7h3k-CP-observatoire-ANFR.pdf"
+    - year: 2020
+      sfr: 20000  # interpolation vers densification
+      bouygues: 0
+      orange: 0
+      active_nbiot_capacity: 20000
+      confidence: low
+    - year: 2021
+      sfr: 22000
+      bouygues: 5000  # déploiement progressif avant national 2022
+      orange: 0
+      active_nbiot_capacity: 27000
+      confidence: low
+    - year: 2022
+      sfr: 24138  # Arcep 2022_T4
+      bouygues: 24842
+      orange: 29213  # si Orange NB-IoT actif (GSMA) ; sinon exclure
+      active_nbiot_capacity_sfr_bouygues: 48980
+      active_nbiot_capacity_with_orange: 78193
+      note: "Mesure Arcep 2022_T4 ; Bouygues national NB-IoT"
+      confidence: high
+      sources: ["Arcep Mon Réseau Mobile 2022_T4"]
+    - year: 2023
+      sfr: 24227
+      bouygues: 25313
+      orange: 29457
+      active_nbiot_capacity_sfr_bouygues: 49540
+      active_nbiot_capacity_with_orange: 78997
+      confidence: high
+      sources: ["Arcep 2023_T1"]
+    - year: 2024
+      sfr: 26695
+      bouygues: 27109
+      orange: 30717
+      active_nbiot_capacity_sfr_bouygues: 53804
+      active_nbiot_capacity_with_orange: 84521
+      confidence: high
+      sources: ["Arcep 2024_T1"]
+    - year: 2025
+      sfr: 28711
+      bouygues: 29045
+      orange: 31718
+      active_nbiot_capacity_sfr_bouygues: 57756
+      active_nbiot_capacity_with_orange: 89474
+      confidence: high
+      sources: ["Arcep 2025_T1"]
+    - year: 2026
+      sfr: 30394
+      bouygues: 30546
+      orange: 32576
+      active_nbiot_capacity_sfr_bouygues: 60940
+      active_nbiot_capacity_with_orange: 93516
+      confidence: high
+      sources: ["Arcep 2026_T1"]
+
+trends_summary:
+  lora:
+    phase_2015_2019: "CROISSANCE forte (0 → ~9100 antennes publiques)"
+    phase_2019_2024: "PLATEAU duopole Orange+Objenious (~9100)"
+    phase_2025_2026: "DÉCROISSANCE brutale (-47%) après arrêt Objenious → ~4800"
+  nbiot:
+    phase_2015_2018: "NÉANT commercial FR (0 site NB-IoT actif)"
+    phase_2019_2021: "CROISSANCE (SFR puis début Bouygues)"
+    phase_2022_2026: "CROISSANCE continue de la densification 4G sous-jacente (+20% SFR+Bouygues 2022→2026)"
+  comparison:
+    - "LoRa = réseau d'antennes dédiées (milliers) ; NB-IoT = soft/firmware sur dizaines de milliers de sites 4G"
+    - "Dynamique opposée depuis 2024-2025 : LoRa public ↓, capacité radio NB-IoT ↑"
+    - "LoRa a 2-3 ans d'avance de déploiement FR (2016) sur NB-IoT commercial (2019)"
+
+world_context:
+  lora_gateways_mid_2024: 6900000
+  lora_end_nodes_mid_2024: 350000000
+  source: "LoRa Alliance / Omdia mid-2024"
+  nbiot_networks_gsma_nov_2025: 140
+  note: "Pas de série mondiale homogène d'antennes NB-IoT : chaque site LTE peut activer NB-IoT in-band"

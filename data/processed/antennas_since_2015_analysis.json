@@ -1,0 +1,155 @@
+{
+  "table": [
+    {
+      "year": 2015,
+      "lora_orange": 0,
+      "lora_objenious": 0,
+      "lora_total_public": 0,
+      "nbiot_proxy_sites": 0,
+      "nbiot_sfr": 0,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2016,
+      "lora_orange": null,
+      "lora_objenious": null,
+      "lora_total_public": null,
+      "nbiot_proxy_sites": 0,
+      "nbiot_sfr": 0,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2017,
+      "lora_orange": 4000,
+      "lora_objenious": 4020,
+      "lora_total_public": 8020,
+      "nbiot_proxy_sites": 0,
+      "nbiot_sfr": 0,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2018,
+      "lora_orange": 4500,
+      "lora_objenious": 4300,
+      "lora_total_public": 8800,
+      "nbiot_proxy_sites": 0,
+      "nbiot_sfr": 0,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2019,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 17700,
+      "nbiot_sfr": 17700,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2020,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 20000,
+      "nbiot_sfr": 20000,
+      "nbiot_bouygues": 0,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2021,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 27000,
+      "nbiot_sfr": 22000,
+      "nbiot_bouygues": 5000,
+      "nbiot_orange": 0
+    },
+    {
+      "year": 2022,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 78193,
+      "nbiot_sfr": 24138,
+      "nbiot_bouygues": 24842,
+      "nbiot_orange": 29213
+    },
+    {
+      "year": 2023,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 78997,
+      "nbiot_sfr": 24227,
+      "nbiot_bouygues": 25313,
+      "nbiot_orange": 29457
+    },
+    {
+      "year": 2024,
+      "lora_orange": 4800,
+      "lora_objenious": 4300,
+      "lora_total_public": 9100,
+      "nbiot_proxy_sites": 84521,
+      "nbiot_sfr": 26695,
+      "nbiot_bouygues": 27109,
+      "nbiot_orange": 30717
+    },
+    {
+      "year": 2025,
+      "lora_orange": 4800,
+      "lora_objenious": 0,
+      "lora_total_public": 4800,
+      "nbiot_proxy_sites": 89474,
+      "nbiot_sfr": 28711,
+      "nbiot_bouygues": 29045,
+      "nbiot_orange": 31718
+    },
+    {
+      "year": 2026,
+      "lora_orange": 4800,
+      "lora_objenious": 0,
+      "lora_total_public": 4800,
+      "nbiot_proxy_sites": 93516,
+      "nbiot_sfr": 30394,
+      "nbiot_bouygues": 30546,
+      "nbiot_orange": 32576
+    }
+  ],
+  "trends": {
+    "lora": {
+      "phase_2015_2019": "CROISSANCE forte (0 → ~9100 antennes publiques)",
+      "phase_2019_2024": "PLATEAU duopole Orange+Objenious (~9100)",
+      "phase_2025_2026": "DÉCROISSANCE brutale (-47%) après arrêt Objenious → ~4800"
+    },
+    "nbiot": {
+      "phase_2015_2018": "NÉANT commercial FR (0 site NB-IoT actif)",
+      "phase_2019_2021": "CROISSANCE (SFR puis début Bouygues)",
+      "phase_2022_2026": "CROISSANCE continue de la densification 4G sous-jacente (+20% SFR+Bouygues 2022→2026)"
+    },
+    "comparison": [
+      "LoRa = réseau d'antennes dédiées (milliers) ; NB-IoT = soft/firmware sur dizaines de milliers de sites 4G",
+      "Dynamique opposée depuis 2024-2025 : LoRa public ↓, capacité radio NB-IoT ↑",
+      "LoRa a 2-3 ans d'avance de déploiement FR (2016) sur NB-IoT commercial (2019)"
+    ]
+  },
+  "world": {
+    "lora_gateways_mid_2024": 6900000,
+    "lora_end_nodes_mid_2024": 350000000,
+    "source": "LoRa Alliance / Omdia mid-2024",
+    "nbiot_networks_gsma_nov_2025": 140,
+    "note": "Pas de série mondiale homogène d'antennes NB-IoT : chaque site LTE peut activer NB-IoT in-band"
+  },
+  "figures": [
+    "phases_deploiement_antennes_2015.png",
+    "antennes_lora_depuis_2015.png",
+    "antennes_nbiot_proxy_depuis_2015.png",
+    "comparaison_antennes_lora_vs_nbiot_2015.png"
+  ],
+  "method": "Comparer des gateways LoRaWAN à des sites 4G n'est pas un comptage homogène :\nun site 4G NB-IoT mutualise voix/data/IoT ; une antenne LoRa est dédiée LPWAN.\nL'analyse porte sur la DYNAMIQUE (croissance/décroissance) et les ordres de grandeur.\n"
+}
