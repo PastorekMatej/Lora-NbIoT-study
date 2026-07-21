@@ -29,6 +29,15 @@
     },
     {
       "technologie": "LoRaWAN",
+      "acteur": "Orange (réseau opéré)",
+      "indicateur": "Croissance objets connectés",
+      "valeur": "double_digit_yoy",
+      "unite": "",
+      "type": "tendance",
+      "source": "Orange Business (JDN)"
+    },
+    {
+      "technologie": "LoRaWAN",
       "acteur": "Communautaire (Packet Broker)",
       "indicateur": "Gateways géolocalisés FR métropole",
       "valeur": 2734,
@@ -65,12 +74,39 @@
     },
     {
       "technologie": "NB-IoT",
+      "acteur": "Orange",
+      "indicateur": "Couverture population déclarée",
+      "valeur": 98,
+      "unite": "%",
+      "type": "déclaratif",
+      "source": "GSMA / opérateurs / agrégats"
+    },
+    {
+      "technologie": "NB-IoT",
+      "acteur": "Orange",
+      "indicateur": "Positionnement FR",
+      "valeur": "positioned_fr",
+      "unite": "",
+      "type": "qualitatif",
+      "source": "GSMA / Live Objects / opérateurs"
+    },
+    {
+      "technologie": "NB-IoT",
       "acteur": "SFR",
       "indicateur": "Couverture population déclarée",
       "valeur": 99,
       "unite": "%",
       "type": "déclaratif",
-      "source": "Opérateur / presse IoT"
+      "source": "GSMA / opérateurs / agrégats"
+    },
+    {
+      "technologie": "NB-IoT",
+      "acteur": "SFR",
+      "indicateur": "Positionnement FR",
+      "valeur": "positioned_fr",
+      "unite": "",
+      "type": "qualitatif",
+      "source": "GSMA / Live Objects / opérateurs"
     },
     {
       "technologie": "NB-IoT",
@@ -79,16 +115,16 @@
       "valeur": 99,
       "unite": "%",
       "type": "déclaratif",
-      "source": "Opérateur / presse IoT"
+      "source": "GSMA / opérateurs / agrégats"
     },
     {
       "technologie": "NB-IoT",
-      "acteur": "Orange",
+      "acteur": "Bouygues / Objenious",
       "indicateur": "Positionnement FR",
-      "valeur": "not_positioned_fr",
+      "valeur": "positioned_fr",
       "unite": "",
       "type": "qualitatif",
-      "source": "Orange Business (JDN)"
+      "source": "GSMA / Live Objects / opérateurs"
     },
     {
       "technologie": "Cellulaire (proxy NB-IoT/LTE-M)",
@@ -268,14 +304,347 @@
       "sites_5g": 22777
     }
   ],
+  "growth_metrics": {
+    "lora_public_antennas": {
+      "peak": 9100,
+      "peak_year": 2022,
+      "after_objenious_shutdown": 4800,
+      "delta_pct": -47.3,
+      "direction": "décroissance",
+      "interpretation": "Le parc d'antennes LoRaWAN opéré public en France a CRÛ jusqu'au duopole\n(~9100), puis a DÉCRU brutalement (-47%) avec l'arrêt Objenious.\nOrange maintient un plateau ; la croissance LoRa se déplace vers le privé\net le communautaire, pas vers de nouvelles antennes publiques nationales."
+    },
+    "nbiot_proxy_4g_sites": {
+      "growth_2023_2026_pct": {
+        "orange": 10.6,
+        "sfr": 25.5,
+        "bouygues": 20.7,
+        "free": 27.9
+      },
+      "direction": "croissance",
+      "interpretation": "Densification cellulaire en CROISSANCE continue (+11% à +28% selon opérateur\nentre 2023 et 2026). Pour NB-IoT (in-band), cela signifie une capacité\nd'accueil et une couverture qui s'améliorent, à l'inverse du parc LoRaWAN\npublic qui a chuté en 2025."
+    },
+    "users": {
+      "lora_trend": "CROISSANCE sur le parc Orange (double digit YoY déclaré) et Birdz (millions\nde compteurs). DÉCROISSANCE nette du parc Objenious LoRa (migration forcée\n2024-2025). Au global public LoRaWAN France : transfert d'utilisateurs plus\nque disparition (migration), mais perte d'un réseau concurrent.\n",
+      "nbiot_trend": "CROISSANCE : Objenious vise majority cellulaire dès 2023 ; sunset 2G/3G\npousse les flottes M2M vers NB-IoT/LTE-M ; Massive IoT mondial ~500 M fin 2022\n(Ericsson) et LPWAN mondial +26% CAGR vers 2027 (IoT Analytics).\n",
+      "net_france": "Antennes LoRaWAN publiques : ↓ (-47% en 2025). Utilisateurs LoRaWAN Orange : ↑.\nCapacité/couverture NB-IoT (proxy 4G + déclarations) : ↑. Utilisateurs cellulaire\nLPWA : ↑ (bascule Objenious + sunset 2G/3G).\n"
+    },
+    "lora_antenna_series": [
+      {
+        "year": 2016,
+        "orange": null,
+        "objenious": null,
+        "total_public_estime": null,
+        "note": "Lancement Orange (T1) et création Objenious"
+      },
+      {
+        "year": 2017,
+        "orange": null,
+        "objenious": 4020,
+        "total_public_estime": null,
+        "sources": [
+          "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
+        ],
+        "note": "Objenious revendique 4020 antennes, 93% pop."
+      },
+      {
+        "year": 2018,
+        "orange": null,
+        "objenious": 4300,
+        "total_public_estime": null,
+        "sources": [
+          "https://www.silicon.fr/Thematique/workspace-1376/Breves/IoT-Objenious-geolocalise-les-objets-sur-son-reseau-LoRa-442422.htm"
+        ]
+      },
+      {
+        "year": 2019,
+        "orange": null,
+        "objenious": 4300,
+        "total_public_estime": null,
+        "sources": [
+          "https://www.objetconnecte.com/objenious-reseau-dedie/"
+        ]
+      },
+      {
+        "year": 2022,
+        "orange": 4800,
+        "objenious": 4300,
+        "total_public_estime": 9100,
+        "sources": [
+          "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/",
+          "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+        ],
+        "note": "Pic du duopole public (~9100 antennes)"
+      },
+      {
+        "year": 2024,
+        "orange": 4800,
+        "objenious": 4300,
+        "total_public_estime": 9100,
+        "note": "Avant arrêt Objenious (annoncé juin, effective déc. 2024)"
+      },
+      {
+        "year": 2025,
+        "orange": 4800,
+        "objenious": 0,
+        "total_public_estime": 4800,
+        "sources": [
+          "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+        ],
+        "note": "Chute nette du parc public LoRaWAN : -47% vs pic 2022-2024"
+      },
+      {
+        "year": 2026,
+        "orange": 4800,
+        "objenious": 0,
+        "total_public_estime": 4800,
+        "note": "Orange densifie à la demande ; engagement maintien ≥ 31/12/2027"
+      }
+    ],
+    "users_series": [
+      {
+        "year": 2017,
+        "objenious_lora_objects": 50000,
+        "orange_lora_objects": null,
+        "birdz_lora_meters_fr": null,
+        "note": "Objenious : dizaines de milliers d'objets",
+        "sources": [
+          "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
+        ]
+      },
+      {
+        "year": 2019,
+        "objenious_lora_objects": 110000,
+        "orange_lora_objects": null,
+        "birdz_lora_meters_fr": null,
+        "note": "Objenious : 100 à 120 000 objets",
+        "sources": [
+          "https://www.objetconnecte.com/objenious-reseau-dedie/"
+        ]
+      },
+      {
+        "year": 2020,
+        "objenious_lora_objects": null,
+        "orange_lora_objects": null,
+        "birdz_lora_meters_fr": 3000000,
+        "note": "Birdz/Veolia : >3 M compteurs eau sur LoRaWAN Orange (cible contrat)",
+        "sources": [
+          "https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans"
+        ]
+      },
+      {
+        "year": 2022,
+        "france_iot_all_technologies_m": 244,
+        "note": "ADEME/Arcep : 244 M objets connectés France (toutes technos)",
+        "sources": [
+          "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+        ]
+      },
+      {
+        "year": 2023,
+        "objenious_share_cellular_lpwa_clients_pct": 50,
+        "global_lpwan_connections_bn": 1.3,
+        "global_massive_iot_nbiot_ltem_m": 500,
+        "note": "Objenious : cellulaire >50% choix clients LPWA ; IoT Analytics / Ericsson",
+        "sources": [
+          "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/",
+          "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
+        ]
+      },
+      {
+        "year": 2024,
+        "orange_lora_objects_growth": "double_digit_yoy",
+        "birdz_sensors_connected": 4000000,
+        "note": "Orange : croissance objets LoRa à 2 chiffres/an ; Birdz >4 M capteurs (surtout LoRaWAN)",
+        "sources": [
+          "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/",
+          "https://www.birdz.com/"
+        ]
+      },
+      {
+        "year": 2025,
+        "objenious_lora_objects": 0,
+        "note": "Utilisateurs Objenious LoRa migrés (Orange LoRa / Netmore / NB-IoT / LTE-M)",
+        "sources": [
+          "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+        ]
+      }
+    ]
+  },
   "deployment_models": {
     "lora_public_national_operators": 1,
-    "nbiot_national_operators": 2,
+    "nbiot_national_operators": 3,
     "lora_orange_antennas": 4800,
     "lora_orange_pop_pct": 95,
+    "nbiot_orange_pop_pct": 98,
     "nbiot_sfr_pop_pct": 99,
     "nbiot_bouygues_pop_pct": 99,
-    "structural_shift": "Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un monopole public Orange, tandis que NB-IoT/LTE-M se déploie en multi-opérateurs cellulaires (SFR, Bouygues ; Orange sur LTE-M)."
+    "structural_shift": "Depuis fin 2024 : parc d'antennes LoRaWAN public en DÉCROISSANCE nette (-47.3% vs pic) après arrêt Objenious ; Orange reste le seul opérateur LoRaWAN national mais est aussi positionné NB-IoT (avec SFR et Bouygues). Les sites 4G (proxy NB-IoT) et les utilisateurs cellulaires LPWA sont en CROISSANCE ; les objets LoRaWAN Orange croissent encore (double digit YoY) malgré la contraction du réseau public concurrent.",
+    "growth_highlights": {
+      "lora_public_antennas": {
+        "peak": 9100,
+        "peak_year": 2022,
+        "after_objenious_shutdown": 4800,
+        "delta_pct": -47.3,
+        "direction": "décroissance",
+        "interpretation": "Le parc d'antennes LoRaWAN opéré public en France a CRÛ jusqu'au duopole\n(~9100), puis a DÉCRU brutalement (-47%) avec l'arrêt Objenious.\nOrange maintient un plateau ; la croissance LoRa se déplace vers le privé\net le communautaire, pas vers de nouvelles antennes publiques nationales."
+      },
+      "nbiot_proxy_4g_sites": {
+        "growth_2023_2026_pct": {
+          "orange": 10.6,
+          "sfr": 25.5,
+          "bouygues": 20.7,
+          "free": 27.9
+        },
+        "direction": "croissance",
+        "interpretation": "Densification cellulaire en CROISSANCE continue (+11% à +28% selon opérateur\nentre 2023 et 2026). Pour NB-IoT (in-band), cela signifie une capacité\nd'accueil et une couverture qui s'améliorent, à l'inverse du parc LoRaWAN\npublic qui a chuté en 2025."
+      },
+      "users": {
+        "lora_trend": "CROISSANCE sur le parc Orange (double digit YoY déclaré) et Birdz (millions\nde compteurs). DÉCROISSANCE nette du parc Objenious LoRa (migration forcée\n2024-2025). Au global public LoRaWAN France : transfert d'utilisateurs plus\nque disparition (migration), mais perte d'un réseau concurrent.\n",
+        "nbiot_trend": "CROISSANCE : Objenious vise majority cellulaire dès 2023 ; sunset 2G/3G\npousse les flottes M2M vers NB-IoT/LTE-M ; Massive IoT mondial ~500 M fin 2022\n(Ericsson) et LPWAN mondial +26% CAGR vers 2027 (IoT Analytics).\n",
+        "net_france": "Antennes LoRaWAN publiques : ↓ (-47% en 2025). Utilisateurs LoRaWAN Orange : ↑.\nCapacité/couverture NB-IoT (proxy 4G + déclarations) : ↑. Utilisateurs cellulaire\nLPWA : ↑ (bascule Objenious + sunset 2G/3G).\n"
+      },
+      "lora_antenna_series": [
+        {
+          "year": 2016,
+          "orange": null,
+          "objenious": null,
+          "total_public_estime": null,
+          "note": "Lancement Orange (T1) et création Objenious"
+        },
+        {
+          "year": 2017,
+          "orange": null,
+          "objenious": 4020,
+          "total_public_estime": null,
+          "sources": [
+            "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
+          ],
+          "note": "Objenious revendique 4020 antennes, 93% pop."
+        },
+        {
+          "year": 2018,
+          "orange": null,
+          "objenious": 4300,
+          "total_public_estime": null,
+          "sources": [
+            "https://www.silicon.fr/Thematique/workspace-1376/Breves/IoT-Objenious-geolocalise-les-objets-sur-son-reseau-LoRa-442422.htm"
+          ]
+        },
+        {
+          "year": 2019,
+          "orange": null,
+          "objenious": 4300,
+          "total_public_estime": null,
+          "sources": [
+            "https://www.objetconnecte.com/objenious-reseau-dedie/"
+          ]
+        },
+        {
+          "year": 2022,
+          "orange": 4800,
+          "objenious": 4300,
+          "total_public_estime": 9100,
+          "sources": [
+            "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/",
+            "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+          ],
+          "note": "Pic du duopole public (~9100 antennes)"
+        },
+        {
+          "year": 2024,
+          "orange": 4800,
+          "objenious": 4300,
+          "total_public_estime": 9100,
+          "note": "Avant arrêt Objenious (annoncé juin, effective déc. 2024)"
+        },
+        {
+          "year": 2025,
+          "orange": 4800,
+          "objenious": 0,
+          "total_public_estime": 4800,
+          "sources": [
+            "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+          ],
+          "note": "Chute nette du parc public LoRaWAN : -47% vs pic 2022-2024"
+        },
+        {
+          "year": 2026,
+          "orange": 4800,
+          "objenious": 0,
+          "total_public_estime": 4800,
+          "note": "Orange densifie à la demande ; engagement maintien ≥ 31/12/2027"
+        }
+      ],
+      "users_series": [
+        {
+          "year": 2017,
+          "objenious_lora_objects": 50000,
+          "orange_lora_objects": null,
+          "birdz_lora_meters_fr": null,
+          "note": "Objenious : dizaines de milliers d'objets",
+          "sources": [
+            "https://www.journaldunet.com/iot/1190299-objenious-principal-reseau-lora-france/"
+          ]
+        },
+        {
+          "year": 2019,
+          "objenious_lora_objects": 110000,
+          "orange_lora_objects": null,
+          "birdz_lora_meters_fr": null,
+          "note": "Objenious : 100 à 120 000 objets",
+          "sources": [
+            "https://www.objetconnecte.com/objenious-reseau-dedie/"
+          ]
+        },
+        {
+          "year": 2020,
+          "objenious_lora_objects": null,
+          "orange_lora_objects": null,
+          "birdz_lora_meters_fr": 3000000,
+          "note": "Birdz/Veolia : >3 M compteurs eau sur LoRaWAN Orange (cible contrat)",
+          "sources": [
+            "https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans"
+          ]
+        },
+        {
+          "year": 2022,
+          "france_iot_all_technologies_m": 244,
+          "note": "ADEME/Arcep : 244 M objets connectés France (toutes technos)",
+          "sources": [
+            "https://www.orange-business.com/fr/blogs/lorawanr-reseau-iot-durable-et-performant-chez-orange"
+          ]
+        },
+        {
+          "year": 2023,
+          "objenious_share_cellular_lpwa_clients_pct": 50,
+          "global_lpwan_connections_bn": 1.3,
+          "global_massive_iot_nbiot_ltem_m": 500,
+          "note": "Objenious : cellulaire >50% choix clients LPWA ; IoT Analytics / Ericsson",
+          "sources": [
+            "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/",
+            "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
+          ]
+        },
+        {
+          "year": 2024,
+          "orange_lora_objects_growth": "double_digit_yoy",
+          "birdz_sensors_connected": 4000000,
+          "note": "Orange : croissance objets LoRa à 2 chiffres/an ; Birdz >4 M capteurs (surtout LoRaWAN)",
+          "sources": [
+            "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/",
+            "https://www.birdz.com/"
+          ]
+        },
+        {
+          "year": 2025,
+          "objenious_lora_objects": 0,
+          "note": "Utilisateurs Objenious LoRa migrés (Orange LoRa / Netmore / NB-IoT / LTE-M)",
+          "sources": [
+            "https://objenious.com/en/blogpost/shutdown-of-the-lorawan-network/"
+          ]
+        }
+      ]
+    }
   },
   "timeline_events": [
     {
@@ -443,8 +812,8 @@
     {
       "id": "ecosystem_risk",
       "title": "Risque écosystème France",
-      "lora": "Consolidation opérateur (Objenious off) ; Orange seul national public ; privés en hausse",
-      "nbiot": "Dualité SFR + Bouygues ; aligné sunset 2G/3G et roadmap 3GPP (NB-IoT 2.0)"
+      "lora": "Consolidation (Objenious off) ; Orange seul national public ; privés en hausse ; antennes publiques en baisse (-47%)",
+      "nbiot": "Trio Orange + SFR + Bouygues ; densification 4G en hausse ; aligné sunset 2G/3G"
     },
     {
       "id": "use_cases",
@@ -456,6 +825,7 @@
   "inputs": {
     "packetbroker": true,
     "helium": true,
-    "arcep": true
+    "arcep": true,
+    "timeseries": true
   }
 }

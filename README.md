@@ -6,12 +6,12 @@ Pipeline open-source pour une étude **quantitative et qualitative** du déploie
 
 | Dimension | LoRaWAN | NB-IoT |
 |---|---|---|
-| Opérateurs nationaux publics | **Orange** (seul après arrêt Objenious fin 2024) | **SFR** + **Bouygues** (Orange non positionné FR) |
-| Couverture pop. déclarée | ~**95 %** (Orange) | ~**99 %** (SFR / Bouygues) |
-| Infrastructure dédiée | ~**4 800** antennes Orange | Mutualisée sur RAN **4G** (in-band) |
-| Communautaire mesuré | **2 734** GW Packet Broker FR (dont **413** online) | n/a |
-| Helium IoT (estim.) | ~**11 869** hotspots FR (échantillon) | n/a |
-| Tendance 2024–2026 | Consolidation + réseaux privés | Accélération (sunset 2G/3G) |
+| Opérateurs nationaux | **Orange** (seul public après arrêt Objenious) | **Orange + SFR + Bouygues** |
+| Couverture pop. déclarée | ~**95 %** (Orange) | ~**98–99 %** (Orange / SFR / Bouygues) |
+| Antennes / sites (tendance) | Public **↓ −47 %** (pic ~9100 → ~4800 en 2025) | Proxy 4G **↑ +11 à +26 %** (2023→2026) |
+| Utilisateurs / objets | Orange/Birdz **↑** ; Objenious LoRa **↓→0** | Cellulaire LPWA **↑** (bascule + sunset 2G/3G) |
+| Communautaire mesuré | **2 734** GW Packet Broker (**413** online) | n/a |
+
 
 Rapport généré : [`reports/etude_comparative_lora_nbiot_france.md`](reports/etude_comparative_lora_nbiot_france.md)
 

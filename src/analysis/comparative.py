@@ -60,6 +60,17 @@ def build_kpi_table(
             "source": "Orange Business",
         }
     )
+    rows.append(
+        {
+            "technologie": "LoRaWAN",
+            "acteur": "Orange (réseau opéré)",
+            "indicateur": "Croissance objets connectés",
+            "valeur": orange_lora.get("objects_growth"),
+            "unite": "",
+            "type": "tendance",
+            "source": "Orange Business (JDN)",
+        }
+    )
 
     if packetbroker:
         rows.append(
@@ -111,7 +122,11 @@ def build_kpi_table(
         }
     )
 
-    for actor, key in [("SFR", "sfr"), ("Bouygues / Objenious", "bouygues_objenious")]:
+    for actor, key in [
+        ("Orange", "orange"),
+        ("SFR", "sfr"),
+        ("Bouygues / Objenious", "bouygues_objenious"),
+    ]:
         nb = curated.get("nbiot", {}).get(key, {})
         rows.append(
             {
@@ -121,22 +136,20 @@ def build_kpi_table(
                 "valeur": nb.get("population_coverage_pct"),
                 "unite": "%",
                 "type": "déclaratif",
-                "source": "Opérateur / presse IoT",
+                "source": "GSMA / opérateurs / agrégats",
             }
         )
-
-    orange_nb = curated.get("nbiot", {}).get("orange", {})
-    rows.append(
-        {
-            "technologie": "NB-IoT",
-            "acteur": "Orange",
-            "indicateur": "Positionnement FR",
-            "valeur": orange_nb.get("status"),
-            "unite": "",
-            "type": "qualitatif",
-            "source": "Orange Business (JDN)",
-        }
-    )
+        rows.append(
+            {
+                "technologie": "NB-IoT",
+                "acteur": actor,
+                "indicateur": "Positionnement FR",
+                "valeur": nb.get("status", "positioned_fr"),
+                "unite": "",
+                "type": "qualitatif",
+                "source": "GSMA / Live Objects / opérateurs",
+            }
+        )
 
     if arcep and arcep.get("series"):
         latest = arcep["series"][-1]
@@ -209,28 +222,62 @@ def arcep_4g_trend_table(arcep: dict[str, Any]) -> list[dict[str, Any]]:
     return out
 
 
-def compare_deployment_models(curated: dict[str, Any]) -> dict[str, Any]:
-    """Synthèse structurée pour la partie qualitative/quantitative."""
+def build_growth_metrics(ts: dict[str, Any]) -> dict[str, Any]:
+    """Indicateurs de croissance / décroissance antennes et utilisateurs."""
+    lora_sum = ts.get("antennas_lora_trend_summary") or {}
+    sites = ts.get("sites_4g_proxy_nbiot") or {}
+    users = ts.get("users_connections") or {}
     return {
-        "lora_public_national_operators": 1,  # Orange seul après arrêt Objenious
-        "nbiot_national_operators": 2,  # SFR + Bouygues (Orange non positionné)
+        "lora_public_antennas": {
+            "peak": lora_sum.get("peak_public_antennas"),
+            "peak_year": lora_sum.get("peak_public_year"),
+            "after_objenious_shutdown": lora_sum.get("post_objenious_antennas"),
+            "delta_pct": lora_sum.get("delta_public_pct"),
+            "direction": "décroissance",
+            "interpretation": (lora_sum.get("interpretation") or "").strip(),
+        },
+        "nbiot_proxy_4g_sites": {
+            "growth_2023_2026_pct": sites.get("growth_2023_to_2026_pct"),
+            "direction": "croissance",
+            "interpretation": (sites.get("interpretation") or "").strip(),
+        },
+        "users": {
+            "lora_trend": (users.get("trend_summary") or {}).get("lora_users"),
+            "nbiot_trend": (users.get("trend_summary") or {}).get("nbiot_users"),
+            "net_france": (users.get("trend_summary") or {}).get("net_france"),
+        },
+        "lora_antenna_series": ts.get("antennas_lora_public", {}).get("series", []),
+        "users_series": users.get("series", []),
+    }
+
+
+def compare_deployment_models(curated: dict[str, Any], growth: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "lora_public_national_operators": 1,
+        "nbiot_national_operators": 3,  # Orange, SFR, Bouygues
         "lora_orange_antennas": curated.get("lora", {}).get("orange", {}).get("antennas"),
         "lora_orange_pop_pct": curated.get("lora", {}).get("orange", {}).get("population_coverage_pct"),
+        "nbiot_orange_pop_pct": curated.get("nbiot", {}).get("orange", {}).get("population_coverage_pct"),
         "nbiot_sfr_pop_pct": curated.get("nbiot", {}).get("sfr", {}).get("population_coverage_pct"),
         "nbiot_bouygues_pop_pct": curated.get("nbiot", {})
         .get("bouygues_objenious", {})
         .get("population_coverage_pct"),
         "structural_shift": (
-            "Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu "
-            "un monopole public Orange, tandis que NB-IoT/LTE-M se déploie en multi-opérateurs "
-            "cellulaires (SFR, Bouygues ; Orange sur LTE-M)."
+            "Depuis fin 2024 : parc d'antennes LoRaWAN public en DÉCROISSANCE nette "
+            f"({growth['lora_public_antennas'].get('delta_pct')}% vs pic) après arrêt Objenious ; "
+            "Orange reste le seul opérateur LoRaWAN national mais est aussi positionné NB-IoT "
+            "(avec SFR et Bouygues). Les sites 4G (proxy NB-IoT) et les utilisateurs cellulaires "
+            "LPWA sont en CROISSANCE ; les objets LoRaWAN Orange croissent encore (double digit YoY) "
+            "malgré la contraction du réseau public concurrent."
         ),
+        "growth_highlights": growth,
     }
 
 
 def run_analysis(root: Path) -> dict[str, Any]:
     curated = load_yaml(root / "data" / "curated" / "operator_coverage_france.yaml")
     timeline = load_yaml(root / "data" / "curated" / "timeline_france.yaml")
+    timeseries = load_yaml(root / "data" / "curated" / "deployment_timeseries.yaml")
 
     pb_path = root / "data" / "processed" / "packetbroker_france_summary.json"
     he_path = root / "data" / "processed" / "helium_france_estimate.json"
@@ -240,16 +287,20 @@ def run_analysis(root: Path) -> dict[str, Any]:
     helium = load_json(he_path) if he_path.exists() else None
     arcep = load_json(ar_path) if ar_path.exists() else None
 
+    growth = build_growth_metrics(timeseries)
+
     result = {
         "kpis": build_kpi_table(curated, packetbroker, helium, arcep),
         "arcep_4g_trend": arcep_4g_trend_table(arcep or {}),
-        "deployment_models": compare_deployment_models(curated),
+        "growth_metrics": growth,
+        "deployment_models": compare_deployment_models(curated, growth),
         "timeline_events": timeline.get("events", []),
         "qualitative_axes": timeline.get("qualitative_axes", []),
         "inputs": {
             "packetbroker": bool(packetbroker),
             "helium": bool(helium),
             "arcep": bool(arcep),
+            "timeseries": True,
         },
     }
     out_path = root / "data" / "processed" / "comparative_analysis.json"
@@ -259,4 +310,4 @@ def run_analysis(root: Path) -> dict[str, Any]:
 
 if __name__ == "__main__":
     root = Path(__file__).resolve().parents[2]
-    print(json.dumps(run_analysis(root), indent=2, ensure_ascii=False)[:4000])
+    print(json.dumps(run_analysis(root), indent=2, ensure_ascii=False)[:5000])

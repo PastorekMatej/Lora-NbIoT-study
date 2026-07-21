@@ -1,8 +1,5 @@
 # Indicateurs de couverture déclarés / publiés — France métropolitaine
 # Sources et dates explicitement tracées. À actualiser lors des collectes.
-#
-# ATTENTION: les % population NB-IoT / LTE-M sont des déclarations opérateurs
-# ou agrégats presse ; ils ne sont PAS mesurés par l'Arcep à ce jour.
 
 meta:
   country: FR
@@ -11,6 +8,7 @@ meta:
   notes: |
     L'Arcep open data ne publie pas encore de couches NB-IoT / LTE-M / LoRaWAN.
     Les sites 4G Arcep servent de proxy d'infrastructure cellulaire (NB-IoT in-band).
+    Orange est positionné NB-IoT en France (GSMA commercial launches + Live Objects).
 
 lora:
   orange:
@@ -21,6 +19,7 @@ lora:
     population_coverage_pct: 95
     commitment_until: "2027-12-31"
     platform: Live Objects
+    objects_growth: "double_digit_yoy"
     sources:
       - url: "https://www.orange-business.com/fr/reseau-iot"
         claim: "95% population, >30 000 communes"
@@ -55,18 +54,25 @@ lora:
 nbiot:
   orange:
     technology: NB-IoT
-    status: not_positioned_fr
+    status: positioned_fr
+    population_coverage_pct: 98
+    bands: ["B20", "B3"]
+    platform: Live Objects
     notes: |
-      Direction Orange Business (JDN): pas de positionnement NB-IoT en France
-      (préférence LoRaWAN + LTE-M). GSMA liste Orange FR en LTE-M & NB-IoT —
-      à croiser ; roaming DT IoT ne liste Orange FR qu'en LTE-M pour NB-IoT.
+      Orange est positionné sur NB-IoT en France : listé par GSMA (Mobile IoT
+      Commercial Launches) et supporté par Live Objects (IoT Journey).
+      Couverture population ~98% (sources secondaires / agrégats).
+      Complément historique : LTE-M Orange ~99% (source primaire Orange Business).
     sources:
-      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
-        claim: "Orange non positionné NB-IoT en France"
-      - url: "https://hub.iot.telekom.com/docs/device-to-cloud/general-info/roaming-network-info/"
-        claim: "NB-IoT FR: Bouygues 20820, SFR 20810 (pas Orange)"
+      - url: "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/mobile-iot-commercial-launches/"
+        claim: "Orange France LTE-M & NB-IoT"
+      - url: "https://iotjourney.orange.com/fr-FR/explorer/les-bases-de-l-iot/collecte-et-device-management-pour-quoi-faire-1645711997686"
+        claim: "Live Objects multi-réseaux dont NB-IoT"
+      - url: "https://wikiot.fr/iot/connectivite/nb-iot/nb-iot-deploiement-modem-at-optimisation-conso"
+        claim: "Orange ~98% population NB-IoT (B20/B3)"
   sfr:
     technology: NB-IoT
+    status: positioned_fr
     population_coverage_pct: 99
     bands: ["B20"]
     plmn: "20810"
@@ -77,6 +83,7 @@ nbiot:
         claim: "SFR France NB-IoT & LTE-M (GSMA Nov 2025)"
   bouygues_objenious:
     technology: NB-IoT
+    status: positioned_fr
     population_coverage_pct: 99
     bands: ["B20"]
     plmn: "20820"
@@ -89,10 +96,13 @@ nbiot:
 
 lte_m:
   orange:
-    population_coverage_pct: null
-    notes: "Complémentaire LoRaWAN ; migration 2G→LTE-M"
+    population_coverage_pct: 99
+    national_since: "2018-11"
     sources:
-      - url: "https://www.journaldunet.com/iot/1510453-gregoire-de-changy-obs/"
+      - url: "https://www.orange-business.com/fr/reseau-LTE-M"
+        claim: "+99% population métropolitaine"
+      - url: "https://newsroom.orange.com/orange-business-services-accelere-son-developpement-sur-linternet-des-objets-et-annonce-le-lancement-de-la-technologie-lte-m-en-france/"
+        claim: "lancement 2018, >98% dès l'ouverture"
   sfr:
     population_coverage_pct: null
   bouygues:
@@ -100,12 +110,12 @@ lte_m:
     national_since: "2022-12"
 
 market_global_context:
-  # IoT Analytics LPWAN Market 2024 (Q1/2024 tracker)
   lpwan_connections_2023_bn: 1.3
   nbiot_share_global_pct: 54
   lora_share_ex_china_pct: 41
   nbiot_share_ex_china_pct: 20
   cagr_to_2027_pct: 26
+  massive_iot_2022_m: 500
   source: "https://iot-analytics.com/wp-content/uploads/2024/03/INSIGHTS-RELEASE-LPWAN-Market-2024.pdf"
 
 france_iot_stock:

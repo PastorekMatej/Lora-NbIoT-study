@@ -1,14 +1,32 @@
 # Étude comparative — déploiement LoRaWAN vs NB-IoT en France
 
 > Analyse quantitative et qualitative basée sur données open (APIs) et sources opérateurs / GSMA / IoT Analytics.
-> Généré automatiquement — inputs: `{"packetbroker": true, "helium": true, "arcep": true}`.
+> Généré automatiquement — inputs: `{"packetbroker": true, "helium": true, "arcep": true, "timeseries": true}`.
 
-## Verdict synthétique
+## Verdict — croissance vs décroissance
 
-Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un monopole public Orange, tandis que NB-IoT/LTE-M se déploie en multi-opérateurs cellulaires (SFR, Bouygues ; Orange sur LTE-M).
+Depuis fin 2024 : parc d'antennes LoRaWAN public en DÉCROISSANCE nette (-47.3% vs pic) après arrêt Objenious ; Orange reste le seul opérateur LoRaWAN national mais est aussi positionné NB-IoT (avec SFR et Bouygues). Les sites 4G (proxy NB-IoT) et les utilisateurs cellulaires LPWA sont en CROISSANCE ; les objets LoRaWAN Orange croissent encore (double digit YoY) malgré la contraction du réseau public concurrent.
 
-- **LoRaWAN public national** : 1 opérateur (Orange), ~4800 antennes, ~95 % population.
-- **NB-IoT national** : 2 opérateurs (SFR ~99 %, Bouygues ~99 %) ; Orange non positionné en France (LTE-M + LoRaWAN).
+### Antennes / infrastructure
+
+- **LoRaWAN public** : DÉCROISSANCE — pic ~9100 antennes (2022) → ~4800 après arrêt Objenious (**-47.3%**).
+- **NB-IoT (proxy sites 4G)** : CROISSANCE — Orange **+10.6%**, SFR **+25.5%**, Bouygues **+20.7%** (2023→2026).
+
+### Utilisateurs / objets
+
+- **LoRaWAN** : CROISSANCE sur le parc Orange (double digit YoY déclaré) et Birdz (millions
+de compteurs). DÉCROISSANCE nette du parc Objenious LoRa (migration forcée
+2024-2025). Au global public LoRaWAN France : transfert d'utilisateurs plus
+que disparition (migration), mais perte d'un réseau concurrent.
+- **NB-IoT / cellulaire LPWA** : CROISSANCE : Objenious vise majority cellulaire dès 2023 ; sunset 2G/3G
+pousse les flottes M2M vers NB-IoT/LTE-M ; Massive IoT mondial ~500 M fin 2022
+(Ericsson) et LPWAN mondial +26% CAGR vers 2027 (IoT Analytics).
+- **Synthèse** : Antennes LoRaWAN publiques : ↓ (-47% en 2025). Utilisateurs LoRaWAN Orange : ↑.
+Capacité/couverture NB-IoT (proxy 4G + déclarations) : ↑. Utilisateurs cellulaire
+LPWA : ↑ (bascule Objenious + sunset 2G/3G).
+
+- Opérateurs LoRaWAN public national : **1** (Orange).
+- Opérateurs NB-IoT national : **3** (Orange ~98 %, SFR ~99 %, Bouygues ~99 %).
 
 ## Indicateurs clés (KPI)
 
@@ -17,13 +35,17 @@ Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un mon
 | LoRaWAN | Orange (réseau opéré) | Antennes / gateways | 4800 | antennes | déclaratif | Orange Business |
 | LoRaWAN | Orange (réseau opéré) | Couverture population | 95 | % | déclaratif | Orange Business |
 | LoRaWAN | Orange (réseau opéré) | Communes couvertes | 30000 | communes | déclaratif | Orange Business |
+| LoRaWAN | Orange (réseau opéré) | Croissance objets connectés | double_digit_yoy |  | tendance | Orange Business (JDN) |
 | LoRaWAN | Communautaire (Packet Broker) | Gateways géolocalisés FR métropole | 2734 | gateways | mesuré_api | https://mapper.packetbroker.net/api/v2/gateways |
 | LoRaWAN | Communautaire (Packet Broker) | Gateways online | 413 | gateways | mesuré_api | https://mapper.packetbroker.net/api/v2/gateways |
 | LoRaWAN | Helium IoT | Hotspots estimés FR (échantillon) | 11869 | hotspots | estimé_api | https://entities.nft.helium.io/v2/hotspots |
 | LoRaWAN | Objenious / Bouygues | Statut réseau | shutdown |  | fait | Objenious (arrêt 2024) |
-| NB-IoT | SFR | Couverture population déclarée | 99 | % | déclaratif | Opérateur / presse IoT |
-| NB-IoT | Bouygues / Objenious | Couverture population déclarée | 99 | % | déclaratif | Opérateur / presse IoT |
-| NB-IoT | Orange | Positionnement FR | not_positioned_fr |  | qualitatif | Orange Business (JDN) |
+| NB-IoT | Orange | Couverture population déclarée | 98 | % | déclaratif | GSMA / opérateurs / agrégats |
+| NB-IoT | Orange | Positionnement FR | positioned_fr |  | qualitatif | GSMA / Live Objects / opérateurs |
+| NB-IoT | SFR | Couverture population déclarée | 99 | % | déclaratif | GSMA / opérateurs / agrégats |
+| NB-IoT | SFR | Positionnement FR | positioned_fr |  | qualitatif | GSMA / Live Objects / opérateurs |
+| NB-IoT | Bouygues / Objenious | Couverture population déclarée | 99 | % | déclaratif | GSMA / opérateurs / agrégats |
+| NB-IoT | Bouygues / Objenious | Positionnement FR | positioned_fr |  | qualitatif | GSMA / Live Objects / opérateurs |
 | Cellulaire (proxy NB-IoT/LTE-M) | Orange | Sites 4G Arcep (2026_T1) | 32576 | sites | mesuré_open_data | Arcep Mon Réseau Mobile |
 | Cellulaire (proxy NB-IoT/LTE-M) | SFR | Sites 4G Arcep (2026_T1) | 30394 | sites | mesuré_open_data | Arcep Mon Réseau Mobile |
 | Cellulaire (proxy NB-IoT/LTE-M) | Bouygues Telecom | Sites 4G Arcep (2026_T1) | 30546 | sites | mesuré_open_data | Arcep Mon Réseau Mobile |
@@ -32,13 +54,19 @@ Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un mon
 | LoRa (ex-Chine) | IoT Analytics | Part connexions LPWAN | 41 | % | marché | IoT Analytics 2024 |
 | NB-IoT (ex-Chine) | IoT Analytics | Part connexions LPWAN | 20 | % | marché | IoT Analytics 2024 |
 
-## Graphiques
+## Graphiques (tendances)
+
+![croissance_vs_decroissance](figures/croissance_vs_decroissance.png)
+
+![tendance_antennes_lorawan](figures/tendance_antennes_lorawan.png)
+
+![tendance_sites_4g_proxy_nbiot](figures/tendance_sites_4g_proxy_nbiot.png)
+
+![tendance_utilisateurs_lorawan](figures/tendance_utilisateurs_lorawan.png)
 
 ![couverture_population_declaree](figures/couverture_population_declaree.png)
 
 ![infra_lorawan](figures/infra_lorawan.png)
-
-![arcep_sites_4g_trend](figures/arcep_sites_4g_trend.png)
 
 ![timeline_evenements](figures/timeline_evenements.png)
 
@@ -66,8 +94,8 @@ Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un mon
 - **NB-IoT** : PSM / eDRX ; autonomie élevée mais souvent inférieure LoRaWAN class A pour cas ultra-basse conso
 
 ### Risque écosystème France
-- **LoRaWAN** : Consolidation opérateur (Objenious off) ; Orange seul national public ; privés en hausse
-- **NB-IoT** : Dualité SFR + Bouygues ; aligné sunset 2G/3G et roadmap 3GPP (NB-IoT 2.0)
+- **LoRaWAN** : Consolidation (Objenious off) ; Orange seul national public ; privés en hausse ; antennes publiques en baisse (-47%)
+- **NB-IoT** : Trio Orange + SFR + Bouygues ; densification 4G en hausse ; aligné sunset 2G/3G
 
 ### Cas d'usage typiques FR
 - **LoRaWAN** : Smart metering eau (Birdz/Veolia), smart city, agri, monitoring statique
@@ -93,15 +121,14 @@ Depuis fin 2024, le duopole LoRaWAN opéré (Orange/Objenious) est devenu un mon
 
 ## Limites méthodologiques
 
-- L'Arcep ne publie pas (encore) de couches open data NB-IoT / LTE-M / LoRaWAN.
-- Les % population opérateurs sont déclaratifs ; les mesures Packet Broker / Helium / Arcep 4G sont objectives mais partielles.
-- Packet Broker ne capture pas le réseau LoRaWAN privé Orange (~4800 antennes).
-- Helium : estimation par échantillonnage ; coordonnées obfuscées ; statut `is_active` peu fiable hors contexte epoch.
-- Orange NB-IoT : divergences possibles entre listing GSMA et déclaration Orange Business — documentées dans `data/curated/`.
+- L'Arcep ne publie pas de couches NB-IoT / LTE-M / LoRaWAN : les % population sont déclaratifs.
+- Les sites 4G sont un **proxy** de densification cellulaire (NB-IoT in-band), pas un inventaire d'antennes NB-IoT dédiées.
+- Séries utilisateurs LoRaWAN partielles (Objenious, Birdz, déclarations Orange) — pas de recensement exhaustif Arcep.
+- Packet Broker ne capture pas le réseau LoRaWAN Orange opéré (~4800 antennes).
 
 ## Reproductibilité
 
 ```bash
 pip install -r requirements.txt
-python -m scripts.run_study --collect --analyze --report
+python -m scripts.run_study --collect --spatial --analyze --report
 ```

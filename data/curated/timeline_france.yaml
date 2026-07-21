@@ -119,8 +119,8 @@ qualitative_axes:
 
   - id: ecosystem_risk
     title: Risque écosystème France
-    lora: "Consolidation opérateur (Objenious off) ; Orange seul national public ; privés en hausse"
-    nbiot: "Dualité SFR + Bouygues ; aligné sunset 2G/3G et roadmap 3GPP (NB-IoT 2.0)"
+    lora: "Consolidation (Objenious off) ; Orange seul national public ; privés en hausse ; antennes publiques en baisse (-47%)"
+    nbiot: "Trio Orange + SFR + Bouygues ; densification 4G en hausse ; aligné sunset 2G/3G"
 
   - id: use_cases
     title: Cas d'usage typiques FR
