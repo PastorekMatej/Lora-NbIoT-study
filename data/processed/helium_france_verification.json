@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-07-21",
+  "verdict": "La série FR primaire ~11 700 (Entity) était trop haute pour un total « réseau ». Retenir ~3 200 en 2026 ; Entity ~11 729 = stock géolocalisé (inactifs inclus).",
+  "sources_checked": [
+    {
+      "id": "jdn_2022_02",
+      "url": "https://www.journaldunet.com/iot/1509147-reseau-iot-helium-gonfle-ses-chiffres-mais-peine-encore-a-convaincre-en-france/",
+      "claim": "France ~2 600 hotspots (fév. 2022) ; Paris 624 ; monde ~551k",
+      "confidence": "high"
+    },
+    {
+      "id": "jdn_2022_08",
+      "url": "https://www.journaldunet.com/web-tech/dictionnaire-de-l-iot/1511963-helium-particularites-et-fonctionnement-du-reseau-iot-participatif-20220826/",
+      "claim": "Au 26 août 2022 : monde >934k, France toujours >2 600 ; ouverture FR juillet 2020",
+      "confidence": "high",
+      "implication": "Plateau FR pendant le boom mondial 2022 → interpolations 5k–10k post-2022 non crédibles"
+    },
+    {
+      "id": "heliumtracker_paris_2026",
+      "url": "https://heliumtracker.io/cities/40",
+      "claim": "Paris 781 hotspots (2026)",
+      "confidence": "high",
+      "vs_2022": "624 → 781 = +25 %"
+    },
+    {
+      "id": "certifbus_2026",
+      "url": "https://certifbus.com/en/q/LRW-T06-001",
+      "claim": "Helium ~3 000 hotspots en France (2026)",
+      "confidence": "medium",
+      "caveat": "Source pédagogique ; Orange y est à ~10k (surestimé vs ~4,8k Orange Business) — ordre de grandeur seulement"
+    },
+    {
+      "id": "entity_api_sample",
+      "url": "https://entities.nft.helium.io/v2/hotspots",
+      "claim": "Ratio FR stable ~1,12 % sur 150k–400k items → extrapol. ~11 500–11 730 / 1 035 532",
+      "confidence": "high_for_stock",
+      "caveat": "is_active toujours false dans l'échantillon ; compte asserts géolocalisés, pas couverture active"
+    }
+  ],
+  "cross_checks": {
+    "paris_share_2022": 0.24,
+    "paris_2022": 624,
+    "paris_2026": 781,
+    "national_2022_jdn": 2600,
+    "national_2026_scaled_from_paris": 3250,
+    "national_2026_certifbus": 3000,
+    "national_2026_primary_retained": 3200,
+    "entity_stock_2026": 11729,
+    "entity_overcount_factor_approx": 3.7
+  },
+  "entity_sampling": {
+    "global_total": 1035532,
+    "pages_checked": [15, 40],
+    "ratio_at_150k": 0.011327,
+    "ratio_at_400k": 0.011178,
+    "france_estimated_150k": 11729,
+    "france_estimated_400k": 11574,
+    "ratio_stable": true,
+    "active_flag_in_sample": 0
+  },
+  "series_correction": {
+    "before_2023_2026": [5000, 8000, 10000, 11700],
+    "after_2023_2026": [2800, 3000, 3100, 3200],
+    "reason": "JDN plateau août 2022 + scaling Paris +25 % + CertifBus ~3k ; Entity gardé en annotation séparée"
+  }
+}

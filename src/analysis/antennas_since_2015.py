@@ -56,19 +56,40 @@ def plot_helium_growth(data: dict[str, Any], out: Path) -> tuple[Path, Path]:
     fr = data["helium_hotspots"]["france"]["series"]
     wo = data["helium_hotspots"]["world"]["series"]
 
-    # France
+    # France — série primaire (presse / scaling) + point Entity stock 2026
     fig1, ax1 = plt.subplots(figsize=(11, 5.0))
     yf = [r["year"] for r in fr]
     vf = [r.get("hotspots") or 0 for r in fr]
-    ax1.plot(yf, vf, "o-", color="#7b2cbf", lw=2.5, markersize=7)
+    ax1.plot(yf, vf, "o-", color="#7b2cbf", lw=2.5, markersize=7, label="Réseau FR (vérifié / estimé)")
     ax1.fill_between(yf, vf, color="#7b2cbf", alpha=0.15)
+    entity_pts = [(r["year"], r["entity_stock_est"]) for r in fr if r.get("entity_stock_est")]
+    if entity_pts:
+        ax1.scatter(
+            [y for y, _ in entity_pts],
+            [v for _, v in entity_pts],
+            marker="D",
+            s=60,
+            color="#c0392b",
+            zorder=5,
+            label="Entity stock géoloc. (≠ actifs)",
+        )
+        for y, v in entity_pts:
+            ax1.annotate(
+                f"Entity ~{v:,}".replace(",", " "),
+                (y, v),
+                textcoords="offset points",
+                xytext=(-70, 8),
+                fontsize=8,
+                color="#c0392b",
+            )
     ax1.axvline(2022, color="#333", ls=":", lw=1)
-    ax1.text(2022.1, max(vf) * 0.35, "JDN :\n~2 600 FR", fontsize=8)
-    ax1.set_title("France — Croissance Helium IoT (hotspots géolocalisés / estimés)")
+    ax1.text(2022.1, max(vf) * 0.55, "JDN :\n~2 600 FR\n(plateau)", fontsize=8)
+    ax1.set_title("France — Helium IoT (série réseau vérifiée ; Entity = stock)")
     ax1.set_xlabel("Année")
     ax1.set_ylabel("Hotspots Helium FR")
     ax1.set_xticks(yf)
     ax1.grid(True, alpha=0.3)
+    ax1.legend(loc="upper left")
     path_fr = out / "helium_croissance_france.png"
     _save(fig1, path_fr)
 
@@ -310,6 +331,11 @@ def run(root: Path) -> dict[str, Any]:
         "### Helium (LoRaWAN communautaire / DePIN)",
         f"- 2019–2022 : {he_tr['phase_2019_2022']}",
         f"- 2023–2026 : {he_tr['phase_2023_2026']}",
+        "",
+        "> **Vérification Helium FR (2026-07-21)** : JDN confirme ~2 600 en 2022 (plateau jusqu’à août). "
+        "Paris HeliumTracker 624→781 (+25 %) ⇒ national ~3 200 en 2026. "
+        "Le stock Entity géolocalisé (~11 700) n’est **pas** retenu comme total réseau (inactifs / asserts). "
+        "Détail : `data/processed/helium_france_verification.json`.",
         "",
         "### NB-IoT (proxy sites 4G)",
         f"- 2015–2018 : {data['trends_summary']['nbiot']['phase_2015_2018']}",

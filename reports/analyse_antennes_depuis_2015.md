@@ -13,13 +13,13 @@ L'analyse porte sur la DYNAMIQUE (croissance/décroissance) et les ordres de gra
 | 2017 | 4 000 | 4 020 | 8 020 | 0 | — | 0 |
 | 2018 | 4 500 | 4 300 | 8 800 | 0 | — | 0 |
 | 2019 | 4 800 | 4 300 | 9 100 | 0 | 1 000 | 17 700 |
-| 2020 | 4 800 | 4 300 | 9 100 | 0 | 10 000 | 20 000 |
-| 2021 | 4 800 | 4 300 | 9 100 | 500 | 250 000 | 27 000 |
+| 2020 | 4 800 | 4 300 | 9 100 | 50 | 10 000 | 20 000 |
+| 2021 | 4 800 | 4 300 | 9 100 | 1 200 | 250 000 | 27 000 |
 | 2022 | 4 800 | 4 300 | 9 100 | 2 600 | 975 000 | 78 193 |
-| 2023 | 4 800 | 4 300 | 9 100 | 5 000 | 1 000 000 | 78 997 |
-| 2024 | 4 800 | 4 300 | 9 100 | 8 000 | 1 030 000 | 84 521 |
-| 2025 | 4 800 | 0 | 4 800 | 10 000 | 1 035 000 | 89 474 |
-| 2026 | 4 800 | 0 | 4 800 | 11 700 | 1 035 532 | 93 516 |
+| 2023 | 4 800 | 4 300 | 9 100 | 2 800 | 1 000 000 | 78 997 |
+| 2024 | 4 800 | 4 300 | 9 100 | 3 000 | 1 030 000 | 84 521 |
+| 2025 | 4 800 | 0 | 4 800 | 3 100 | 1 035 000 | 89 474 |
+| 2026 | 4 800 | 0 | 4 800 | 3 200 | 1 035 532 | 93 516 |
 
 ## Tendances
 
@@ -29,8 +29,10 @@ L'analyse porte sur la DYNAMIQUE (croissance/décroissance) et les ordres de gra
 - 2025–2026 : DÉCROISSANCE brutale (-47%) après arrêt Objenious → ~4800
 
 ### Helium (LoRaWAN communautaire / DePIN)
-- 2019–2022 : CROISSANCE explosive mondiale (milliers → ~975k onboarded) ; FR ~0 → ~2600 en 2022
-- 2023–2026 : Monde : stock onboarded élevé mais ACTIFS en baisse post-Solana (~33–43k) ; FR estim. ~12k géolocalisés (souvent inactifs)
+- 2019–2022 : Monde : CROISSANCE explosive (→ ~975k onboarded) ; FR : ~0 → ~2600 (JDN), puis PLATEAU dès mi-2022
+- 2023–2026 : Monde : stock élevé mais ACTIFS ↓ post-Solana (~33–43k) ; FR : croissance modeste ~2600 → ~3200 (réseau) — Entity stock ~12k ≠ couverture
+
+> **Vérification Helium FR (2026-07-21)** : JDN confirme ~2 600 en 2022 (plateau jusqu’à août). Paris HeliumTracker 624→781 (+25 %) ⇒ national ~3 200 en 2026. Le stock Entity géolocalisé (~11 700) n’est **pas** retenu comme total réseau (inactifs / asserts). Détail : `data/processed/helium_france_verification.json`.
 
 ### NB-IoT (proxy sites 4G)
 - 2015–2018 : NÉANT commercial FR (0 site NB-IoT actif)

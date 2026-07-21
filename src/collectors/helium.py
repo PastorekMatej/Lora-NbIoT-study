@@ -57,7 +57,11 @@ def collect(
         time.sleep(sleep_s)
 
     ratio = (len(fr_hotspots) / scanned) if scanned else 0.0
-    est = int(ratio * meta.get("totalItems", 0))
+    entity_stock = int(ratio * meta.get("totalItems", 0))
+    # Le stock Entity géolocalisé surestime fortement le « réseau » FR utile
+    # (vérif. 2026-07-21 : ~11,7k Entity vs ~3,2k réseau presse/trackers).
+    # KPI principal = réseau ; Entity stock séparé.
+    network_est = 3200
     out = {
         "source": BASE,
         "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -67,12 +71,16 @@ def collect(
         "france_in_sample": len(fr_hotspots),
         "france_active_in_sample": active_fr,
         "france_ratio_sample": ratio,
-        "france_estimated_total": est,
+        "france_entity_stock_estimated": entity_stock,
+        "france_network_estimated": network_est,
+        "france_estimated_total": network_est,
         "geo_filter": bbox_metadata(),
         "note": (
-            "Estimation par échantillonnage ; coordonnées Helium obfuscées (H3 res 8). "
-            "is_active souvent faux hors epoch récente — traiter comme densités relatives."
+            "france_estimated_total = estimation réseau FR (~3,2k, JDN+Paris scaling), "
+            "pas le stock Entity géolocalisé. "
+            "Coordonnées Helium obfuscées (H3 res 8) ; is_active souvent faux."
         ),
+        "verification": "data/processed/helium_france_verification.json",
     }
     (raw_dir / "helium_hotspots_france_sample.json").write_text(
         json.dumps(fr_hotspots, ensure_ascii=False), encoding="utf-8"

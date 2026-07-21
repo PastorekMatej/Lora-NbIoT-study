@@ -220,8 +220,10 @@ nbiot_radio_sites_france:
 helium_hotspots:
   unit: hotspots_lorawan_communautaires
   note: |
-    Helium = LoRaWAN décentralisé (DePIN). Les totaux "onboarded" incluent beaucoup
-    d'inactifs ; distinguer onboarded vs actifs. France : peu de série annuelle officielle.
+    Helium = LoRaWAN décentralisé (DePIN). Distinguer (1) compte réseau / presse
+    (~couverture utile) et (2) stock Entity API géolocalisé (inclut inactifs).
+    Vérification 2026-07-21 : la série FR primaire suit JDN + scaling Paris ;
+    Entity ~11,7k n'est PAS retenu comme total « réseau » (surcomptage).
   france:
     series:
       - year: 2015
@@ -237,37 +239,48 @@ helium_hotspots:
         hotspots: 0
         note: "Lancement Helium (US d'abord) ; FR pas encore"
       - year: 2020
-        hotspots: 0
-        note: "Ouverture internationale progressive ; FR encore négligeable"
+        hotspots: 50
+        note: "Ouverture FR juillet 2020 (JDN) — volume encore marginal"
         confidence: low
+        sources:
+          - "https://www.journaldunet.com/web-tech/dictionnaire-de-l-iot/1511963-helium-particularites-et-fonctionnement-du-reseau-iot-participatif-20220826/"
       - year: 2021
-        hotspots: 500
-        note: "Lancement Helium en France (ordre de grandeur début/montée)"
+        hotspots: 1200
+        note: "Montée après lancement FR (début 2021 selon JDN) — interpolation vers 2600 fév. 2022"
         confidence: low
       - year: 2022
         hotspots: 2600
-        note: "JDN fév. 2022 : ~2600 hotspots FR ; août 2022 : >2600"
+        note: "JDN fév. 2022 : ~2600 ; août 2022 : toujours ~>2600 (plateau FR pendant le boom mondial)"
         confidence: high
         sources:
           - "https://www.journaldunet.com/iot/1509147-reseau-iot-helium-gonfle-ses-chiffres-mais-peine-encore-a-convaincre-en-france/"
           - "https://www.journaldunet.com/web-tech/dictionnaire-de-l-iot/1511963-helium-particularites-et-fonctionnement-du-reseau-iot-participatif-20220826/"
       - year: 2023
-        hotspots: 5000
-        note: "Interpolation post-boom 2022 / pré-migration Solana — pas de recensement officiel FR"
+        hotspots: 2800
+        note: "Pas de recensement officiel ; plateau post-boom / pré–post Solana (croissance modeste)"
         confidence: low
       - year: 2024
-        hotspots: 8000
-        note: "Interpolation vers estimation Entity API 2026"
+        hotspots: 3000
+        note: "Interpolation prudente (Paris HeliumTracker 624→781 = +25% vs 2022)"
         confidence: low
       - year: 2025
-        hotspots: 10000
+        hotspots: 3100
         confidence: low
       - year: 2026
-        hotspots: 11700
-        note: "Estimation Entity API (échantillon 150k, filtre polygone FR) — hotspots géolocalisés, majoritairement inactifs"
+        hotspots: 3200
+        entity_stock_est: 11729
+        note: |
+          Primaire ~3200 : scaling Paris JDN 624 (2022) → HeliumTracker 781 (2026) = +25%
+          appliqué au total FR 2600 → ~3250 ; cohérent CertifBus ~3000 (2026).
+          Entity API stock géolocalisé ~11729 (échantillon 150k–400k, ratio stable ~1,12%) —
+          registre NFT/assert, pas un comptage de couverture active (is_active=0 dans l'API).
         confidence: medium
         sources:
+          - "https://www.journaldunet.com/iot/1509147-reseau-iot-helium-gonfle-ses-chiffres-mais-peine-encore-a-convaincre-en-france/"
+          - "https://heliumtracker.io/cities/40"
+          - "https://certifbus.com/en/q/LRW-T06-001"
           - "https://entities.nft.helium.io/v2/hotspots"
+          - "data/processed/helium_france_verification.json"
   world:
     series:
       - year: 2019
@@ -325,13 +338,13 @@ trends_summary:
     phase_2019_2021: "CROISSANCE (SFR puis début Bouygues)"
     phase_2022_2026: "CROISSANCE continue de la densification 4G sous-jacente (+20% SFR+Bouygues 2022→2026)"
   helium:
-    phase_2019_2022: "CROISSANCE explosive mondiale (milliers → ~975k onboarded) ; FR ~0 → ~2600 en 2022"
-    phase_2023_2026: "Monde : stock onboarded élevé mais ACTIFS en baisse post-Solana (~33–43k) ; FR estim. ~12k géolocalisés (souvent inactifs)"
+    phase_2019_2022: "Monde : CROISSANCE explosive (→ ~975k onboarded) ; FR : ~0 → ~2600 (JDN), puis PLATEAU dès mi-2022"
+    phase_2023_2026: "Monde : stock élevé mais ACTIFS ↓ post-Solana (~33–43k) ; FR : croissance modeste ~2600 → ~3200 (réseau) — Entity stock ~12k ≠ couverture"
   comparison:
     - "LoRa opéré = réseau d'antennes dédiées (milliers) ; NB-IoT = soft/firmware sur dizaines de milliers de sites 4G"
     - "Helium = 3e couche LoRaWAN communautaire : boom 2021-2022 puis correction des actifs"
-    - "Dynamique 2024-2026 : LoRa public ↓, NB-IoT capacité ↑, Helium stock ↑ mais usage/actifs fragiles"
-    - "LoRa opéré a 2-3 ans d'avance FR (2016) sur NB-IoT commercial (2019) et Helium FR (~2021)"
+    - "Dynamique 2024-2026 : LoRa public ↓, NB-IoT capacité ↑, Helium FR en plateau bas (~3k) face à Orange LoRa (~4,8k)"
+    - "Ne pas confondre stock Entity géolocalisé FR (~12k) et hotspots « réseau » (~3k) — écart ≈ inactifs / asserts"
 
 world_context:
   lora_gateways_mid_2024: 6900000

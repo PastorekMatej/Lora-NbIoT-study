@@ -70,7 +70,7 @@
       "lora_orange": 4800,
       "lora_objenious": 4300,
       "lora_total_public": 9100,
-      "helium_fr": 0,
+      "helium_fr": 50,
       "helium_world_onboarded": 10000,
       "helium_world_active": null,
       "nbiot_proxy_sites": 20000,
@@ -83,7 +83,7 @@
       "lora_orange": 4800,
       "lora_objenious": 4300,
       "lora_total_public": 9100,
-      "helium_fr": 500,
+      "helium_fr": 1200,
       "helium_world_onboarded": 250000,
       "helium_world_active": null,
       "nbiot_proxy_sites": 27000,
@@ -109,7 +109,7 @@
       "lora_orange": 4800,
       "lora_objenious": 4300,
       "lora_total_public": 9100,
-      "helium_fr": 5000,
+      "helium_fr": 2800,
       "helium_world_onboarded": 1000000,
       "helium_world_active": 342000,
       "nbiot_proxy_sites": 78997,
@@ -122,7 +122,7 @@
       "lora_orange": 4800,
       "lora_objenious": 4300,
       "lora_total_public": 9100,
-      "helium_fr": 8000,
+      "helium_fr": 3000,
       "helium_world_onboarded": 1030000,
       "helium_world_active": 33000,
       "nbiot_proxy_sites": 84521,
@@ -135,7 +135,7 @@
       "lora_orange": 4800,
       "lora_objenious": 0,
       "lora_total_public": 4800,
-      "helium_fr": 10000,
+      "helium_fr": 3100,
       "helium_world_onboarded": 1035000,
       "helium_world_active": 43000,
       "nbiot_proxy_sites": 89474,
@@ -148,7 +148,7 @@
       "lora_orange": 4800,
       "lora_objenious": 0,
       "lora_total_public": 4800,
-      "helium_fr": 11700,
+      "helium_fr": 3200,
       "helium_world_onboarded": 1035532,
       "helium_world_active": 43000,
       "nbiot_proxy_sites": 93516,
@@ -169,14 +169,14 @@
       "phase_2022_2026": "CROISSANCE continue de la densification 4G sous-jacente (+20% SFR+Bouygues 2022→2026)"
     },
     "helium": {
-      "phase_2019_2022": "CROISSANCE explosive mondiale (milliers → ~975k onboarded) ; FR ~0 → ~2600 en 2022",
-      "phase_2023_2026": "Monde : stock onboarded élevé mais ACTIFS en baisse post-Solana (~33–43k) ; FR estim. ~12k géolocalisés (souvent inactifs)"
+      "phase_2019_2022": "Monde : CROISSANCE explosive (→ ~975k onboarded) ; FR : ~0 → ~2600 (JDN), puis PLATEAU dès mi-2022",
+      "phase_2023_2026": "Monde : stock élevé mais ACTIFS ↓ post-Solana (~33–43k) ; FR : croissance modeste ~2600 → ~3200 (réseau) — Entity stock ~12k ≠ couverture"
     },
     "comparison": [
       "LoRa opéré = réseau d'antennes dédiées (milliers) ; NB-IoT = soft/firmware sur dizaines de milliers de sites 4G",
       "Helium = 3e couche LoRaWAN communautaire : boom 2021-2022 puis correction des actifs",
-      "Dynamique 2024-2026 : LoRa public ↓, NB-IoT capacité ↑, Helium stock ↑ mais usage/actifs fragiles",
-      "LoRa opéré a 2-3 ans d'avance FR (2016) sur NB-IoT commercial (2019) et Helium FR (~2021)"
+      "Dynamique 2024-2026 : LoRa public ↓, NB-IoT capacité ↑, Helium FR en plateau bas (~3k) face à Orange LoRa (~4,8k)",
+      "Ne pas confondre stock Entity géolocalisé FR (~12k) et hotspots « réseau » (~3k) — écart ≈ inactifs / asserts"
     ]
   },
   "world": {

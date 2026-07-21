@@ -1,8 +1,16 @@
 {
   "fetched_at": "2026-07-21T09:11:53Z",
+  "verified_at": "2026-07-21",
+  "source": "https://entities.nft.helium.io/v2/hotspots",
   "global_total": 1035532,
   "sample_scanned": 150000,
   "france_in_sample": 1699,
   "france_ratio": 0.011326666666666667,
-  "france_estimated": 11729
+  "france_entity_stock_estimated": 11729,
+  "france_network_estimated": 3200,
+  "france_estimated_total": 3200,
+  "method_network": "JDN 2600 (2022) × croissance Paris HeliumTracker (+25 %) ≈ 3250 ; arrondi 3200 ; cohérent CertifBus ~3000",
+  "method_entity_stock": "Extrapolation ratio FR (point-in-polygon) × totalItems Entity API",
+  "note": "france_estimated_total = estimation réseau (~3,2k), PAS le stock Entity (~11,7k). Voir helium_france_verification.json.",
+  "verification": "data/processed/helium_france_verification.json"
 }

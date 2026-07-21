@@ -101,13 +101,26 @@ def build_kpi_table(
             {
                 "technologie": "LoRaWAN",
                 "acteur": "Helium IoT",
-                "indicateur": "Hotspots estimés FR (échantillon)",
-                "valeur": helium.get("france_estimated_total"),
+                "indicateur": "Hotspots réseau FR (estim. vérifiée)",
+                "valeur": helium.get("france_network_estimated")
+                or helium.get("france_estimated_total"),
                 "unite": "hotspots",
-                "type": "estimé_api",
-                "source": helium.get("source"),
+                "type": "estimé_vérifié",
+                "source": helium.get("verification") or helium.get("source"),
             }
         )
+        if helium.get("france_entity_stock_estimated"):
+            rows.append(
+                {
+                    "technologie": "LoRaWAN",
+                    "acteur": "Helium IoT",
+                    "indicateur": "Stock Entity géolocalisé FR (≠ actifs)",
+                    "valeur": helium.get("france_entity_stock_estimated"),
+                    "unite": "hotspots",
+                    "type": "estimé_api_stock",
+                    "source": helium.get("source"),
+                }
+            )
 
     obj = curated.get("lora", {}).get("objenious_bouygues", {})
     rows.append(
