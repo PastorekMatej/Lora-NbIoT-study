@@ -1,0 +1,341 @@
+# Inventaire documenté — usagers NB-IoT en France (collectivités, sociétés)
+# Depuis 2015. Inventaire NON exhaustif.
+# Distinguer couverture opérateur (sites 4G / % pop.) et projet métier.
+
+meta:
+  last_review: "2026-07-21"
+  scope: france_metropolitaine
+  technology: NB-IoT
+  method_note: |
+    NB-IoT est in-band sur 4G : « communes couvertes » ≠ projets métier.
+    Inventaire collectivités NB-IoT nettement plus mince que LoRaWAN
+    (télérelève eau FR = surtout LoRa/Birdz ; gaz = Wize, pas NB-IoT).
+    Quantification = inventaire nominatif sourcé + marqueurs opérateurs.
+
+national_facts:
+  - "SFR : 1er NB-IoT commercial France (fév. 2019)"
+  - "Bouygues/Objenious : NB-IoT nov. 2021 (~1000 communes) puis ≥99% pop. fin 2022"
+  - "Orange : listé NB-IoT (GSMA/Live Objects) ; stratégie historique aussi LTE-M + LoRa — nuance à conserver"
+  - "Gazpar GRDF = Wize 169 MHz (contre-exemple, pas NB-IoT)"
+  - "Extinction 2G/3G accélère migrations M2M vers LTE-M/NB-IoT"
+
+collectivites:
+  - name: Montluçon Communauté
+    type: agglomeration
+    year_start: 2023
+    use_cases: [detection_fuites_eau]
+    network: unknown
+    objets_approx: 390
+    usage_level: projet_metier
+    note: "Loggers corrélants ; remontée via NB-IoT (Aquagir / Banque des Territoires)"
+    confidence: high
+    sources:
+      - "https://aquagir.fr/distribution-eau-potable/retours-experiences/montlucon-communaute-03-ecoute-les-fuites/"
+
+  - name: Métropole de Lyon / Eau du Grand Lyon
+    type: metropole
+    year_start: 2023
+    use_cases: [detection_fuites_eau]
+    network: unknown
+    objets_approx: 6000
+    objets_year: 2023
+    usage_level: projet_metier
+    note: |
+      Migration annoncée vers loggers Gutermann NB-IoT (Revue EIN 2023).
+      Historique Smart Water 2015 = radio Birdz/Gutermann (pas NB-IoT).
+      Confidence medium_low — déploiement progressif / claims opérateurs.
+    confidence: medium_low
+    sources:
+      - "https://www.revue-ein.com/article/detecter-les-fuites"
+      - "https://objenious.com/blogpost/smart-cities-en-france/"
+
+# Projets métier documentés sans collectivité nommée (comptés à part)
+projets_metier_anonymes:
+  - name: SFR × Gutermann — détection fuites (collectivité non nommée)
+    year_start: 2022
+    use_cases: [detection_fuites_eau]
+    network: sfr
+    objets_approx: 5000
+    usage_level: projet_metier
+    note: "JDN / SFR : ~5000 modules détection fuites NB-IoT"
+    confidence: medium
+    sources:
+      - "https://www.journaldunet.com/iot/1510695-valerie-grau-sfr/"
+
+# Couverture seule (pas projet métier) — pour contraste avec LoRa 2016
+couverture_evenements:
+  - year: 2019
+    label: "SFR lance NB-IoT commercial"
+    communes_approx: null
+    note: "Début déploiement national in-band 4G"
+  - year: 2021
+    label: "Objenious NB-IoT ~1000 communes au lancement"
+    communes_approx: 1000
+    note: "Couverture, pas 1000 projets"
+  - year: 2022
+    label: "Objenious ≥99% pop. ; SFR ~90% pop. NB-IoT"
+    communes_approx: null
+
+societes:
+  - name: SFR Business
+    role: operateur
+    vertical: multi
+    year_start: 2019
+    note: "1er NB-IoT commercial France"
+    confidence: high
+    sources:
+      - "https://www.zdnet.fr/actualites/sfr-lance-son-propre-reseau-nb-iot-39881263.htm"
+
+  - name: Objenious (Bouygues Telecom)
+    role: operateur
+    vertical: multi
+    year_start: 2021
+    note: "NB-IoT+LTE-M ; arrêt LoRaWAN déc. 2024 → bascule cellulaire"
+    confidence: high
+    sources:
+      - "https://objenious.com/presse/objenious-devient-le-1er-acteur-francais-a-proposer-lensemble-des-technologies-iot-cellulaires-avec-le-lancement-du-reseau-nb-iot/"
+
+  - name: Orange Business
+    role: operateur
+    vertical: multi
+    year_start: 2022
+    note: "Positionné NB-IoT (GSMA/Live Objects) ; aussi LTE-M (2018) + LoRaWAN"
+    confidence: medium
+    sources:
+      - "https://www.gsma.com/iot/mobile-iot-commercial-launches/"
+
+  - name: Sequans Communications
+    role: vendor_modules
+    vertical: chipsets_lpwa
+    year_start: 2019
+    note: "Siège Colombes ; chips LTE-M/NB-IoT"
+    confidence: high
+    sources:
+      - "https://sequans.com/"
+
+  - name: Quectel
+    role: vendor_modules
+    vertical: modules_lpwa
+    year_start: 2019
+    note: "Modules NB-IoT intégrés dans devices FR"
+    confidence: medium
+    sources:
+      - "https://www.quectel.com/"
+
+  - name: u-blox
+    role: vendor_modules
+    vertical: modules_lpwa
+    year_start: 2019
+    confidence: medium
+    sources:
+      - "https://www.u-blox.com/"
+
+  - name: Adeunis
+    role: vendor_devices
+    vertical: metering_smart_building
+    year_start: 2020
+    note: "PULSE NB-IoT ; offre ZEN (SIM SFR + Live Objects)"
+    confidence: high
+    sources:
+      - "https://www.adeunis.com/solution-iot-cellulaire-nb-iot-ltem/offres-packagees/"
+
+  - name: Gutermann
+    role: vendor_devices
+    vertical: eau_fuites
+    year_start: 2019
+    note: "Zonescan NB-IoT ; partenariats SFR / Lyon"
+    confidence: high
+    sources:
+      - "https://en.gutermann-water.com/2019/11/21/the-worlds-first-nb-iot-leak-logger-has-superior-product-features/"
+
+  - name: Ijinus
+    role: vendor_devices
+    vertical: eau_assainissement
+    year_start: 2021
+    note: "Loggers multi-techno dont NB-IoT"
+    confidence: medium
+    sources:
+      - "https://www.revue-ein.com/article/l-intelligence-numerique-au-service-de-la-gestion-des-reseaux-d-eau"
+
+  - name: Ovarro
+    role: vendor_devices
+    vertical: eau_fuites
+    year_start: 2022
+    note: "Enigma 3M option NB-IoT"
+    confidence: medium
+    sources:
+      - "https://www.ovarro.com/"
+
+  - name: TRAKmy
+    role: vendor_devices
+    vertical: asset_tracking
+    year_start: 2021
+    note: "Trackers NB-IoT ; couverture SFR"
+    confidence: medium
+    sources:
+      - "https://trakmy.fr/test-couverture-nbiot-2/"
+
+  - name: ffly4u (Groupe ZeKat)
+    role: vendor_devices
+    vertical: tracking_industriel
+    year_start: 2020
+    note: "Offre asset tracking NB-IoT multi-LPWAN"
+    confidence: medium
+    sources:
+      - "https://www.journaldunet.com/web-tech/dictionnaire-de-l-iot/1489515-nb-iot-qu-est-ce-que-le-reseau-bas-debit-utilise-dans-la-5g/"
+
+  - name: Efento
+    role: vendor_devices
+    vertical: cold_chain
+    year_start: 2021
+    note: "Loggers NB-IoT déployés via intégrateurs FR (Wiifor)"
+    confidence: medium
+    sources:
+      - "https://www.wiifor.com/project/securiser-le-transport-des-medicaments-sensibles/"
+
+  - name: Orange Live Objects
+    role: vendor_plateforme
+    vertical: device_management
+    year_start: 2019
+    note: "Plateforme multi-connectivité ; packagée avec Adeunis ZEN"
+    confidence: high
+    sources:
+      - "https://www.adeunis.com/solution-iot-cellulaire-nb-iot-ltem/offres-packagees/"
+
+  - name: Vertical M2M
+    role: vendor_plateforme
+    vertical: multi
+    year_start: 2019
+    note: "CommonSense ; PoC/projets NB-IoT SFR"
+    confidence: medium
+    sources:
+      - "https://www.vertical-m2m.com/fr/faites-confiance-a-de-veritables-experts-en-iot-lpwan/"
+
+  - name: Synox
+    role: integrateur
+    vertical: multi
+    year_start: 2020
+    note: "Offres / guides NB-IoT industriels"
+    confidence: medium
+    sources:
+      - "https://www.synox.io/"
+
+  - name: Wiifor
+    role: integrateur
+    vertical: sante_cold_chain
+    year_start: 2021
+    note: "PST médicaments LTE-M/NB-IoT"
+    confidence: medium
+    sources:
+      - "https://www.wiifor.com/project/securiser-le-transport-des-medicaments-sensibles/"
+
+  - name: Birdz
+    role: integrateur
+    vertical: eau
+    year_start: 2020
+    note: "Catalogue inclut NB-IoT ; parc FR télérelève surtout LoRa/Wize"
+    confidence: high
+    sources:
+      - "https://www.birdz.com/nos-expertises/connectivite-iot/"
+
+  - name: ADH Hauts-de-France
+    role: utilisateur
+    vertical: sante_transport
+    year_start: 2021
+    note: "Capteurs Efento NB-IoT (glacières PST)"
+    confidence: medium
+    sources:
+      - "https://www.wiifor.com/project/securiser-le-transport-des-medicaments-sensibles/"
+
+  - name: AAIR Occitanie
+    role: utilisateur
+    vertical: sante_transport
+    year_start: 2021
+    note: "Monitoring froid LTE-M/NB-IoT via Wiifor"
+    confidence: medium
+    sources:
+      - "https://www.wiifor.com/securite-dans-le-transport-des-medicaments/"
+
+  - name: Suez
+    role: utilisateur_massif
+    vertical: eau
+    year_start: 2024
+    note: "Partenariat Vodafone NB-IoT mondial ; FR progressive — pas massif encore"
+    confidence: medium
+    sources:
+      - "https://www.suez.com/en/news/press-releases/suez-vodafone-sign-global-partnership-remote-reading-new-generation-smart-water-meters"
+
+marqueurs_quantitatifs:
+  note: "Couverture / marché — hors inventaire projets métier"
+  series:
+    - year: 2019
+      metric: "lancement_sfr_nbiot"
+      value: 1
+      confidence: high
+    - year: 2021
+      metric: "communes_couvertes_objenious_lancement"
+      value: 1000
+      confidence: high
+      note: "Couverture, pas projets"
+    - year: 2022
+      metric: "couverture_pop_objenious_pct"
+      value: 99
+      confidence: high
+    - year: 2022
+      metric: "modules_gutermann_sfr"
+      value: 5000
+      confidence: medium
+    - year: 2026
+      metric: "sites_4g_proxy_nbiot_ops"
+      value: 93516
+      confidence: medium
+      note: "Proxy Arcep sites 4G opérateurs NB-IoT (pas projets)"
+
+tendances_depuis_2015:
+  resume:
+    - "2015–2018 : pas de NB-IoT commercial FR (0 projet métier) — Orange LTE-M 2018"
+    - "2019–2021 : naissance écosystème (SFR puis Objenious) ; vendors/intégrateurs ↑ ; projets métier encore rares"
+    - "2022–2023 : premiers projets métier eau (fuites) documentés ; couverture nationale densifiée"
+    - "2024–2026 : bascule LoRa Objenious → cellulaire ; annonces massives (Suez) mais inventaire collectivités toujours mince vs LoRa"
+  verticales_dominantes:
+    - detection_fuites_eau
+    - metering_smart_building
+    - asset_tracking
+    - cold_chain_sante
+  series:
+    - year: 2015
+      phase: neant
+      highlight: "Pas de NB-IoT commercial FR"
+    - year: 2016
+      phase: neant
+      highlight: "Standardisation 3GPP en cours"
+    - year: 2017
+      phase: preparation
+      highlight: "Préparation opérateurs"
+    - year: 2018
+      phase: lte_m_orange
+      highlight: "Orange LTE-M (complément, hors NB-IoT strict)"
+    - year: 2019
+      phase: lancement_sfr
+      highlight: "SFR NB-IoT commercial ; Gutermann Zonescan NB-IoT"
+    - year: 2020
+      phase: ecosysteme
+      highlight: "Pilotes Adeunis×SFR ; tracking NB-IoT ; pénurie modules"
+    - year: 2021
+      phase: lancement_bouygues
+      highlight: "Objenious NB-IoT (~1000 communes couverture)"
+    - year: 2022
+      phase: densification
+      highlight: "Couverture nationale ; SFR×Gutermann ~5000 modules"
+    - year: 2023
+      phase: projets_eau
+      highlight: "Montluçon + Lyon (migration) projets métier eau"
+    - year: 2024
+      phase: bascule
+      highlight: "Fin LoRa Objenious ; Suez×Vodafone NB-IoT"
+    - year: 2025
+      phase: consolidation
+      highlight: "Migration 2G/3G → NB-IoT/LTE-M"
+    - year: 2026
+      phase: dual_cover_vs_projets
+      highlight: "Couverture/proxy sites ↑ ; projets métier collectivités encore peu nombreux"
