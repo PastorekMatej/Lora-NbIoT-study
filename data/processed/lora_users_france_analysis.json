@@ -1,0 +1,25 @@
+{
+  "n_collectivites": 26,
+  "n_societes": 24,
+  "figures": [
+    "lora_phases_depuis_2015.png",
+    "lora_collectivites_cumul_depuis_2015.png",
+    "lora_objets_marqueurs_depuis_2015.png",
+    "lora_usecases_collectivites.png",
+    "lora_societes_par_role.png"
+  ],
+  "report": "/workspace/reports/lora_usagers_france_depuis_2015.md",
+  "tendances": [
+    "2015–2017 : naissance et couverture nationale (Orange + Objenious)",
+    "2018–2022 : explosion des objets via télérelève eau (Birdz) + smart city",
+    "2023–2024 : fin du duopole public ; migration Objenious ; Netmore entre",
+    "2025–2026 : antennes publiques ↓ mais objets et réseaux privés collectivités ↑"
+  ],
+  "verticales": [
+    "teleleve_eau",
+    "dechets",
+    "smart_city_eclairage_parking_batiments",
+    "ferroviaire",
+    "tracking_logistique"
+  ]
+}
