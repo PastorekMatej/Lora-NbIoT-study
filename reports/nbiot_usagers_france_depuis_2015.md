@@ -10,7 +10,7 @@ Quantification = inventaire nominatif sourcé + marqueurs opérateurs.
 - Collectivités nommées : **2**
 - Projets métier (total) : **3** (dont 2 collectivités + 1 anonyme)
 - Sociétés inventoriées : **21**
-- Objets documentés (somme projets chiffrés) : **11 390**
+- Objets documentés (somme projets chiffrés) : **5 390**
 
 ### Faits nationaux
 
@@ -47,17 +47,17 @@ Quantification = inventaire nominatif sourcé + marqueurs opérateurs.
 | 2020 | 0 | 0 | 11 | 0 |
 | 2021 | 0 | 0 | 18 | 0 |
 | 2022 | 1 | 1 | 20 | 5 000 |
-| 2023 | 2 | 3 | 20 | 11 390 |
-| 2024 | 0 | 3 | 21 | 11 390 |
-| 2025 | 0 | 3 | 21 | 11 390 |
-| 2026 | 0 | 3 | 21 | 11 390 |
+| 2023 | 2 | 3 | 20 | 5 390 |
+| 2024 | 0 | 3 | 21 | 5 390 |
+| 2025 | 0 | 3 | 21 | 5 390 |
+| 2026 | 0 | 3 | 21 | 5 390 |
 
 ## Projets métier documentés
 
 | Projet / collectivité | Type | Début | Objets | Confiance |
 |---|---|---:|---:|---|
 | Montluçon Communauté | agglomeration | 2023 | 390 | high |
-| Métropole de Lyon / Eau du Grand Lyon | metropole | 2023 | 6 000 | medium_low |
+| Métropole de Lyon / Eau du Grand Lyon | metropole | 2023 | — | low |
 | SFR × Gutermann — détection fuites (collectivité non nommée) | projet_anonyme | 2022 | 5 000 | medium |
 
 ## Sociétés

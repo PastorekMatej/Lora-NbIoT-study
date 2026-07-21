@@ -178,8 +178,8 @@
         "societes_actives_vendors": 12,
         "societes_actives_utilisateurs": 2,
         "societes_actives_integrateurs": 3,
-        "objets_documentes_nouveaux": 6390,
-        "objets_documentes_cumul": 11390
+        "objets_documentes_nouveaux": 390,
+        "objets_documentes_cumul": 5390
       },
       {
         "year": 2024,
@@ -199,7 +199,7 @@
         "societes_actives_utilisateurs": 3,
         "societes_actives_integrateurs": 3,
         "objets_documentes_nouveaux": 0,
-        "objets_documentes_cumul": 11390
+        "objets_documentes_cumul": 5390
       },
       {
         "year": 2025,
@@ -219,7 +219,7 @@
         "societes_actives_utilisateurs": 3,
         "societes_actives_integrateurs": 3,
         "objets_documentes_nouveaux": 0,
-        "objets_documentes_cumul": 11390
+        "objets_documentes_cumul": 5390
       },
       {
         "year": 2026,
@@ -239,7 +239,7 @@
         "societes_actives_utilisateurs": 3,
         "societes_actives_integrateurs": 3,
         "objets_documentes_nouveaux": 0,
-        "objets_documentes_cumul": 11390
+        "objets_documentes_cumul": 5390
       }
     ],
     "growth_phases": [
@@ -271,7 +271,7 @@
       "projets_metier_collectivites": 2,
       "projets_metier_anonymes": 1,
       "societes": 21,
-      "objets_documentes_cumul": 11390
+      "objets_documentes_cumul": 5390
     },
     "marqueurs_externes": {
       "note": "Couverture / marché — hors inventaire projets métier",

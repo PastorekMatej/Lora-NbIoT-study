@@ -18,6 +18,8 @@ collectivites:
   sources:
   - https://www.orange-business.com/fr/presse/orange-deploie-un-reseau-pour-l-internet-des-objets
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Paris
   type: ville
   year_start: 2016
@@ -29,6 +31,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Lyon
   type: ville
   year_start: 2016
@@ -39,6 +43,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Marseille
   type: ville
   year_start: 2016
@@ -49,6 +55,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Toulouse
   type: ville
   year_start: 2016
@@ -62,6 +70,8 @@ collectivites:
   - https://www.journaldunet.com/iot/1420169-compteurs-d-eau-veolia-choisit-lora-a-grande-echelle/
   - https://www.orange-business.com/fr/presse/nova-veolia-et-filiale-birdz-choisissent-orange-business-services-pour-accompagner-dans
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Bordeaux
   type: metropole
   year_start: 2016
@@ -73,11 +83,15 @@ collectivites:
   - batiments
   network: mixte
   note: Ouverture Orange 2016 ; réseau privé métropole ~500 capteurs (2018-2019, Kerlink/SPIE/Pilot Things)
+    | year_projet_metier=2018 (projet métier distinct de couverture 2016)
   confidence: high
   sources:
   - https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme
   - https://www.kerlink.com/blog/2019/05/16/smart-city-solution-built-by-kerlink-pilot-things-wins-award-for-bordeaux-metropolitan-authority/
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
+  year_projet_metier: 2018
 - name: Nantes
   type: ville
   year_start: 2016
@@ -88,6 +102,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Lille
   type: ville
   year_start: 2016
@@ -98,6 +114,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Nice
   type: ville
   year_start: 2016
@@ -108,6 +126,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Rennes Métropole
   type: metropole
   year_start: 2016
@@ -121,8 +141,12 @@ collectivites:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   - https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/
   year_projet_prive: 2019
-  note: Ouverture Orange 2016 ; réseau privé Wi6labs industrialisé fin 2018–2019 (43 communes)
+  note: Ouverture Orange 2016 ; réseau privé Wi6labs industrialisé fin 2018–2019 (43 communes) | year_projet_metier=2019
+    (projet métier distinct de couverture 2016)
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
+  year_projet_metier: 2019
 - name: Strasbourg
   type: eurometropole
   year_start: 2016
@@ -137,6 +161,8 @@ collectivites:
   sources:
   - https://hal.science/hal-04807013v1/document
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Montpellier Méditerranée Métropole
   type: metropole
   year_start: 2016
@@ -154,6 +180,8 @@ collectivites:
   - https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes
   usage_level: projet_metier
   objets_year: 2026
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Angers
   type: ville
   year_start: 2016
@@ -164,6 +192,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Avignon
   type: ville
   year_start: 2016
@@ -174,6 +204,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Rouen
   type: ville
   year_start: 2016
@@ -184,6 +216,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Toulon
   type: ville
   year_start: 2016
@@ -194,6 +228,8 @@ collectivites:
   sources:
   - https://totaltele.com/orange-details-iot-rollout-plan/
   usage_level: couverture_operateur
+  include_in_fiable: false
+  reliability_status: couverture_seule
 - name: Dijon Métropole
   type: metropole
   year_start: 2019
@@ -206,6 +242,8 @@ collectivites:
   sources:
   - https://www.synox.io/en/our-iot-achievements/customer-feedback/success-story-dijon-metropole/
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Département de l'Isère
   type: departement
   year_start: 2020
@@ -220,6 +258,8 @@ collectivites:
   sources:
   - https://www.isere.fr/actualites/des-services-publics-connectes-durables-avec-lora
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Istres
   type: ville
   year_start: 2022
@@ -232,6 +272,8 @@ collectivites:
   sources:
   - https://numerique360.banquedesterritoires.fr/attractivite-amenagement/retours-experiences/une-ville-saine-et-tranquille-grace-a-ses-multiples-services-numeriques-a-istres-13/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Communauté de communes Pays du Mont-Blanc
   type: intercommunalite
   year_start: 2021
@@ -244,6 +286,8 @@ collectivites:
   sources:
   - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Pays de Montbéliard Agglomération
   type: agglomeration
   year_start: 2022
@@ -256,6 +300,8 @@ collectivites:
   sources:
   - https://makeamove.fr/le-digital-au-service-du-ramassage-des-dechets/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Indre (36) + Cher (18) — Berry Territoire Innovant
   type: departements
   year_start: 2024
@@ -270,6 +316,8 @@ collectivites:
   - https://www.lanouvellerepublique.fr/indre/un-partenariat-unique-en-france-entre-l-indre-et-le-cher-pour-investir-dans-des-objets-connectes
   - https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Département de la Somme
   type: departement
   year_start: 2024
@@ -284,6 +332,8 @@ collectivites:
   sources:
   - https://numerique360.banquedesterritoires.fr/transition-ecologique-energetique/retours-experiences/un-hyperviseur-pour-federer-les-donnees-iot-du-departement-de-la-somme-80/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Communauté d'agglomération du Niortais
   type: agglomeration
   year_start: 2022
@@ -296,6 +346,8 @@ collectivites:
   sources:
   - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Saint-Malo Agglomération
   type: agglomeration
   year_start: 2022
@@ -307,6 +359,8 @@ collectivites:
   sources:
   - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Communauté d'agglomération de Lens-Liévin
   type: agglomeration
   year_start: 2022
@@ -318,6 +372,8 @@ collectivites:
   sources:
   - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 - name: Saint-Sulpice-la-Forêt
   type: commune
   year_start: 2015
@@ -330,6 +386,8 @@ collectivites:
   sources:
   - https://www.wi6labs.com/en/2019/11/09/the-plumber-of-the-internet-of-things-and-rennes-metropole-deploy-an-iot-network/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: mention_secondaire_recit
 - name: Issy-les-Moulineaux
   type: ville
   year_start: 2018
@@ -337,10 +395,12 @@ collectivites:
   - smart_city
   network: prive
   note: Démonstrateur smart city francilien souvent cité (précurseur IDF LoRaWAN)
-  confidence: medium
+  confidence: low
   sources:
   - https://www.journaldunet.com/iot/1529749-decouvrez-comment-se-deploie-l-un-des-plus-grands-reseaux-smart-city-lorawan-d-europe/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: mention_indirecte
 - name: Val d'Oise Numérique / Essonne Numérique / Seine-et-Marne Numérique
   type: syndicats_mixtes
   year_start: 2018
@@ -351,10 +411,13 @@ collectivites:
   objets_approx: null
   gateways_cible: 3000
   note: Projet régional IDF ; initié 2018, pilote 2022 ; cible ~3000 GW début 2027
-  confidence: high
+  confidence: medium
   sources:
   - https://www.journaldunet.com/iot/1529749-decouvrez-comment-se-deploie-l-un-des-plus-grands-reseaux-smart-city-lorawan-d-europe/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: projet_infra_en_cours
+  year_projet_metier: 2022
 - name: Sarthe (Sarthe Numérique)
   type: departement
   year_start: 2020
@@ -372,6 +435,8 @@ collectivites:
   - https://numerique360.banquedesterritoires.fr/gouvernance-socles-technologiques/retours-experiences/infrastructures-numeriques-la-sarthe-72-deploie-un-reseau-lora-pour-y-accueillir-40-000-objets-connectes/
   usage_level: projet_metier
   objets_year: 2023
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: Finistère (SDEF — Finistère Smart Connect)
   type: departement
   year_start: 2021
@@ -388,6 +453,8 @@ collectivites:
   sources:
   - https://lora-alliance.org/wp-content/uploads/2021/06/Kerlink_NR_Finistere_EN_27052021.pdf
   usage_level: projet_metier
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
 - name: SMICOTOM Médoc
   type: syndicat
   year_start: 2022
@@ -400,6 +467,8 @@ collectivites:
   sources:
   - https://presseagence.fr/rennes-en-2024-heyliot-confirme-sa-dynamique-de-forte-croissance/
   usage_level: projet_metier
+  include_in_fiable: false
+  reliability_status: source_secondaire
 orange_launch_2016_zones:
   note: 17 zones d'ouverture progressive Orange LoRaWAN (T1 2016)
   cities:
@@ -740,3 +809,9 @@ marqueurs_quantitatifs:
     value: 4000000
     confidence: medium
     source: https://www.birdz.com/
+reliability_audit:
+  audited_at: '2026-07-21'
+  rules:
+  - fiable = confidence high + projet métier documenté (pas couverture seule)
+  - year_projet_metier utilisé for trend if present else year_start
+  - Heyliot collectivités medium = documenté presse fournisseur

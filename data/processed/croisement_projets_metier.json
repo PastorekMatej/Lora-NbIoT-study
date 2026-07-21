@@ -1,0 +1,825 @@
+{
+  "totals": {
+    "lora_documente": 22,
+    "lora_fiable": 12,
+    "nbiot_documente": 2,
+    "nbiot_fiable": 1,
+    "lora_objets_doc": 95395,
+    "nbiot_objets_doc": 5390
+  },
+  "series": {
+    "lora_documente": [
+      {
+        "year": 2015,
+        "nouveaux": 2,
+        "cumul": 2,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2016,
+        "nouveaux": 3,
+        "cumul": 5,
+        "croissance_pct": 150.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2017,
+        "nouveaux": 0,
+        "cumul": 5,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2018,
+        "nouveaux": 2,
+        "cumul": 7,
+        "croissance_pct": 40.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2019,
+        "nouveaux": 2,
+        "cumul": 9,
+        "croissance_pct": 28.6,
+        "objets_nouveaux": 450,
+        "objets_cumul": 450
+      },
+      {
+        "year": 2020,
+        "nouveaux": 2,
+        "cumul": 11,
+        "croissance_pct": 22.2,
+        "objets_nouveaux": 0,
+        "objets_cumul": 450
+      },
+      {
+        "year": 2021,
+        "nouveaux": 2,
+        "cumul": 13,
+        "croissance_pct": 18.2,
+        "objets_nouveaux": 1500,
+        "objets_cumul": 1950
+      },
+      {
+        "year": 2022,
+        "nouveaux": 7,
+        "cumul": 20,
+        "croissance_pct": 53.8,
+        "objets_nouveaux": 3445,
+        "objets_cumul": 5395
+      },
+      {
+        "year": 2023,
+        "nouveaux": 0,
+        "cumul": 20,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 40000,
+        "objets_cumul": 45395
+      },
+      {
+        "year": 2024,
+        "nouveaux": 2,
+        "cumul": 22,
+        "croissance_pct": 10.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 45395
+      },
+      {
+        "year": 2025,
+        "nouveaux": 0,
+        "cumul": 22,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 45395
+      },
+      {
+        "year": 2026,
+        "nouveaux": 0,
+        "cumul": 22,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 50000,
+        "objets_cumul": 95395
+      }
+    ],
+    "lora_fiable": [
+      {
+        "year": 2015,
+        "nouveaux": 1,
+        "cumul": 1,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2016,
+        "nouveaux": 3,
+        "cumul": 4,
+        "croissance_pct": 300.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2017,
+        "nouveaux": 0,
+        "cumul": 4,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2018,
+        "nouveaux": 1,
+        "cumul": 5,
+        "croissance_pct": 25.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2019,
+        "nouveaux": 2,
+        "cumul": 7,
+        "croissance_pct": 40.0,
+        "objets_nouveaux": 450,
+        "objets_cumul": 450
+      },
+      {
+        "year": 2020,
+        "nouveaux": 2,
+        "cumul": 9,
+        "croissance_pct": 28.6,
+        "objets_nouveaux": 0,
+        "objets_cumul": 450
+      },
+      {
+        "year": 2021,
+        "nouveaux": 2,
+        "cumul": 11,
+        "croissance_pct": 22.2,
+        "objets_nouveaux": 1500,
+        "objets_cumul": 1950
+      },
+      {
+        "year": 2022,
+        "nouveaux": 0,
+        "cumul": 11,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 1950
+      },
+      {
+        "year": 2023,
+        "nouveaux": 0,
+        "cumul": 11,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 40000,
+        "objets_cumul": 41950
+      },
+      {
+        "year": 2024,
+        "nouveaux": 1,
+        "cumul": 12,
+        "croissance_pct": 9.1,
+        "objets_nouveaux": 0,
+        "objets_cumul": 41950
+      },
+      {
+        "year": 2025,
+        "nouveaux": 0,
+        "cumul": 12,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 41950
+      },
+      {
+        "year": 2026,
+        "nouveaux": 0,
+        "cumul": 12,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 50000,
+        "objets_cumul": 91950
+      }
+    ],
+    "nbiot_documente": [
+      {
+        "year": 2015,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2016,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2017,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2018,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2019,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2020,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2021,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2022,
+        "nouveaux": 1,
+        "cumul": 1,
+        "croissance_pct": null,
+        "objets_nouveaux": 5000,
+        "objets_cumul": 5000
+      },
+      {
+        "year": 2023,
+        "nouveaux": 1,
+        "cumul": 2,
+        "croissance_pct": 100.0,
+        "objets_nouveaux": 390,
+        "objets_cumul": 5390
+      },
+      {
+        "year": 2024,
+        "nouveaux": 0,
+        "cumul": 2,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 5390
+      },
+      {
+        "year": 2025,
+        "nouveaux": 0,
+        "cumul": 2,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 5390
+      },
+      {
+        "year": 2026,
+        "nouveaux": 0,
+        "cumul": 2,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 5390
+      }
+    ],
+    "nbiot_fiable": [
+      {
+        "year": 2015,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2016,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2017,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2018,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2019,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2020,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2021,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2022,
+        "nouveaux": 0,
+        "cumul": 0,
+        "croissance_pct": null,
+        "objets_nouveaux": 0,
+        "objets_cumul": 0
+      },
+      {
+        "year": 2023,
+        "nouveaux": 1,
+        "cumul": 1,
+        "croissance_pct": null,
+        "objets_nouveaux": 390,
+        "objets_cumul": 390
+      },
+      {
+        "year": 2024,
+        "nouveaux": 0,
+        "cumul": 1,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 390
+      },
+      {
+        "year": 2025,
+        "nouveaux": 0,
+        "cumul": 1,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 390
+      },
+      {
+        "year": 2026,
+        "nouveaux": 0,
+        "cumul": 1,
+        "croissance_pct": 0.0,
+        "objets_nouveaux": 0,
+        "objets_cumul": 390
+      }
+    ]
+  },
+  "projects": {
+    "lora": [
+      {
+        "tech": "lora",
+        "name": "Grenoble",
+        "year": 2015,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2015,
+        "use_cases": [
+          "pilote_reseau",
+          "smart_city"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Toulouse",
+        "year": 2016,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2016,
+        "use_cases": [
+          "couverture_operateur",
+          "teleleve_eau"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Bordeaux",
+        "year": 2018,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2018,
+        "use_cases": [
+          "couverture_operateur",
+          "eclairage",
+          "dechets",
+          "bornes_ve",
+          "batiments"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Rennes Métropole",
+        "year": 2019,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2019,
+        "use_cases": [
+          "couverture_operateur",
+          "dechets",
+          "smart_city"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Strasbourg",
+        "year": 2016,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2016,
+        "use_cases": [
+          "mobilite",
+          "environnement",
+          "patrimoine",
+          "recherche"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Montpellier Méditerranée Métropole",
+        "year": 2016,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": 50000,
+        "objets_year": 2026,
+        "use_cases": [
+          "teleleve_eau",
+          "dechets",
+          "hydrologie",
+          "air",
+          "ilots_fraicheur"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Dijon Métropole",
+        "year": 2019,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": 450,
+        "objets_year": 2019,
+        "use_cases": [
+          "stationnement"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Département de l'Isère",
+        "year": 2020,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2020,
+        "use_cases": [
+          "batiments",
+          "teleleve_eau",
+          "dechets",
+          "eclairage"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Istres",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2022,
+        "use_cases": [
+          "eclairage",
+          "qualite_air",
+          "ecoles"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Communauté de communes Pays du Mont-Blanc",
+        "year": 2021,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": 1500,
+        "objets_year": 2021,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Pays de Montbéliard Agglomération",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": 1445,
+        "objets_year": 2022,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Indre (36) + Cher (18) — Berry Territoire Innovant",
+        "year": 2024,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2024,
+        "use_cases": [
+          "teleleve_eau",
+          "batiments",
+          "frequentation"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Département de la Somme",
+        "year": 2024,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2024,
+        "use_cases": [
+          "eclairage",
+          "dechets",
+          "batiments",
+          "hydrologie"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Communauté d'agglomération du Niortais",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": 720,
+        "objets_year": 2022,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Saint-Malo Agglomération",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": 457,
+        "objets_year": 2022,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Communauté d'agglomération de Lens-Liévin",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": 300,
+        "objets_year": 2022,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Saint-Sulpice-la-Forêt",
+        "year": 2015,
+        "confidence": "medium",
+        "reliability_status": "mention_secondaire_recit",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2015,
+        "use_cases": [
+          "smart_city",
+          "pilote_reseau"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Issy-les-Moulineaux",
+        "year": 2018,
+        "confidence": "low",
+        "reliability_status": "mention_indirecte",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2018,
+        "use_cases": [
+          "smart_city"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Val d'Oise Numérique / Essonne Numérique / Seine-et-Marne Numérique",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "projet_infra_en_cours",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2022,
+        "use_cases": [
+          "smart_city",
+          "infrastructure_regionale"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Sarthe (Sarthe Numérique)",
+        "year": 2020,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": 40000,
+        "objets_year": 2023,
+        "use_cases": [
+          "teleleve_eau",
+          "eclairage",
+          "dechets",
+          "batiments"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Finistère (SDEF — Finistère Smart Connect)",
+        "year": 2021,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": null,
+        "objets_year": 2021,
+        "use_cases": [
+          "batiments",
+          "stationnement",
+          "teleleve_eau",
+          "eclairage",
+          "dechets",
+          "air"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "SMICOTOM Médoc",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "source_secondaire",
+        "include_in_fiable": false,
+        "objets": 523,
+        "objets_year": 2022,
+        "use_cases": [
+          "dechets"
+        ],
+        "excluded": false
+      }
+    ],
+    "nbiot": [
+      {
+        "tech": "nbiot",
+        "name": "Montluçon Communauté",
+        "year": 2023,
+        "confidence": "high",
+        "reliability_status": "rex_banque_territoires",
+        "include_in_fiable": true,
+        "objets": 390,
+        "objets_year": 2023,
+        "use_cases": [
+          "detection_fuites_eau"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "nbiot",
+        "name": "Métropole de Lyon / Eau du Grand Lyon",
+        "year": 2023,
+        "confidence": "low",
+        "reliability_status": "annonce_non_confirmee",
+        "include_in_fiable": false,
+        "objets": null,
+        "objets_year": 2023,
+        "use_cases": [
+          "detection_fuites_eau"
+        ],
+        "excluded": true
+      },
+      {
+        "tech": "nbiot",
+        "name": "SFR × Gutermann — détection fuites (collectivité non nommée)",
+        "year": 2022,
+        "confidence": "medium",
+        "reliability_status": "claim_operateur",
+        "include_in_fiable": false,
+        "objets": 5000,
+        "objets_year": 2022,
+        "use_cases": [
+          "detection_fuites_eau"
+        ],
+        "excluded": false,
+        "anonyme": true
+      }
+    ]
+  },
+  "figures": [
+    "croise_projets_metier_cumul_lora_nbiot.png",
+    "croise_projets_metier_flux_lora_nbiot.png",
+    "croise_objets_documentes_lora_nbiot.png",
+    "croise_fiabilite_projets_metier.png",
+    "croise_tendances_index_fiable.png"
+  ],
+  "report": "/workspace/reports/croisement_projets_metier_lora_nbiot.md",
+  "audits": {
+    "lora": {
+      "audited_at": "2026-07-21",
+      "rules": [
+        "fiable = confidence high + projet métier documenté (pas couverture seule)",
+        "year_projet_metier utilisé for trend if present else year_start",
+        "Heyliot collectivités medium = documenté presse fournisseur"
+      ]
+    },
+    "nbiot": {
+      "audited_at": "2026-07-21",
+      "rules": [
+        "fiable = confidence high AND include_in_fiable!=False AND source primaire (REX collectivité / CP opérateur multiple / presse spécialisée concordante)",
+        "documente = inventaire nominatif hors annonces non confirmées",
+        "annonce_non_confirmee exclue du socle fiable et des objets"
+      ],
+      "nbiot_lyon_decision": "EXCLU du socle fiable (EIN « prochainement » ; historique Homerider)",
+      "nbiot_montlucon_decision": "INCLUS fiable (Aquagir citation directe NB-IoT)",
+      "nbiot_sfr_gutermann_decision": "INCLUS documenté, EXCLU fiable (collectivité anonyme)"
+    }
+  }
+}
