@@ -16,7 +16,7 @@
 
 | Techno | Documentés | Fiables (high) | Objets doc. cumul |
 |---|---:|---:|---:|
-| LoRa | 22 | 12 | 95 395 |
+| LoRa | 23 | 13 | 114 955 |
 | NB-IoT | 2 | 1 | 5 390 |
 
 ## Tendances (cumul documenté)
@@ -30,11 +30,11 @@
 | 2019 | 2 | 9 | 0 | 0 | 7 | 0 |
 | 2020 | 2 | 11 | 0 | 0 | 9 | 0 |
 | 2021 | 2 | 13 | 0 | 0 | 11 | 0 |
-| 2022 | 7 | 20 | 1 | 1 | 11 | 0 |
-| 2023 | 0 | 20 | 1 | 2 | 11 | 1 |
-| 2024 | 2 | 22 | 0 | 2 | 12 | 1 |
-| 2025 | 0 | 22 | 0 | 2 | 12 | 1 |
-| 2026 | 0 | 22 | 0 | 2 | 12 | 1 |
+| 2022 | 8 | 21 | 1 | 1 | 12 | 0 |
+| 2023 | 0 | 21 | 1 | 2 | 12 | 1 |
+| 2024 | 2 | 23 | 0 | 2 | 13 | 1 |
+| 2025 | 0 | 23 | 0 | 2 | 13 | 1 |
+| 2026 | 0 | 23 | 0 | 2 | 13 | 1 |
 
 ### Lecture des tendances
 
@@ -68,9 +68,10 @@
 | 2022 | Pays de Montbéliard Agglomération | non | source_secondaire | 1 445 |
 | 2022 | SMICOTOM Médoc | non | source_secondaire | 523 |
 | 2022 | Saint-Malo Agglomération | non | source_secondaire | 457 |
+| 2022 | Syndicat intercommunal des eaux de Ribemont (Aisne) | oui | source_primaire_ou_presse_forte | 14 560 |
 | 2022 | Val d'Oise Numérique / Essonne Numérique / Seine-et-Marne Numérique | non | projet_infra_en_cours | — |
 | 2024 | Département de la Somme | non | source_secondaire | — |
-| 2024 | Indre (36) + Cher (18) — Berry Territoire Innovant | oui | source_primaire_ou_presse_forte | — |
+| 2024 | Indre (36) + Cher (18) — Berry Territoire Innovant | oui | source_primaire_ou_presse_forte | 5 000 |
 
 ### NB-IoT — projets métier
 

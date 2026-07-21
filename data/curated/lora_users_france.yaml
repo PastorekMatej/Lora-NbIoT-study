@@ -1,10 +1,9 @@
 meta:
   last_review: '2026-07-21'
   scope: france_metropolitaine
-  method_note: Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventaire nominatif
-    sourcé (flux/cumul calculés) ; (B) marqueurs opérateurs/alliance. Séparer couverture radio (~30 000
-    communes) et projets métier documentés. Le claim « 500 collectivités (2021) » est un marqueur secondaire
-    à faible confiance.
+  method_note: Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventaire nominatif sourcé
+    (flux/cumul calculés) ; (B) marqueurs opérateurs/alliance. Séparer couverture radio (~30 000 communes) et projets
+    métier documentés. Le claim « 500 collectivités (2021) » est un marqueur secondaire à faible confiance.
 collectivites:
 - name: Grenoble
   type: ville
@@ -82,8 +81,8 @@ collectivites:
   - bornes_ve
   - batiments
   network: mixte
-  note: Ouverture Orange 2016 ; réseau privé métropole ~500 capteurs (2018-2019, Kerlink/SPIE/Pilot Things)
-    | year_projet_metier=2018 (projet métier distinct de couverture 2016)
+  note: Ouverture Orange 2016 ; réseau privé métropole ~500 capteurs (2018-2019, Kerlink/SPIE/Pilot Things) | year_projet_metier=2018
+    (projet métier distinct de couverture 2016)
   confidence: high
   sources:
   - https://www.spie.com/en/news/bordeaux-metropole-chooses-spie-its-smart-digital-territory-pilot-scheme
@@ -174,7 +173,8 @@ collectivites:
   - ilots_fraicheur
   network: prive
   objets_approx: 50000
-  note: Réseau privé ChirpStack ; ~45k compteurs eau ; 50k objets en 2026 ; objectif 85k compteurs 2027
+  note: 'Réseau privé ChirpStack ; ~45k compteurs eau ; 50k objets en 2026 ; objectif 85k compteurs 2027 | Jalons
+    stock : 50k atteints ~2026 (Smart City Mag) ; +500 compteurs/mois ; objectif 85k en 2027'
   confidence: high
   sources:
   - https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes
@@ -310,7 +310,8 @@ collectivites:
   - batiments
   - frequentation
   network: prive_mutualise
-  note: Réseau LoRaWAN mutualisé Ubicité ; cibles ~700 GW / 100k capteurs
+  note: 'Ubicité oct. 2025 : 50 GW installées (objectif 100 fin 2025) ; 5 000 capteurs déployés (cap 10 000). Lancement
+    MGP 2024.'
   confidence: high
   sources:
   - https://www.lanouvellerepublique.fr/indre/un-partenariat-unique-en-france-entre-l-indre-et-le-cher-pour-investir-dans-des-objets-connectes
@@ -318,6 +319,9 @@ collectivites:
   usage_level: projet_metier
   include_in_fiable: true
   reliability_status: source_primaire_ou_presse_forte
+  objets_approx: 5000
+  objets_year: 2025
+  gateways_approx: 50
 - name: Département de la Somme
   type: departement
   year_start: 2024
@@ -469,6 +473,23 @@ collectivites:
   usage_level: projet_metier
   include_in_fiable: false
   reliability_status: source_secondaire
+- name: Syndicat intercommunal des eaux de Ribemont (Aisne)
+  type: syndicat
+  year_start: 2022
+  use_cases:
+  - teleleve_eau
+  - detection_fuites_eau
+  network: prive
+  objets_approx: 14560
+  objets_year: 2024
+  usage_level: projet_metier
+  note: 'Smart City Mag 15/06/2026 : 14 500 compteurs modernisés 2022-2024 (Itron) + >60 loggers Sewerin ; ~20 GW
+    Requea'
+  confidence: high
+  include_in_fiable: true
+  reliability_status: source_primaire_ou_presse_forte
+  sources:
+  - https://www.smartcitymag.fr/article/1850/telereleve-a-ribemont-le-reseau-lorawan-au-service-de-l-eau-et-des-territoires
 orange_launch_2016_zones:
   note: 17 zones d'ouverture progressive Orange LoRaWAN (T1 2016)
   cities:
@@ -757,10 +778,9 @@ tendances_depuis_2015:
     objets_marqueurs: 50000
     objets_note: Montpellier objets (réseau privé)
   resume:
-  - '2015–2017 : naissance puis couverture nationale (Orange + Objenious) — peu de projets métier documentés
-    hors pilotes'
-  - '2018–2022 : CROISSANCE forte des projets métier (eau, smart city, départements) et des objets (Birdz
-    / Alliance)'
+  - '2015–2017 : naissance puis couverture nationale (Orange + Objenious) — peu de projets métier documentés hors
+    pilotes'
+  - '2018–2022 : CROISSANCE forte des projets métier (eau, smart city, départements) et des objets (Birdz / Alliance)'
   - '2023–2024 : rupture opérateurs publics (Objenious↓) mais CROISSANCE des réseaux privés mutualisés'
   - '2025–2026 : dual track — opérateurs nationaux stabilisés + collectivités/départements en densification'
   verticales_dominantes:
@@ -815,3 +835,36 @@ reliability_audit:
   - fiable = confidence high + projet métier documenté (pas couverture seule)
   - year_projet_metier utilisé for trend if present else year_start
   - Heyliot collectivités medium = documenté presse fournisseur
+jalons_objets_par_annee:
+  note: Stock/objets constatés une année donnée (projet souvent démarré avant). Complète les year_start.
+  series:
+  - year: 2024
+    tech: LoRa
+    projet: Ribemont
+    objets: 14560
+    confidence: high
+  - year: 2025
+    tech: LoRa
+    projet: Berry Territoire Innovant
+    objets: 5000
+    confidence: high
+    source: https://ubicite.fr/berry-territoire-innovant-un-projet-au-service-des-usagers/
+  - year: 2026
+    tech: LoRa
+    projet: Montpellier Méditerranée Métropole
+    objets: 50000
+    confidence: high
+    source: https://www.smartcitymag.fr/article/1796/iot-montpellier-passe-le-cap-des-50-000-capteurs-connectes
+  - year: 2025
+    tech: NB-IoT
+    projet: null
+    objets: null
+    confidence: n/a
+    note: Aucun projet collectivité NB-IoT FR chiffré trouvé pour 2025
+  - year: 2026
+    tech: NB-IoT
+    projet: null
+    objets: null
+    confidence: n/a
+    note: Aucun projet collectivité NB-IoT FR chiffré trouvé pour 2026 (migration 2G→NB-IoT/LTE-M citée sans volumes
+      locaux)

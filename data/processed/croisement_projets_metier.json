@@ -1,10 +1,10 @@
 {
   "totals": {
-    "lora_documente": 22,
-    "lora_fiable": 12,
+    "lora_documente": 23,
+    "lora_fiable": 13,
     "nbiot_documente": 2,
     "nbiot_fiable": 1,
-    "lora_objets_doc": 95395,
+    "lora_objets_doc": 114955,
     "nbiot_objets_doc": 5390
   },
   "series": {
@@ -67,16 +67,16 @@
       },
       {
         "year": 2022,
-        "nouveaux": 7,
-        "cumul": 20,
-        "croissance_pct": 53.8,
+        "nouveaux": 8,
+        "cumul": 21,
+        "croissance_pct": 61.5,
         "objets_nouveaux": 3445,
         "objets_cumul": 5395
       },
       {
         "year": 2023,
         "nouveaux": 0,
-        "cumul": 20,
+        "cumul": 21,
         "croissance_pct": 0.0,
         "objets_nouveaux": 40000,
         "objets_cumul": 45395
@@ -84,26 +84,26 @@
       {
         "year": 2024,
         "nouveaux": 2,
-        "cumul": 22,
-        "croissance_pct": 10.0,
-        "objets_nouveaux": 0,
-        "objets_cumul": 45395
+        "cumul": 23,
+        "croissance_pct": 9.5,
+        "objets_nouveaux": 14560,
+        "objets_cumul": 59955
       },
       {
         "year": 2025,
         "nouveaux": 0,
-        "cumul": 22,
+        "cumul": 23,
         "croissance_pct": 0.0,
-        "objets_nouveaux": 0,
-        "objets_cumul": 45395
+        "objets_nouveaux": 5000,
+        "objets_cumul": 64955
       },
       {
         "year": 2026,
         "nouveaux": 0,
-        "cumul": 22,
+        "cumul": 23,
         "croissance_pct": 0.0,
         "objets_nouveaux": 50000,
-        "objets_cumul": 95395
+        "objets_cumul": 114955
       }
     ],
     "lora_fiable": [
@@ -165,16 +165,16 @@
       },
       {
         "year": 2022,
-        "nouveaux": 0,
-        "cumul": 11,
-        "croissance_pct": 0.0,
+        "nouveaux": 1,
+        "cumul": 12,
+        "croissance_pct": 9.1,
         "objets_nouveaux": 0,
         "objets_cumul": 1950
       },
       {
         "year": 2023,
         "nouveaux": 0,
-        "cumul": 11,
+        "cumul": 12,
         "croissance_pct": 0.0,
         "objets_nouveaux": 40000,
         "objets_cumul": 41950
@@ -182,26 +182,26 @@
       {
         "year": 2024,
         "nouveaux": 1,
-        "cumul": 12,
-        "croissance_pct": 9.1,
-        "objets_nouveaux": 0,
-        "objets_cumul": 41950
+        "cumul": 13,
+        "croissance_pct": 8.3,
+        "objets_nouveaux": 14560,
+        "objets_cumul": 56510
       },
       {
         "year": 2025,
         "nouveaux": 0,
-        "cumul": 12,
+        "cumul": 13,
         "croissance_pct": 0.0,
-        "objets_nouveaux": 0,
-        "objets_cumul": 41950
+        "objets_nouveaux": 5000,
+        "objets_cumul": 61510
       },
       {
         "year": 2026,
         "nouveaux": 0,
-        "cumul": 12,
+        "cumul": 13,
         "croissance_pct": 0.0,
         "objets_nouveaux": 50000,
-        "objets_cumul": 91950
+        "objets_cumul": 111510
       }
     ],
     "nbiot_documente": [
@@ -584,8 +584,8 @@
         "confidence": "high",
         "reliability_status": "source_primaire_ou_presse_forte",
         "include_in_fiable": true,
-        "objets": null,
-        "objets_year": 2024,
+        "objets": 5000,
+        "objets_year": 2025,
         "use_cases": [
           "teleleve_eau",
           "batiments",
@@ -743,6 +743,21 @@
         "objets_year": 2022,
         "use_cases": [
           "dechets"
+        ],
+        "excluded": false
+      },
+      {
+        "tech": "lora",
+        "name": "Syndicat intercommunal des eaux de Ribemont (Aisne)",
+        "year": 2022,
+        "confidence": "high",
+        "reliability_status": "source_primaire_ou_presse_forte",
+        "include_in_fiable": true,
+        "objets": 14560,
+        "objets_year": 2024,
+        "use_cases": [
+          "teleleve_eau",
+          "detection_fuites_eau"
         ],
         "excluded": false
       }

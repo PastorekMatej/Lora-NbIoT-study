@@ -4,19 +4,19 @@ Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventa
 
 ## Synthèse chiffrée (inventaire)
 
-- Collectivités inventoriées : **32**
-- dont projets métier : **22**
+- Collectivités inventoriées : **33**
+- dont projets métier : **23**
 - dont couverture opérateur seule : **10**
 - Sociétés inventoriées : **27**
-- Objets documentés (somme des projets ayant un chiffre) : **95 395**
+- Objets documentés (somme des projets ayant un chiffre) : **114 955**
 
 ## Tendances (croissance du cumul projets métier)
 
 | Période | Début | Fin | Variation | Lecture |
 |---|---:|---:|---:|---|
 | 2015–2017 | 2 | 7 | **250.0%** | Amorçage + ouverture nationale ; peu de projets métier hors pilotes/grandes villes |
-| 2018–2022 | 7 | 20 | **185.7%** | CROISSANCE forte : eau, smart city, départements (Sarthe, Finistère), déchets |
-| 2023–2026 | 20 | 22 | **10.0%** | CROISSANCE continue des projets métier privés malgré fin Objenious |
+| 2018–2022 | 7 | 21 | **200.0%** | CROISSANCE forte : eau, smart city, départements (Sarthe, Finistère), déchets |
+| 2023–2026 | 21 | 23 | **9.5%** | CROISSANCE continue des projets métier privés malgré fin Objenious |
 
 ## Tableau annuel quantifié
 
@@ -29,11 +29,11 @@ Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventa
 | 2019 | 1 | 1 | 10 | 11.1% | 20 | 18 | 450 |
 | 2020 | 2 | 2 | 12 | 20.0% | 22 | 22 | 450 |
 | 2021 | 2 | 2 | 14 | 16.7% | 24 | 25 | 1 950 |
-| 2022 | 6 | 6 | 20 | 42.9% | 30 | 25 | 5 395 |
-| 2023 | 0 | 0 | 20 | 0.0% | 30 | 26 | 45 395 |
-| 2024 | 2 | 2 | 22 | 10.0% | 32 | 27 | 45 395 |
-| 2025 | 0 | 0 | 22 | 0.0% | 32 | 26 | 45 395 |
-| 2026 | 0 | 0 | 22 | 0.0% | 32 | 26 | 95 395 |
+| 2022 | 7 | 7 | 21 | 50.0% | 31 | 25 | 5 395 |
+| 2023 | 0 | 0 | 21 | 0.0% | 31 | 26 | 45 395 |
+| 2024 | 2 | 2 | 23 | 9.5% | 33 | 27 | 59 955 |
+| 2025 | 0 | 0 | 23 | 0.0% | 33 | 26 | 64 955 |
+| 2026 | 0 | 0 | 23 | 0.0% | 33 | 26 | 114 955 |
 
 ### Lecture
 
@@ -92,8 +92,9 @@ Pas de registre national Arcep des projets LoRaWAN. Quantification = (A) inventa
 | Pays de Montbéliard Agglomération | agglomeration | 2022 | 1 445 |
 | SMICOTOM Médoc | syndicat | 2022 | 523 |
 | Saint-Malo Agglomération | agglomeration | 2022 | 457 |
+| Syndicat intercommunal des eaux de Ribemont (Aisne) | syndicat | 2022 | 14 560 |
 | Département de la Somme | departement | 2024 | — |
-| Indre (36) + Cher (18) — Berry Territoire Innovant | departements | 2024 | — |
+| Indre (36) + Cher (18) — Berry Territoire Innovant | departements | 2024 | 5 000 |
 
 ## Sociétés
 

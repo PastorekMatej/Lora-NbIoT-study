@@ -42,8 +42,8 @@ collectivites:
   objets_year: 2023
   usage_level: projet_metier
   note: 'EIN fév. 2023 : « 6000 loggers NB-IoT seront prochainement déployés à Lyon » (annonce forward-looking).
-    Historique 2015 = Gutermann Zonescan + radio Homerider/Birdz, PAS NB-IoT. Exclu du socle fiable tant
-    que non confirmé par la collectivité.'
+    Historique 2015 = Gutermann Zonescan + radio Homerider/Birdz, PAS NB-IoT. Exclu du socle fiable tant que non
+    confirmé par la collectivité.'
   confidence: low
   sources:
   - https://www.revue-ein.com/article/detecter-les-fuites
@@ -58,8 +58,7 @@ projets_metier_anonymes:
   network: sfr
   objets_approx: 5000
   usage_level: projet_metier
-  note: 'JDN/SFR Valérie Grau : déploiement 5000 modules Gutermann — claim opérateur, collectivité non
-    nommée. MEDIUM.'
+  note: 'JDN/SFR Valérie Grau : déploiement 5000 modules Gutermann — claim opérateur, collectivité non nommée. MEDIUM.'
   confidence: medium
   sources:
   - https://www.journaldunet.com/iot/1510695-valerie-grau-sfr/
@@ -273,11 +272,10 @@ marqueurs_quantitatifs:
 tendances_depuis_2015:
   resume:
   - '2015–2018 : pas de NB-IoT commercial FR (0 projet métier) — Orange LTE-M 2018'
-  - '2019–2021 : naissance écosystème (SFR puis Objenious) ; vendors/intégrateurs ↑ ; projets métier encore
-    rares'
+  - '2019–2021 : naissance écosystème (SFR puis Objenious) ; vendors/intégrateurs ↑ ; projets métier encore rares'
   - '2022–2023 : premiers projets métier eau (fuites) documentés ; couverture nationale densifiée'
-  - '2024–2026 : bascule LoRa Objenious → cellulaire ; annonces massives (Suez) mais inventaire collectivités
-    toujours mince vs LoRa'
+  - '2024–2026 : bascule LoRa Objenious → cellulaire ; annonces massives (Suez) mais inventaire collectivités toujours
+    mince vs LoRa'
   verticales_dominantes:
   - detection_fuites_eau
   - metering_smart_building
@@ -323,10 +321,19 @@ tendances_depuis_2015:
 reliability_audit:
   audited_at: '2026-07-21'
   rules:
-  - fiable = confidence high AND include_in_fiable!=False AND source primaire (REX collectivité / CP opérateur
-    multiple / presse spécialisée concordante)
+  - fiable = confidence high AND include_in_fiable!=False AND source primaire (REX collectivité / CP opérateur multiple
+    / presse spécialisée concordante)
   - documente = inventaire nominatif hors annonces non confirmées
   - annonce_non_confirmee exclue du socle fiable et des objets
   nbiot_lyon_decision: EXCLU du socle fiable (EIN « prochainement » ; historique Homerider)
   nbiot_montlucon_decision: INCLUS fiable (Aquagir citation directe NB-IoT)
   nbiot_sfr_gutermann_decision: INCLUS documenté, EXCLU fiable (collectivité anonyme)
+jalons_objets_par_annee:
+  note: Pas de jalon collectivité NB-IoT chiffré 2025-2026 dans sources vérifiées
+  series:
+  - year: 2025
+    objets: null
+    note: Migration 2G/3G vers LTE-M/NB-IoT (opérateurs) — pas de volume projet métier local publié
+  - year: 2026
+    objets: null
+    note: Idem ; Suez×Vodafone NB-IoT encore progressif hors FR massif
