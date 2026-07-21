@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Graphiques — LoRaWAN vs NB-IoT France</title>
+<style>
+  body{font-family:Georgia,serif;margin:0;padding:2rem;background:#f4f1ea;color:#1a1a1a}
+  h1{font-size:1.6rem;margin:0 0 0.25rem}
+  p.lead{color:#444;margin:0 0 2rem}
+  figure{margin:0 0 2.5rem;background:#fff;padding:1rem;border:1px solid #ddd}
+  img{max-width:100%;height:auto;display:block}
+  figcaption{margin-top:0.75rem;font-size:0.95rem;color:#333}
+  ol{line-height:1.6}
+</style>
+</head>
+<body>
+  <h1>Étude LoRaWAN vs NB-IoT — France</h1>
+  <p class="lead">Graphiques générés automatiquement (données Arcep / opérateurs / APIs).</p>
+  <ol>
+    <li>Croissance vs décroissance</li>
+    <li>Antennes LoRaWAN publiques</li>
+    <li>Sites 4G proxy NB-IoT</li>
+    <li>Utilisateurs / objets LoRaWAN</li>
+    <li>Couverture population</li>
+    <li>Infrastructure LoRaWAN (snapshot)</li>
+    <li>Chronologie</li>
+  </ol>
+
+  <figure>
+    <img src="figures/croissance_vs_decroissance.png" alt="Croissance vs décroissance"/>
+    <figcaption>1. LoRaWAN public −47,3 % vs proxy NB-IoT +18,9 %</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/tendance_antennes_lorawan.png" alt="Tendance antennes LoRaWAN"/>
+    <figcaption>2. Antennes LoRaWAN publiques — pic ~9100 puis chute à ~4800</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/tendance_sites_4g_proxy_nbiot.png" alt="Tendance sites 4G proxy NB-IoT"/>
+    <figcaption>3. Sites 4G (proxy NB-IoT) — croissance Orange/SFR/Bouygues</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/tendance_utilisateurs_lorawan.png" alt="Tendance utilisateurs LoRaWAN"/>
+    <figcaption>4. Utilisateurs LoRaWAN — Objenious → 0 ; Birdz/Orange en hausse</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/couverture_population_declaree.png" alt="Couverture population"/>
+    <figcaption>5. Couverture population déclarée LoRaWAN vs NB-IoT</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/infra_lorawan.png" alt="Infrastructure LoRaWAN"/>
+    <figcaption>6. Infrastructure LoRaWAN mesurée / déclarée (snapshot)</figcaption>
+  </figure>
+  <figure>
+    <img src="figures/timeline_evenements.png" alt="Chronologie"/>
+    <figcaption>7. Chronologie qualitative du déploiement LPWAN en France</figcaption>
+  </figure>
+</body>
+</html>
