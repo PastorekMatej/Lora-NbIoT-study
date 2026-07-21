@@ -1,22 +1,8 @@
 {
-  "source": "https://entities.nft.helium.io/v2/hotspots",
-  "fetched_at": "2026-07-21T08:39:21Z",
-  "global_meta": {
-    "pageSize": 10000,
-    "totalItems": 1035532,
-    "totalPages": 104
-  },
-  "sample_pages": 8,
-  "sample_scanned": 80000,
-  "france_in_sample": 917,
-  "france_active_in_sample": 0,
-  "france_ratio_sample": 0.0114625,
-  "france_estimated_total": 11869,
-  "geo_filter": {
-    "method": "point_in_polygon",
-    "geojson": "france_regions.geojson",
-    "regions": 13,
-    "includes_corsica": true
-  },
-  "note": "Estimation par échantillonnage ; coordonnées Helium obfuscées (H3 res 8). is_active souvent faux hors epoch récente — traiter comme densités relatives."
+  "fetched_at": "2026-07-21T09:11:53Z",
+  "global_total": 1035532,
+  "sample_scanned": 150000,
+  "france_in_sample": 1699,
+  "france_ratio": 0.011326666666666667,
+  "france_estimated": 11729
 }
